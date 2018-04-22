@@ -7,7 +7,9 @@ const async = require('asyncawait/async');
 
 // let url = "https://www.hotels.com/search.do?resolved-location=CITY%3A1493604%3AUNKNOWN%3AUNKNOWN&destination-id=1493604&q-destination=San%20Francisco,%20California,%20United%20States%20of%20America&q-rooms=1&q-room-0-adults=2&q-room-0-children=0&sort-order=DISTANCE_FROM_LANDMARK";
 let url = "https://www.hotels.com/search.do?resolved-location=CITY%3A1493604%3AUNKNOWN%3AUNKNOWN&destination-id=1493604&q-destination=San%20Francisco,%20California,%20United%20States%20of%20America&q-rooms=1&q-room-0-adults=2&q-room-0-children=0&sort-order=DISTANCE_FROM_LANDMARK&pn=";
-const numPages = 5;
+
+//change this to get more pages from hotels.com
+const numPages = 1;
 
 
 function scrape(pageNumber) {
@@ -37,15 +39,19 @@ async function megaScrape() {
     .then(body => {
       const hotels = [];
       const $ = cheerio.load(body);
-      $('.description').each((i, element) => {
+      $('.hotel-wrap').each((i, element) => {
         const $element = $(element);
         // const $name = $element.find(".rest-row-name-text");
         const $name = $element.find(".p-name");
+        const $rating = $element.find(".guest-rating-value");
+        const $numReviews = $element.find(".ta-total-reviews");
+        const $price = $element.find(".price b");
 
         const hotel = {
-          // name: $name.text(),
           name: $name.text(),
-
+          price: $price.text(),
+          rating: $rating.text(),
+          numReviews: $numReviews.text(),
         };
 
         hotels.push(hotel);
