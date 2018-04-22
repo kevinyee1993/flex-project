@@ -34,7 +34,8 @@ function scrape(pageNumber) {
 let allHotels = [];
 
 
-//not all hotels have description or details
+//not all hotels have description or details/ some don't even have prices
+//even though linter is acting up, code works fine for underlined function
 async function megaScrape() {
   for(let page = 1; page <= numPages; page++) {
     await scrape(page)
@@ -83,27 +84,3 @@ async function megaScrape() {
 }
 
 megaScrape();
-
-
-
-
-// const rp = require('request-promise');
-// const cheerio = require('cheerio');
-// const options = {
-//   uri: `https://convogenius.herokuapp.com/#/`,
-//   transform: function (body) {
-//     // return ($('.main-header').text());
-//     return cheerio.load(body);
-//   },
-// };
-//
-// rp(options)
-//   .then(($) => {
-//     // console.log($('.main-header').text());
-//     console.log($);
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//   });
-//
-//   //track-title

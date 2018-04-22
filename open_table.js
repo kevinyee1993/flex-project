@@ -2,6 +2,7 @@
 
 const fetch = require('node-fetch');
 const cheerio = require('cheerio');
+const SF_ID = 4;
 
 //NOTE: if you wanna change which city you want to look at, change the metroId of the URL
 //metroId of 4 is SF/bay area
@@ -22,7 +23,7 @@ function scrape(metroId) {
 
 //param that is put into scrape is the metroId, 4 is SF, change it for different cities
 
-scrape(4)
+scrape(SF_ID)
 .then(body => {
   const restaurants = [];
   const $ = cheerio.load(body);
