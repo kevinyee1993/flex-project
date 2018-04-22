@@ -1,4 +1,4 @@
-//SCRAPER FOR EVENTBRITE, SF, FOOD
+//SCRAPER FOR EVENTBRITE, SF
 
 //instead of making multiple files, there is a way to manipulate the url to enter different
 //categories and get it back as well as the pages, just need to split the url into different
