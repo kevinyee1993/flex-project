@@ -9,7 +9,7 @@ const async = require('asyncawait/async');
 let url = "https://www.hotels.com/search.do?resolved-location=CITY%3A1493604%3AUNKNOWN%3AUNKNOWN&destination-id=1493604&q-destination=San%20Francisco,%20California,%20United%20States%20of%20America&q-rooms=1&q-room-0-adults=2&q-room-0-children=0&sort-order=DISTANCE_FROM_LANDMARK&pn=";
 
 //change this to get more pages from hotels.com
-const numPages = 2;
+const NUM_PAGES = 2;
 
 
 function scrape(pageNumber) {
@@ -17,7 +17,7 @@ function scrape(pageNumber) {
   // return fetch(`${url}`)
   // .then(response => response.text());
 
-  // for(let i = 1; i < numPages; i++) {
+  // for(let i = 1; i < NUM_PAGES; i++) {
   // let pn = 1;
     return fetch(`${url}${pageNumber}`)
       .then(response => response.text());
@@ -37,7 +37,7 @@ let allHotels = [];
 //not all hotels have description or details/ some don't even have prices
 //even though linter is acting up, code works fine for underlined function
 async function megaScrape() {
-  for(let page = 1; page <= numPages; page++) {
+  for(let page = 1; page <= NUM_PAGES; page++) {
     await scrape(page)
     .then(body => {
       const hotels = [];

@@ -20,6 +20,10 @@ const FOOD_AND_DRINK = 'food-and-drink';
 const MUSIC = 'music';
 const ARTS = 'arts';
 
+const NUM_PAGES = 2;
+
+const async = require('asyncawait/async');
+
 // const url = "https://www.eventbrite.com/d/ca--san-francisco/food-and-drink--events/?crt=regular&sort=best&page=";
 
 function scrape(event, pageNumber) {
@@ -37,44 +41,70 @@ function scrape(event, pageNumber) {
 //turn all new lines into spaces
 //regex to find any spaces that come in groups of 2 or more
 //if find those, replace them with nothing
-scrape(FOOD_AND_DRINK, 1)
-.then(body => {
-  const activities = [];
-  const $ = cheerio.load(body);
 
-  $('.list-card-v2').each((i, element) => {
+let allActivities = [];
 
-    const $element = $(element);
-    // const $name = $element.find(".rest-row-name-text");
-    const $name = $element.find(".list-card__title");
-    const $date = $element.find(".list-card__date");
-    const $priceRange = $element.find(".list-card__label");
-    const $location = $element.find(".list-card__venue");
+async function megaScrape(category) {
+
+  for(let page = 1; page <= NUM_PAGES; page++) {
 
 
-    const activity = {
-      name: $name.text(),
-      date: $date.text(),
-      priceRange: $priceRange.text(),
-      location: $location.text(),
-    };
+    await scrape(category, page)
+    .then(body => {
+      const activities = [];
+      const $ = cheerio.load(body);
 
-    activities.push(activity);
-  });
+      $('.list-card-v2').each((i, element) => {
 
-  //str = str.replace(/(?:\r\n|\r|\n)/g, ' ');
-  //this is to replace all the new lines with spaces
-//then deletes all the extra spaces including the leading and trailing
-//white space.  Cleans up the JSON nicely
-  for(let i = 0; i < activities.length; i++) {
-    Object.keys(activities[i]).forEach( (key) => {
-      let value = activities[i][key].replace(/(?:\r\n|\r|\n)/g, ' ');
+        const $element = $(element);
+        // const $name = $element.find(".rest-row-name-text");
+        const $name = $element.find(".list-card__title");
+        const $date = $element.find(".list-card__date");
+        const $priceRange = $element.find(".list-card__label");
+        const $location = $element.find(".list-card__venue");
+
+
+        const activity = {
+          name: $name.text(),
+          date: $date.text(),
+          priceRange: $priceRange.text(),
+          location: $location.text(),
+        };
+
+        activities.push(activity);
+      });
+
+      //str = str.replace(/(?:\r\n|\r|\n)/g, ' ');
+      //this is to replace all the new lines with spaces
+    //then deletes all the extra spaces including the leading and trailing
+    //white space.  Cleans up the JSON nicely
+
+    allActivities = allActivities.concat(activities);
+
+    });
+
+  }
+
+  // for(let i = 0; i < activities.length; i++) {
+  //   Object.keys(activities[i]).forEach( (key) => {
+  //     let value = activities[i][key].replace(/(?:\r\n|\r|\n)/g, ' ');
+  //     value = value.replace(/ +(?= )/g,'');
+  //     value = value.trim();
+  //     activities[i][key] = value;
+  //   });
+  // }
+  for(let i = 0; i < allActivities.length; i++) {
+    Object.keys(allActivities[i]).forEach( (key) => {
+      let value = allActivities[i][key].replace(/(?:\r\n|\r|\n)/g, ' ');
       value = value.replace(/ +(?= )/g,'');
       value = value.trim();
-      activities[i][key] = value;
+      allActivities[i][key] = value;
     });
   }
 
 
-  console.log(activities);
-});
+  console.log(allActivities);
+}
+
+//just add the category here
+megaScrape(ARTS);
