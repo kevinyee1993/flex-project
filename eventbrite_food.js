@@ -1,5 +1,17 @@
 //SCRAPER FOR EVENTBRITE, SF, FOOD
 
+//instead of making multiple files, there is a way to manipulate the url to enter different
+//categories and get it back as well as the pages, just need to split the url into different
+//sections
+
+//e.g:
+//food url: https://www.eventbrite.com/d/ca--san-francisco/food-and-drink--events/?crt=regular&page=1&sort=best
+//music url: https://www.eventbrite.com/d/ca--san-francisco/music--events/?crt=regular&page=1&sort=best
+//already moved the page to the end so that's taken care of
+//the only difference between the two urls are food-and-drink and music
+//just replace those with an interpolation to get different data
+
+
 const fetch = require('node-fetch');
 const cheerio = require('cheerio');
 
