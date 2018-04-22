@@ -9,7 +9,7 @@ const async = require('asyncawait/async');
 let url = "https://www.hotels.com/search.do?resolved-location=CITY%3A1493604%3AUNKNOWN%3AUNKNOWN&destination-id=1493604&q-destination=San%20Francisco,%20California,%20United%20States%20of%20America&q-rooms=1&q-room-0-adults=2&q-room-0-children=0&sort-order=DISTANCE_FROM_LANDMARK&pn=";
 
 //change this to get more pages from hotels.com
-const numPages = 1;
+const numPages = 2;
 
 
 function scrape(pageNumber) {
@@ -47,7 +47,16 @@ async function megaScrape() {
         const $name = $element.find(".p-name");
         const $rating = $element.find(".guest-rating-value");
         const $numReviews = $element.find(".ta-total-reviews");
-        const $price = $element.find(".price b");
+
+        let checkPrice;
+        if($element.find(".price b").text() !== "") {
+          checkPrice = $element.find(".price b");
+        } else {
+          checkPrice = $element.find(".old-price-cont ins")
+        }
+
+        // const $price = $element.find(".price b");
+        const $price = checkPrice;
         const $address = $element.find(".p-adr");
         const $phone = $element.find(".p-tel");
         const $description = $element.find(".travel-ad-headline");
