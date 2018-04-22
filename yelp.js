@@ -37,18 +37,22 @@ async function megaScrape() {
         const $element = $(element);
         // const $name = $element.find(".rest-row-name-text");
         const $name = $element.find(".biz-name");
+        const $numReviews = $element.find(".review-count");
+        const $address = $element.find("address");
+        const $category = $element.find(".category-str-list a");
+        const $rating = $element.find(".i-stars title")
 
         const landmark = {
           name: $name.text(),
+          numReviews: $numReviews.text(),
+          address: $address.text(),
+          category: $category.text(),
+          rating: $rating.text(),
         };
 
         landmarks.push(landmark);
       });
 
-      //str = str.replace(/(?:\r\n|\r|\n)/g, ' ');
-      //this is to replace all the new lines with spaces
-    //then deletes all the extra spaces including the leading and trailing
-    //white space.  Cleans up the JSON nicely
 
     allLandmarks = allLandmarks.concat(landmarks);
 
@@ -56,18 +60,16 @@ async function megaScrape() {
 
   }
 
-  // for(let i = 0; i < allActivities.length; i++) {
-  //   Object.keys(allActivities[i]).forEach( (key) => {
-  //     let value = allActivities[i][key].replace(/(?:\r\n|\r|\n)/g, ' ');
-  //     value = value.replace(/ +(?= )/g,'');
-  //     value = value.trim();
-  //     allActivities[i][key] = value;
-  //   });
-  // }
-
+  for(let i = 0; i < allLandmarks.length; i++) {
+    Object.keys(allLandmarks[i]).forEach( (key) => {
+      let value = allLandmarks[i][key].replace(/(?:\r\n|\r|\n)/g, ' ');
+      value = value.replace(/ +(?= )/g,'');
+      value = value.trim();
+      allLandmarks[i][key] = value;
+    });
+  }
 
   console.log(allLandmarks);
 }
 
-//just add the category here
 megaScrape();
