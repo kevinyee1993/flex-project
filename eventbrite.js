@@ -30,13 +30,18 @@ function scrape(event, pageNumber) {
 
 
 //hard coded 1 just to check for customized page number
+//hard coded category too but ideally want to pass that in as arg
 //getting back names but with hella white space
+
+//for white spaces and new lines, strategy:
+//turn all new lines into spaces
+//regex to find any spaces that come in groups of 2 or more
+//if find those, replace them with nothing
 scrape(FOOD_AND_DRINK, 1)
 .then(body => {
   const activities = [];
   const $ = cheerio.load(body);
 
-  // $('.list-card__body').each((i, element) => {
   $('.list-card-v2').each((i, element) => {
 
     const $element = $(element);
@@ -56,6 +61,15 @@ scrape(FOOD_AND_DRINK, 1)
 
     activities.push(activity);
   });
+
+  //str = str.replace(/(?:\r\n|\r|\n)/g, ' ');
+  //this is to replace all the new lines with spaces
+  for(let i = 0; i < activities.length; i++) {
+    Object.keys(activities[i]).forEach( (key) => {
+      let value = activities[i][key].replace(/(?:\r\n|\r|\n)/g, ' ');
+      activities[i][key] = value;
+    });
+  }
 
 
   console.log(activities);
