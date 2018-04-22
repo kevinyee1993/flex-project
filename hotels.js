@@ -3,6 +3,8 @@
 const fetch = require('node-fetch');
 const cheerio = require('cheerio');
 
+const async = require('asyncawait/async');
+
 // let url = "https://www.hotels.com/search.do?resolved-location=CITY%3A1493604%3AUNKNOWN%3AUNKNOWN&destination-id=1493604&q-destination=San%20Francisco,%20California,%20United%20States%20of%20America&q-rooms=1&q-room-0-adults=2&q-room-0-children=0&sort-order=DISTANCE_FROM_LANDMARK";
 let url = "https://www.hotels.com/search.do?resolved-location=CITY%3A1493604%3AUNKNOWN%3AUNKNOWN&destination-id=1493604&q-destination=San%20Francisco,%20California,%20United%20States%20of%20America&q-rooms=1&q-room-0-adults=2&q-room-0-children=0&sort-order=DISTANCE_FROM_LANDMARK&pn=";
 const numPages = 5;
@@ -29,31 +31,33 @@ function scrape(pageNumber) {
 //param that is put into scrape is the metroId, 4 is SF, change it for different cities
 let allHotels = [];
 
+async function megaScrape() {
+  for(let page = 1; page <= numPages; page++) {
+    await scrape(page)
+    .then(body => {
+      const hotels = [];
+      const $ = cheerio.load(body);
+      $('.description').each((i, element) => {
+        const $element = $(element);
+        // const $name = $element.find(".rest-row-name-text");
+        const $name = $element.find(".p-name");
 
-for(let page = 1; page <= numPages; page++) {
-  scrape(page)
-  .then(body => {
-    const hotels = [];
-    const $ = cheerio.load(body);
-    $('.description').each((i, element) => {
-      const $element = $(element);
-      // const $name = $element.find(".rest-row-name-text");
-      const $name = $element.find(".p-name");
+        const hotel = {
+          // name: $name.text(),
+          name: $name.text(),
 
-      const hotel = {
-        // name: $name.text(),
-        name: $name.text(),
+        };
 
-      };
+        hotels.push(hotel);
+      });
 
-      hotels.push(hotel);
+      allHotels = allHotels.concat(hotels);
     });
-
-    allHotels = allHotels.concat(hotels);
-    console.log(allHotels);
-  });
+  }
+  console.log(allHotels);
 }
 
+megaScrape();
 
 
 
