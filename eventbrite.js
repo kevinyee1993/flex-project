@@ -44,6 +44,7 @@ function scrape(event, pageNumber) {
 
 let allActivities = [];
 
+//ignore linter here
 async function megaScrape(category) {
 
   for(let page = 1; page <= NUM_PAGES; page++) {
@@ -62,6 +63,7 @@ async function megaScrape(category) {
         const $date = $element.find(".list-card__date");
         const $priceRange = $element.find(".list-card__label");
         const $location = $element.find(".list-card__venue");
+        const $category = $element.find(".list-card__tags");
 
 
         const activity = {
@@ -69,6 +71,7 @@ async function megaScrape(category) {
           date: $date.text(),
           priceRange: $priceRange.text(),
           location: $location.text(),
+          category: $category.text(),
         };
 
         activities.push(activity);
@@ -85,14 +88,6 @@ async function megaScrape(category) {
 
   }
 
-  // for(let i = 0; i < activities.length; i++) {
-  //   Object.keys(activities[i]).forEach( (key) => {
-  //     let value = activities[i][key].replace(/(?:\r\n|\r|\n)/g, ' ');
-  //     value = value.replace(/ +(?= )/g,'');
-  //     value = value.trim();
-  //     activities[i][key] = value;
-  //   });
-  // }
   for(let i = 0; i < allActivities.length; i++) {
     Object.keys(allActivities[i]).forEach( (key) => {
       let value = allActivities[i][key].replace(/(?:\r\n|\r|\n)/g, ' ');
