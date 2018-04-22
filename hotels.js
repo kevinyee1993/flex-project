@@ -33,6 +33,8 @@ function scrape(pageNumber) {
 //param that is put into scrape is the metroId, 4 is SF, change it for different cities
 let allHotels = [];
 
+
+//not all hotels have description or details
 async function megaScrape() {
   for(let page = 1; page <= numPages; page++) {
     await scrape(page)
@@ -46,12 +48,20 @@ async function megaScrape() {
         const $rating = $element.find(".guest-rating-value");
         const $numReviews = $element.find(".ta-total-reviews");
         const $price = $element.find(".price b");
+        const $address = $element.find(".p-adr");
+        const $phone = $element.find(".p-tel");
+        const $description = $element.find(".travel-ad-headline");
+        const $details = $element.find(".travel-ad-details");
 
         const hotel = {
           name: $name.text(),
           price: $price.text(),
           rating: $rating.text(),
           numReviews: $numReviews.text(),
+          address: $address.text(),
+          phone: $phone.text(),
+          description: $description.text(),
+          details: $details.text(),
         };
 
         hotels.push(hotel);
