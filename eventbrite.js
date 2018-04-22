@@ -64,9 +64,13 @@ scrape(FOOD_AND_DRINK, 1)
 
   //str = str.replace(/(?:\r\n|\r|\n)/g, ' ');
   //this is to replace all the new lines with spaces
+//then deletes all the extra spaces including the leading and trailing
+//white space.  Cleans up the JSON nicely
   for(let i = 0; i < activities.length; i++) {
     Object.keys(activities[i]).forEach( (key) => {
       let value = activities[i][key].replace(/(?:\r\n|\r|\n)/g, ' ');
+      value = value.replace(/ +(?= )/g,'');
+      value = value.trim();
       activities[i][key] = value;
     });
   }
