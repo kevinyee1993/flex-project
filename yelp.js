@@ -49,7 +49,7 @@ async function megaScrape() {
           numReviews: $numReviews.text(),
           address: $address.text(),
           category: $category.text(),
-          rating: $rating.text(),
+          rating: $rating.attr('title'),
         };
 
         landmarks.push(landmark);

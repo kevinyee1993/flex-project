@@ -10,6 +10,7 @@ const async = require('asyncawait/async');
 
 const SF_ID = 4;
 
+//change this to get more pages
 const NUM_PAGES = 1;
 
 //NOTE: if you wanna change which city you want to look at, change the metroId of the URL
