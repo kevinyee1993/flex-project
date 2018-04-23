@@ -40,7 +40,9 @@ async function megaScrape() {
         const $numReviews = $element.find(".review-count");
         const $address = $element.find("address");
         const $category = $element.find(".category-str-list a");
-        const $rating = $element.find(".i-stars title")
+        const $rating = $element.find(".i-stars")
+
+        // console.log($rating.text());
 
         const landmark = {
           name: $name.text(),
