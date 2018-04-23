@@ -1,0 +1,29 @@
+{
+  "name": "scraperPractice",
+  "version": "1.0.0",
+  "description": "{# Trip Planner (think of new name later) **Trip Planner is an app that intelligently recommends trip itinerary suggestions based on a user’s background and preferences.**",
+  "main": "eventbrite.js",
+  "dependencies": {
+    "asyncawait": "^1.0.6",
+    "cheerio": "^1.0.0-rc.2",
+    "jsonframe-cheerio": "^3.0.1",
+    "node-fetch": "^2.1.2",
+    "request": "^2.85.0",
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinyee1993/scraper-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevinyee1993/scraper-practice/issues"
+  },
+  "homepage": "https://github.com/kevinyee1993/scraper-practice#readme"
+}
