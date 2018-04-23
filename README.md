@@ -42,7 +42,9 @@ Influencers:
 	Blog sites which can be scraped for reviews, recommendations, etc.
 
 **Matching trip data points to user preferences**
+For lodging recommendations, direct matches will be made with survey responses (budget)
 Use Tensorflow to teach machine to classify activities stored in db as good recommendation or not per survey answers.
+Machine will be trained with pre-scraped activities and specific user archetypes as the main 2 attributes, and with a recommendation rating as the “label.”
 Failing that, write our own logic to achieve the same result.
 
 
@@ -56,29 +58,27 @@ Kevin Yee, Winston Chan, Yihwan Kim
 * Built scrapers for yelp, opentable, eventbrite, and hotels
 
 ### Day 1
-* Stand-up marketing homepage, start working on survey interface. YIHWAN
-* begin relating mock data we will be receiving from survey to activities in database WINSTON
-* Set up database to store JSON obtained from scrapers KEVIN
+* Stand-up marketing homepage, start working on survey interface.
+* begin relating mock data we will be receiving from survey to activities in database
+* Set up database to store JSON obtained from scrapers
 
 ### Day 2
-* Finish survey interface, ensure smooth transitions and that user responses are saved within a single session. -  YIHWAN
-* Customize scrapers to get info periodically to keep app updated - KEVIN
-* Work on AI - WINSTON
+* Finish survey interface, ensure smooth transitions and that user responses are saved within a single session.
+* Customize scrapers to get info periodically to keep app updated
+* Work on AI
 
 ### Day 3
 * Depending on progress with AI, can either continue with that route or manually filter results based on user preference
-    * manually filter results - KEVIN/YIHWAN
-    * continue working on AI - WINSTON
 * Should have the basic skeleton of the app set up
 
 ### Day 4
-* Integrate/polish up the app and its basic functionality - TEAM
+* Integrate/polish up the app and its basic functionality
 * Will have to discuss with team but can start working on bonus features:
-    * Incorporate a schedule for the user to follow - TEAM
-    * Add more cities and provide search functionality - will need to update scrapers for this to handle more cities - KEVIN
+    * Incorporate a schedule for the user to follow
+    * Add more cities and provide search functionality - will need to update scrapers for this to handle more cities
 ### Day 5
-* Work on bonus features decided upon - TBD
+* Work on bonus features decided upon
 ### Day 6
-* Work on bonus features decided upon - TBD
+* Work on bonus features decided upon
 [Data Sources](
 https://docs.google.com/spreadsheets/d/1tbsrEgkJfH-mGZId1uzCcbQmYgWsQ8J1lkDp9jU8qR4/edit#gid=0)
