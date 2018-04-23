@@ -1,8 +1,5 @@
 //SCRAPER FOR OPENTABLE, SF RESTAURANTS, ALL CUISINE
 
-//TODO:
-//update this to be able to grab multiple pages!!
-
 const fetch = require('node-fetch');
 const cheerio = require('cheerio');
 
