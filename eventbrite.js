@@ -77,10 +77,6 @@ async function megaScrape(category) {
         activities.push(activity);
       });
 
-      //str = str.replace(/(?:\r\n|\r|\n)/g, ' ');
-      //this is to replace all the new lines with spaces
-    //then deletes all the extra spaces including the leading and trailing
-    //white space.  Cleans up the JSON nicely
 
     allActivities = allActivities.concat(activities);
 
@@ -88,6 +84,10 @@ async function megaScrape(category) {
 
   }
 
+  //str = str.replace(/(?:\r\n|\r|\n)/g, ' ');
+  //this is to replace all the new lines with spaces
+  //then deletes all the extra spaces including the leading and trailing
+  //white space.  Cleans up the JSON nicely
   for(let i = 0; i < allActivities.length; i++) {
     Object.keys(allActivities[i]).forEach( (key) => {
       let value = allActivities[i][key].replace(/(?:\r\n|\r|\n)/g, ' ');
