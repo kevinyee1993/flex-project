@@ -46,8 +46,10 @@ async function megaScrape(category) {
         const $category = $element.find(".category-str-list a");
         const $rating = $element.find(".i-stars");
         const $price = $element.find(".business-attribute ,price-range");
-
+        const $image = $element.find(".photo-box-img");
         // console.log($rating.text());
+
+        
         const landmark = {
           name: $name.text(),
           numReviews: $numReviews.text(),
@@ -55,6 +57,7 @@ async function megaScrape(category) {
           tags: $category.text(),
           rating: $rating.attr('title'),
           price: $price.text(),
+          image: $image.attr('src'),
           category: category,
         };
 
