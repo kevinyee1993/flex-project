@@ -5,10 +5,14 @@
   "main": "eventbrite.js",
   "dependencies": {
     "asyncawait": "^1.0.6",
+<<<<<<< HEAD
+    "axios": "^0.18.0",
+=======
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+>>>>>>> a57c0cf61d65329e92e57a078e93387c2add6908
     "body-parser": "^1.18.2",
     "cheerio": "^1.0.0-rc.2",
     "express": "^4.16.3",

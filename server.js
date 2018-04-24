@@ -9,6 +9,9 @@ const port = 8000;
 
 //express can't process url encoded forms on its own
 //bodyParser downloaded helps us out with that
+
+//need bodyParser if passing in JSON as body
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //importing routes for the server to use
