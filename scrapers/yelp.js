@@ -1,4 +1,9 @@
 //SCRAPER FOR YELP, specifically landmarks
+//yelp scraper is dedicated to different activities, save these all under
+//an activities collection in db
+
+//can call the megafetch multiple times using a different param for each
+//and then store those
 
 
 const fetch = require('node-fetch');
@@ -11,8 +16,13 @@ const cheerio = require('cheerio');
 const NUM_PAGES = 1;
 
 //add new category in json returned and use these as categories
+//landmarks, nightlife, and shopping are all pretty straightforward
 const LANDMARKS = "landmarks";
 const NIGHTLIFE = "nightlife";
+const SHOPPING = "shopping";
+
+//outdoors can be a lot of things, need to split into different subcategories
+const OUTDOORS = "outdoors"
 
 const async = require('asyncawait/async');
 
@@ -43,13 +53,13 @@ async function megaScrape(category) {
         const $name = $element.find(".biz-name");
         const $numReviews = $element.find(".review-count");
         const $address = $element.find("address");
-        const $category = $element.find(".category-str-list a");
+        const $category = $element.find(".category-str-list");
         const $rating = $element.find(".i-stars");
         const $price = $element.find(".business-attribute ,price-range");
         const $image = $element.find(".photo-box-img");
         // console.log($rating.text());
 
-        
+
         const landmark = {
           name: $name.text(),
           numReviews: $numReviews.text(),
@@ -85,4 +95,4 @@ async function megaScrape(category) {
 }
 
 //change this to get different categories
-megaScrape(NIGHTLIFE);
+megaScrape(SHOPPING);
