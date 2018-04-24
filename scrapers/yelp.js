@@ -10,6 +10,10 @@ const cheerio = require('cheerio');
 //need to multiply NUM_PAGES by 10 or something
 const NUM_PAGES = 1;
 
+//add new category in json returned and use these as categories
+const LANDMARKS = "landmarks";
+const NIGHTLIFE = "nightlife";
+
 const async = require('asyncawait/async');
 
 function scrape(resultNum) {
@@ -21,7 +25,7 @@ function scrape(resultNum) {
 let allLandmarks = [];
 
 //ignore linter here
-async function megaScrape() {
+async function megaScrape(category) {
 
   //0 is 10 results 0-10
   for(let page = 0; page < NUM_PAGES; page++) {
@@ -40,16 +44,16 @@ async function megaScrape() {
         const $numReviews = $element.find(".review-count");
         const $address = $element.find("address");
         const $category = $element.find(".category-str-list a");
-        const $rating = $element.find(".i-stars")
+        const $rating = $element.find(".i-stars");
 
         // console.log($rating.text());
-
         const landmark = {
           name: $name.text(),
           numReviews: $numReviews.text(),
           address: $address.text(),
-          category: $category.text(),
+          tags: $category.text(),
           rating: $rating.attr('title'),
+          category: category,
         };
 
         landmarks.push(landmark);
@@ -62,6 +66,7 @@ async function megaScrape() {
 
   }
 
+  //gets rid of all line breaks and extra spaces
   for(let i = 0; i < allLandmarks.length; i++) {
     Object.keys(allLandmarks[i]).forEach( (key) => {
       let value = allLandmarks[i][key].replace(/(?:\r\n|\r|\n)/g, ' ');
@@ -74,4 +79,4 @@ async function megaScrape() {
   console.log(allLandmarks);
 }
 
-megaScrape();
+megaScrape(LANDMARKS);
