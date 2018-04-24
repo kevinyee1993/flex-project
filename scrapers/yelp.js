@@ -16,8 +16,8 @@ const NIGHTLIFE = "nightlife";
 
 const async = require('asyncawait/async');
 
-function scrape(resultNum) {
-  let url = `https://www.yelp.com/search?find_desc=landmarks&find_loc=San+Francisco+Bay+Area,+CA&start=`;
+function scrape(resultNum, category) {
+  let url = `https://www.yelp.com/search?find_desc=${ category }&find_loc=San+Francisco+Bay+Area,+CA&start=`;
   return fetch(`${url}${resultNum}`)
   .then(response => response.text());
 }
@@ -31,7 +31,7 @@ async function megaScrape(category) {
   for(let page = 0; page < NUM_PAGES; page++) {
 
     //0 gives 0 which gives first 10 results, 1 gives 10, 2 gives 20, etc.
-    await scrape(page * 10)
+    await scrape(page * 10, category)
     .then(body => {
       const landmarks = [];
       const $ = cheerio.load(body);
@@ -45,6 +45,7 @@ async function megaScrape(category) {
         const $address = $element.find("address");
         const $category = $element.find(".category-str-list a");
         const $rating = $element.find(".i-stars");
+        const $price = $element.find(".business-attribute ,price-range");
 
         // console.log($rating.text());
         const landmark = {
@@ -53,6 +54,7 @@ async function megaScrape(category) {
           address: $address.text(),
           tags: $category.text(),
           rating: $rating.attr('title'),
+          price: $price.text(),
           category: category,
         };
 
@@ -79,4 +81,5 @@ async function megaScrape(category) {
   console.log(allLandmarks);
 }
 
-megaScrape(LANDMARKS);
+//change this to get different categories
+megaScrape(NIGHTLIFE);
