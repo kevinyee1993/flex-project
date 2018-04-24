@@ -1,0 +1,54 @@
+/*------------------------------------------------------------------
+[Stylesheet]
+Color Palette - Orange
+
+background_solid    { background: #ef6c00; }
+button              { background: #ff9800; }
+button_hover        { background: #ff9e0d; }
+-------------------------------------------------------------------*/
+
+.btn,
+.btn-large {
+	background-color: #ff9800;
+}
+
+.btn:hover,
+.btn-large:hover {
+	background-color: #ff9e0d;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=date]:focus,
+textarea:focus {
+	border-bottom: 1px solid #ff9800;
+    -webkit-box-shadow: 0 1px 0 0 #ff9800;
+    -moz-box-shadow: 0 1px 0 0 #ff9800;
+    box-shadow: 0 1px 0 0 #ff9800; 
+}
+
+.hero_fullscreen.background_solid {
+	background-color: #ef6c00;
+}
+
+a {
+	color:#ff9800
+}
+
+.hero_fullscreen.gradient_overlay {
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-linear-gradient(top left, #E65100 0%, #FFEB3B 100%);
+	
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(top left, #E65100 0%, #FFEB3B 100%);
+	
+	/* Opera */ 
+	background-image: -o-linear-gradient(top left, #E65100 0%, #FFEB3B 100%);
+	
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #E65100), color-stop(1, #FFEB3B));
+	
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(top left, #E65100 0%, #FFEB3B 100%);
+}

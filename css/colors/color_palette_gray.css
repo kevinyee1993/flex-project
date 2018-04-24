@@ -1,0 +1,54 @@
+/*------------------------------------------------------------------
+[Stylesheet]
+Color Palette - Gray
+
+background_solid    { background: #424242; }
+button              { background: #9e9e9e; }
+button_hover        { background: #ababab; }
+-------------------------------------------------------------------*/
+
+.btn,
+.btn-large {
+	background-color: #9e9e9e;
+}
+
+.btn:hover,
+.btn-large:hover {
+	background-color: #ababab;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=date]:focus,
+textarea:focus {
+	border-bottom: 1px solid #9e9e9e;
+    -webkit-box-shadow: 0 1px 0 0 #9e9e9e;
+    -moz-box-shadow: 0 1px 0 0 #9e9e9e;
+    box-shadow: 0 1px 0 0 #9e9e9e; 
+}
+
+.hero_fullscreen.background_solid {
+	background-color: #424242;
+}
+
+a {
+	color:#9e9e9e
+}
+
+.hero_fullscreen.gradient_overlay {
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-linear-gradient(top left, #4E342E 0%, #546E7A 100%);
+	
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(top left, #4E342E 0%, #546E7A 100%);
+	
+	/* Opera */ 
+	background-image: -o-linear-gradient(top left, #4E342E 0%, #546E7A 100%);
+	
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #4E342E), color-stop(1, #546E7A));
+	
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(top left, #4E342E 0%, #546E7A 100%);
+}
