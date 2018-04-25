@@ -30,8 +30,12 @@ const TOURS = "tours";
 const async = require('asyncawait/async');
 
 function scrape(resultNum, category) {
-  let url = `https://www.yelp.com/search?find_desc=${ category }&sortby=rating&find_loc=San+Francisco,+CA&start=`;
-  // https://www.yelp.com/search?find_desc=Shopping+Centers&find_loc=San+Francisco,+CA&start=0&sortby=rating
+  let url;
+  if(category === NIGHTLIFE){
+    url = 'https://www.yelp.com/search?find_desc=nightlife&find_loc=San+Francisco,+CA&sortby=review_count&start=';
+  } else {
+    url = `https://www.yelp.com/search?find_desc=${ category }&sortby=rating&find_loc=San+Francisco,+CA&start=`;
+  }
   return fetch(`${url}${resultNum}`)
   .then(response => response.text());
 }
@@ -64,6 +68,11 @@ async function megaScrape(category) {
         // console.log($rating.text());
 
 
+        //set this up to switch the main categories depending on what you searched for
+        let mainCategory;
+
+
+
         const landmark = {
           name: $name.text(),
           numReviews: $numReviews.text(),
@@ -72,6 +81,7 @@ async function megaScrape(category) {
           rating: $rating.attr('title'),
           price: $price.text(),
           image: $image.attr('src'),
+          //change this to mainCategory for yihwan's survey data but not necessarily for winston's AI
           category: category,
         };
 
@@ -99,4 +109,4 @@ async function megaScrape(category) {
 }
 
 //change this to get different categories
-megaScrape(TOURS);
+megaScrape(NIGHTLIFE);
