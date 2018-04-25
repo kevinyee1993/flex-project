@@ -9,21 +9,18 @@ class Header extends React.Component {
   render() {
 
     return(
-      <div>
-        <rb.Navbar>
-          <rb.Navbar.Header>
-            <rb.Navbar.Brand>
-              flex-project
-            </rb.Navbar.Brand>
-          </rb.Navbar.Header>
-
-          <rb.Nav pullRight>
-            <rb.NavItem eventKey={1} href="#">
-              MY ITINERARY
-            </rb.NavItem>
-          </rb.Nav>
-        </rb.Navbar>
-      </div>
+      <rb.Navbar>
+        <rb.Navbar.Header>
+          <rb.Navbar.Brand>
+            flex-project
+          </rb.Navbar.Brand>
+        </rb.Navbar.Header>
+        <rb.Nav pullRight>
+          <rb.NavItem eventKey={1} href="#">
+            MY ITINERARY
+          </rb.NavItem>
+        </rb.Nav>
+      </rb.Navbar>
     );
   }
 }
