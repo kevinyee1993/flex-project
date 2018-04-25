@@ -79,7 +79,8 @@ async function megaScrape(category) {
         //set this up to switch the main categories depending on what you searched for
         let mainCategory = checkMainCategory(category);
 
-
+        //converts all $ prices to numbers so that it's easier to query
+        let priceToNum = $price.text().length;
 
         const activity = {
           name: $name.text(),
@@ -87,7 +88,8 @@ async function megaScrape(category) {
           address: $address.text(),
           tags: $category.text(),
           rating: $rating.attr('title'),
-          price: $price.text(),
+          // price: $price.text(),
+          price: priceToNum,
           image: $image.attr('src'),
           //change this to mainCategory for yihwan's survey data but not necessarily for winston's AI
           category: mainCategory,
@@ -106,17 +108,22 @@ async function megaScrape(category) {
   //gets rid of all line breaks and extra spaces
   for(let i = 0; i < allActivities.length; i++) {
     Object.keys(allActivities[i]).forEach( (key) => {
-      let value = allActivities[i][key].replace(/(?:\r\n|\r|\n)/g, ' ');
-      value = value.replace(/ +(?= )/g,'');
-      value = value.trim();
-      allActivities[i][key] = value;
+
+      if(key === "price") {
+        //do not clean up the data if we're looking at price
+      } else {
+        let value = allActivities[i][key].replace(/(?:\r\n|\r|\n)/g, ' ');
+        value = value.replace(/ +(?= )/g,'');
+        value = value.trim();
+        allActivities[i][key] = value;
+      }
     });
   }
 
-  // console.log(allActivities);
-  for(let i = 0; i < allActivities.length; i++) {
-    await PostToDatabase('activities', allActivities[i]);
-  }
+  console.log(allActivities);
+  // for(let i = 0; i < allActivities.length; i++) {
+    // await PostToDatabase('activities', allActivities[i]);
+  // }
 }
 
 //categorizes all the subactivities into 1 of 4 main affinity categories
@@ -136,7 +143,7 @@ function checkMainCategory(category) {
 //change this to get different categories
 //going to have a whole bunch of activities of diff categories
 // megaScrape(LANDMARKS);
-// megaScrape(NIGHTLIFE);
+megaScrape(NIGHTLIFE);
 // megaScrape(SHOPPING);
 // megaScrape(SPAS);
 // megaScrape(MUSEUMS);
