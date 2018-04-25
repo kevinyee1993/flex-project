@@ -19,15 +19,19 @@ const NUM_PAGES = 1;
 //landmarks, nightlife, and shopping are all pretty straightforward
 const LANDMARKS = "landmarks";
 const NIGHTLIFE = "nightlife";
-const SHOPPING = "shopping";
+const SHOPPING = "Shopping+Centers";
 
 //outdoors can be a lot of things, need to split into different subcategories
-const OUTDOORS = "outdoors"
+const SPAS = "spas";
+const MUSEUMS = "museums";
+const PARKS = "parks";
+const TOURS = "tours";
 
 const async = require('asyncawait/async');
 
 function scrape(resultNum, category) {
-  let url = `https://www.yelp.com/search?find_desc=${ category }&find_loc=San+Francisco+Bay+Area,+CA&start=`;
+  let url = `https://www.yelp.com/search?find_desc=${ category }&sortby=rating&find_loc=San+Francisco,+CA&start=`;
+  // https://www.yelp.com/search?find_desc=Shopping+Centers&find_loc=San+Francisco,+CA&start=0&sortby=rating
   return fetch(`${url}${resultNum}`)
   .then(response => response.text());
 }
@@ -95,4 +99,4 @@ async function megaScrape(category) {
 }
 
 //change this to get different categories
-megaScrape(SHOPPING);
+megaScrape(TOURS);
