@@ -9,10 +9,12 @@ import {
 } from 'react-router-dom';
 
 import Header from './header';
+import Survey from './main/survey';
 
 const App = () => (
   <div>
-    <Header /> 
+    <Header />
+    <Survey /> 
   </div>
 
 );
