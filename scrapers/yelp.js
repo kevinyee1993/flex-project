@@ -141,4 +141,4 @@ function checkMainCategory(category) {
 // megaScrape(SPAS);
 // megaScrape(MUSEUMS);
 // megaScrape(PARKS);
-megaScrape(TOURS);
+// megaScrape(TOURS);

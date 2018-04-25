@@ -20,3 +20,8 @@ const App = () => (
 );
 
 export default App;
+
+//ds161483.mlab.com:61483/flexproject -u kevinmongo -p appacademy1
+
+//USE THIS COMMAND TO CONNECT TO MONGO SHELL IN TERMINAL
+//~/mongodb/mongodb-osx-x86_64-3.6.4/bin/mongo ds161483.mlab.com:61483/flexproject -u testuser -p password
