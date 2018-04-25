@@ -1,6 +1,7 @@
 import React from 'react';
 import * as rb from 'react-bootstrap';
 import LargeImageOptions from './large_image';
+import SmallImageOptions from './small_image';
 import Question from './question';
 
 class Survey extends React.Component {
