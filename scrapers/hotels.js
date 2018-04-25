@@ -1,4 +1,5 @@
 //SCRAPER FOR hotels.com, SF
+const PostToDatabase = require('../app/util/post_request');
 
 const fetch = require('node-fetch');
 const cheerio = require('cheerio');
@@ -80,7 +81,10 @@ async function megaScrape() {
       allHotels = allHotels.concat(hotels);
     });
   }
-  console.log(allHotels);
+
+  for(let i = 0; i < allHotels.length; i++) {
+    await PostToDatabase('lodging', allHotels[i]);
+  }
 }
 
 megaScrape();
