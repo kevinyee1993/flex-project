@@ -1,9 +1,10 @@
-//SCRAPER FOR YELP, specifically landmarks
+//SCRAPER FOR YELP, all activities
 //yelp scraper is dedicated to different activities, save these all under
 //an activities collection in db
 
 //can call the megafetch multiple times using a different param for each
 //and then store those
+const PostToDatabase = require('../app/util/post_request');
 
 
 const fetch = require('node-fetch');
@@ -47,7 +48,7 @@ function scrape(resultNum, category) {
   .then(response => response.text());
 }
 
-let allLandmarks = [];
+let allActivities = [];
 
 //ignore linter here
 async function megaScrape(category) {
@@ -58,7 +59,7 @@ async function megaScrape(category) {
     //0 gives 0 which gives first 10 results, 1 gives 10, 2 gives 20, etc.
     await scrape(page * 10, category)
     .then(body => {
-      const landmarks = [];
+      const activities = [];
       const $ = cheerio.load(body);
 
       $('.regular-search-result').each((i, element) => {
@@ -80,7 +81,7 @@ async function megaScrape(category) {
 
 
 
-        const landmark = {
+        const activity = {
           name: $name.text(),
           numReviews: $numReviews.text(),
           address: $address.text(),
@@ -92,29 +93,31 @@ async function megaScrape(category) {
           category: mainCategory,
         };
 
-        landmarks.push(landmark);
+        activities.push(activity);
       });
 
 
-    allLandmarks = allLandmarks.concat(landmarks);
+    allActivities = allActivities.concat(activities);
 
     });
 
   }
 
   //gets rid of all line breaks and extra spaces
-  for(let i = 0; i < allLandmarks.length; i++) {
-    Object.keys(allLandmarks[i]).forEach( (key) => {
-      let value = allLandmarks[i][key].replace(/(?:\r\n|\r|\n)/g, ' ');
+  for(let i = 0; i < allActivities.length; i++) {
+    Object.keys(allActivities[i]).forEach( (key) => {
+      let value = allActivities[i][key].replace(/(?:\r\n|\r|\n)/g, ' ');
       value = value.replace(/ +(?= )/g,'');
       value = value.trim();
-      allLandmarks[i][key] = value;
+      allActivities[i][key] = value;
     });
   }
 
-  console.log(allLandmarks);
+  // console.log(allActivities);
+  for(let i = 0; i < allActivities.length; i++) {
+    await PostToDatabase('activities', allActivities[i]);
+  }
 }
-
 
 //categorizes all the subactivities into 1 of 4 main affinity categories
 //helps to organize db
@@ -131,4 +134,11 @@ function checkMainCategory(category) {
 }
 
 //change this to get different categories
+//going to have a whole bunch of activities of diff categories
+// megaScrape(LANDMARKS);
+// megaScrape(NIGHTLIFE);
+// megaScrape(SHOPPING);
+// megaScrape(SPAS);
+// megaScrape(MUSEUMS);
+// megaScrape(PARKS);
 megaScrape(TOURS);

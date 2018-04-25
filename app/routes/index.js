@@ -3,10 +3,12 @@
 const noteRoutes = require('./note_routes');
 const restaurantRoutes = require('./restaurant_routes');
 const lodgingRoutes = require('./lodging_routes');
+const activityRoutes = require('./activity_routes');
 
 module.exports = function(app, db) {
   noteRoutes(app, db);
   restaurantRoutes(app, db);
   lodgingRoutes(app, db);
+  activityRoutes(app, db);
   // Other route groups could go here, in the future
 };
