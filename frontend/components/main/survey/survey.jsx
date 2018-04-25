@@ -45,7 +45,6 @@ class Survey extends React.Component {
       <rb.Grid>
         <rb.Row className="survey-question">
           <rb.Col xs={12} sm={10} smOffset={1} md={8} mdOffset={2}>
-            <br />
             <h3>How do you like them apples?</h3>
           </rb.Col>
         </rb.Row>
