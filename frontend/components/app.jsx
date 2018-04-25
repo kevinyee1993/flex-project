@@ -12,9 +12,7 @@ import Header from './header';
 
 const App = () => (
   <div>
-    <h1>
-      I am app through Root.
-    </h1>
+    <Header /> 
   </div>
 
 );
