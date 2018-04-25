@@ -17,8 +17,8 @@ module.exports = function(app, db) {
   });
 
   app.post('/lodging', (req, res) => {
-      const note = { text: req.body.body, title: req.body.title };
-      db.collection('Lodging').insert(note, (err, result) => {
+
+      db.collection('Lodging').insert(req.body, (err, result) => {
         if (err) {
           res.send({ 'error': 'An error has occurred' });
         } else {

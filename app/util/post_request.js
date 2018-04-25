@@ -6,9 +6,6 @@
 const axios = require('axios');
 
 module.exports = function(routeName, object) {
-  //testing method out 2
-  // console.log(routeName);
-  // console.log(object);
 
 //TODO: change this URL when in production
   axios.post(`http://localhost:8000/${ routeName }`, object)
@@ -18,16 +15,5 @@ module.exports = function(routeName, object) {
     })
     .catch(function (error) {
       console.log(error);
-      // console.log(object);
     });
-
-
-//testing method out 2
-    // axios({
-    //   method: 'post',
-    //   url: `${ routeName }`,
-    //   data: {object},
-    // });
-
-
 };

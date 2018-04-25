@@ -19,18 +19,6 @@ module.exports = function(app, db) {
 
   //post route for restaurants
   app.post('/restaurants', (req, res) => {
-      // const note = { text: req.body.body, title: req.body.title };
-      // const restaurant = { name: req.body.name,
-      //   category: req.body.category,
-      //   location: req.body.location,
-      //   numReviews: req.body.numReviews,
-      //   recommendations: req.body.recommendations };
-      // console.log('test');
-      // console.log(req.body);
-      //delete this after
-
-      const test = {body: "hello"};
-      console.log(req.body);
 
       //delete the check here too
       db.collection('Restaurants').insert(req.body, (err, result) => {
