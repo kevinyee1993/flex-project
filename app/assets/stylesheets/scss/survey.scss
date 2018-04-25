@@ -1,0 +1,31 @@
+.survey-question {
+  h3 {
+    font-weight: 500;
+  }
+}
+
+
+.survey-answer {
+  .all-options {
+
+    .option-container {
+      border: 1px solid red;
+
+
+      .option {
+        border: 1px solid blue;
+        max-width: 300px;
+
+        img {
+          width: 100%;
+
+        }
+
+        .caption {
+
+        }
+
+      }
+    }
+  }
+}

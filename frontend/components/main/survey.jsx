@@ -6,46 +6,58 @@ class Survey extends React.Component {
     super(props);
   }
 
-  render() {
-    const dummySentences = [
-      'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
-      'Donec hendrerit tempor tellus.',
-      'Donec pretium posuere tellus.',
-      'Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus.',
-      'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
-      'Nulla posuere.',
-      'Donec vitae dolor.',
-      'Nullam tristique diam non turpis.',
-      'Cras placerat accumsan nulla.',
-      'Nullam rutrum.',
-      'Nam vestibulum accumsan nisl.'
+  renderBigOptions() {
+    const images = [
+      <img src="https://images.unsplash.com/photo-1496939217462-7d42e9a74f0e" alt="option"/>,
+      <img src="https://images.unsplash.com/photo-1496939217462-7d42e9a74f0e" alt="option"/>,
+      <img src="https://images.unsplash.com/photo-1496939217462-7d42e9a74f0e" alt="option"/>,
+      <img src="https://images.unsplash.com/photo-1496939217462-7d42e9a74f0e" alt="option"/>
+    ];
+
+    const captions = [
+      "Lalala",
+      "Lalala",
+      "Lalala",
+      "Lalala"
     ];
 
     return(
+      images.map((image, idx) => (
+        <rb.Col xs={12} sm={6} className="option-container">
+          <div className="option">
+            {image}
+
+            <div className="caption">
+              {captions[idx]}
+            </div>
+          </div>
+        </rb.Col>
+      ))
+    );
+
+  }
+
+  render() {
+
+
+    return(
+
       <rb.Grid>
-        <rb.Row className="show-grid">
-          <rb.Col sm={6} md={3}>
-            <code>&lt;{'Col sm={6} md={3}'} /&gt;</code>
+        <rb.Row className="survey-question">
+          <rb.Col xs={12} sm={10} smOffset={1} md={8} mdOffset={2}>
             <br />
-            {dummySentences.slice(0, 6).join(' ')}
+            <h3>How do you like them apples?</h3>
           </rb.Col>
-          <rb.Col sm={6} md={3}>
-            <code>&lt;{'Col sm={6} md={3}'} /&gt;</code>
-            <br />
-            {dummySentences.slice(0, 4).join(' ')}
-          </rb.Col>
-          <rb.Col sm={6} md={3}>
-            <code>&lt;{'Col sm={6} md={3}'} /&gt;</code>
-            <br />
-            {dummySentences.slice(0, 6).join(' ')}
-          </rb.Col>
-          <rb.Col sm={6} md={3}>
-            <code>&lt;{'Col sm={6} md={3}'} /&gt;</code>
-            <br />
-            {dummySentences.slice(0, 2).join(' ')}
+        </rb.Row>
+        <rb.Row className="survey-answer">
+          <rb.Col xs={12} sm={10} smOffset={1} md={8} mdOffset={2}>
+            <rb.ListGroup className="all-options">
+              {this.renderBigOptions()}
+            </rb.ListGroup>
           </rb.Col>
         </rb.Row>
       </rb.Grid>
+
     );
   }
 }
