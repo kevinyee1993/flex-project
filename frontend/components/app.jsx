@@ -10,7 +10,9 @@ import {
 
 const App = () => (
   <div>
-    I am app through Root.
+    <h1>
+      I am app through Root.
+    </h1>
   </div>
 
 );
