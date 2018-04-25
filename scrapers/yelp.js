@@ -27,6 +27,13 @@ const MUSEUMS = "museums";
 const PARKS = "parks";
 const TOURS = "tours";
 
+const CULTURE_CAT = [ MUSEUMS, LANDMARKS ];
+const LEISURE_CAT = [ SHOPPING, SPAS ];
+const OUTDOOR_CAT = [ PARKS, TOURS ];
+const NIGHTLIFE_CAT = [ NIGHTLIFE ];
+
+
+
 const async = require('asyncawait/async');
 
 function scrape(resultNum, category) {
@@ -69,7 +76,7 @@ async function megaScrape(category) {
 
 
         //set this up to switch the main categories depending on what you searched for
-        let mainCategory;
+        let mainCategory = checkMainCategory(category);
 
 
 
@@ -82,7 +89,7 @@ async function megaScrape(category) {
           price: $price.text(),
           image: $image.attr('src'),
           //change this to mainCategory for yihwan's survey data but not necessarily for winston's AI
-          category: category,
+          category: mainCategory,
         };
 
         landmarks.push(landmark);
@@ -108,5 +115,20 @@ async function megaScrape(category) {
   console.log(allLandmarks);
 }
 
+
+//categorizes all the subactivities into 1 of 4 main affinity categories
+//helps to organize db
+function checkMainCategory(category) {
+  if(CULTURE_CAT.includes(category)) {
+    return "culture";
+  } else if (LEISURE_CAT.includes(category)) {
+    return "leisure";
+  } else if (OUTDOOR_CAT.includes(category)) {
+    return "outdoor";
+  } else if (NIGHTLIFE_CAT.includes(category)) {
+    return "nightlife";
+  }
+}
+
 //change this to get different categories
-megaScrape(NIGHTLIFE);
+megaScrape(TOURS);
