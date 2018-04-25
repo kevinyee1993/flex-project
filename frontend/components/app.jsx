@@ -9,12 +9,12 @@ import {
 } from 'react-router-dom';
 
 import Header from './header';
+import Survey from './main/survey';
 
 const App = () => (
   <div>
-    <h1>
-      I am app through Root.
-    </h1>
+    <Header />
+    <Survey /> 
   </div>
 
 );
