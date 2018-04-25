@@ -8,6 +8,8 @@ import {
   HashRouter
 } from 'react-router-dom';
 
+import Header from './header';
+
 const App = () => (
   <div>
     <h1>
