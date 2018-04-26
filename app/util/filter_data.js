@@ -14,18 +14,23 @@
 //then need to send all of this data back to the user
 //figure out how to do this
 
-var MongoClient = require('mongodb').MongoClient;
-// var url = "mongodb://localhost:27017/";
-let url = 'mongodb://testuser:password@ds161483.mlab.com:61483/flexproject';
 
-MongoClient.connect(url, function(err, db) {
+//put the query in the params rather than creating it yourself in line 29
+module.exports  = function filterData(query) {
+  var MongoClient = require('mongodb').MongoClient;
+  // var url = "mongodb://localhost:27017/";
+  let url = 'mongodb://testuser:password@ds161483.mlab.com:61483/flexproject';
 
-  if (err) throw err;
-  // var dbo = db.db("mydb");
-  var query = { price: 0 };
-  db.collection("Activities").find(query).toArray(function(err, result) {
+  MongoClient.connect(url, function(err, db) {
+
     if (err) throw err;
-    console.log(result);
-    db.close();
+    // var dbo = db.db("mydb");
+    //change this query to whatever is passed in
+    // var query = { price: 1 };
+    db.collection("Activities").find(query).toArray(function(err, result) {
+      if (err) throw err;
+      console.log(result);
+      db.close();
+    });
   });
-});
+}
