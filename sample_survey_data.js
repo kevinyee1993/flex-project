@@ -54,31 +54,25 @@ const rawResponseThree = {
 // Parsed Response
 
 const parsedResponseOne = {
-  "budget": 1,
-  "activityPreferences": {
-    "outdoors": 2,
-    "spa/shopping": 4,
-    "nightlife": 3,
-    "culture": 1
-  }
+  "nightlife": 3,
+  "outdoors": 2,
+  "culture": 1,
+  "spa/shopping": 4,
+  "budget": 1
 };
 
 const parsedResponseTwo = {
-  "budget": 3,
-  "activityPreferences": {
-    "outdoors": 2,
-    "spa/shopping": 1,
-    "nightlife": 3,
-    "culture": 4
-  }
+  "nightlife": 3,
+  "outdoors": 2,
+  "culture": 4,
+  "spa/shopping": 1,
+  "budget": 3
 };
 
 const parsedResponseThree = {
-  "budget": 4,
-  "activityPreferences": {
-    "outdoors": 3,
-    "spa/shopping": 1,
-    "nightlife": 4,
-    "culture": 2
-  }
+  "nightlife": 4,
+  "outdoors": 3,
+  "culture": 2,
+  "spa/shopping": 1,
+  "budget": 4
 };

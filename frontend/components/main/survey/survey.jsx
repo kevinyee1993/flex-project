@@ -44,13 +44,11 @@ class Survey extends React.Component {
 
   handleResponse() {
     let parsedResponse = {
-      "budget": null,
-      "activityPreferences": {
-        "outdoors": null,
-        "spa/shopping": null,
-        "nightlife": null,
-        "culture": null
-      }
+      "nightlife": null,
+      "outdoors": null,
+      "culture": null,
+      "spa/shopping": null,
+      "budget": null
     };
 
     parsedResponse["budget"] = this.state.responses[0] + 1;
