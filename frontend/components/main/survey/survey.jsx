@@ -27,14 +27,58 @@ class Survey extends React.Component {
 
   saveResponse(questionNumber, option) {
     let responses = this.state.responses;
-    responses[questionNumber] = option + 1;
+    responses[questionNumber] = option;
     this.setState({ responses });
 
     this.nextStep();
   }
 
   nextStep() {
-    this.setState({ step: this.state.step + 1 });
+    if (this.state.step >= 10 ) {
+      console.log(this.state);
+      this.handleResponse();
+    } else {
+      this.setState({ step: this.state.step + 1 });
+    }
+  }
+
+  handleResponse() {
+    let parsedResponse = {
+      "budget": null,
+      "activityPreferences": {
+        "outdoors": null,
+        "spa/shopping": null,
+        "nightlife": null,
+        "culture": null
+      }
+    };
+
+    parsedResponse["budget"] = this.state.responses[0] + 1;
+
+    let pairQuestionIndices = [1, 3, 4, 6, 8, 10];
+    let pairResponses = {};
+
+    for (var key in this.state.responses) {
+      if (pairQuestionIndices.includes(parseInt(key))) {
+        pairResponses[key] = this.state.responses[key];
+      }
+    }
+
+    this.generatePreferenceOrdering(pairResponses);
+  }
+
+  generatePreferenceOrdering(pairResponses) {
+    const pairAssignments = {
+      1: [3, 4],
+      3: [2, 3],
+      4: [2, 4],
+      6: [1, 3],
+      8: [1, 2],
+      10: [1, 4]
+    };
+
+    const preferenceOrdering = [];
+
   }
 
   render() {
