@@ -1,12 +1,25 @@
 import React from 'react';
 import * as rb from 'react-bootstrap';
-import LargeImageOptions from './large_image';
-import SmallImageOptions from './small_image';
-import Question from './question';
+import {
+  Question1,
+  Question2
+} from './actual_questions';
 
 class Survey extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      step: 1,
+      responses: {
+        1: null,
+        2: null
+      }
+    };
+  }
+
+  saveResponse(questionNumber, option) {
+    console.log(questionNumber, option);
   }
 
   render() {
@@ -26,12 +39,21 @@ class Survey extends React.Component {
       "Lalala"
     ];
 
-    return(
-      <rb.Grid>
-        <Question question={question} />
-        <LargeImageOptions images={images} captions={captions}/>
-      </rb.Grid>
-    );
+    switch (this.state.step) {
+      case 0:
+        return(
+          <Question1
+            saveResponse={this.saveResponse}
+          />
+        );
+      case 1:
+        return(
+          <Question2
+            saveResponse={this.saveResponse}
+          />
+        );
+      default:
+    }
   }
 }
 

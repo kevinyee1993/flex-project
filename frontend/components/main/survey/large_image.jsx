@@ -1,11 +1,11 @@
 import React from 'react';
 import * as rb from 'react-bootstrap';
 
-export default ({ images, captions }) => {
+export default ({ images, captions, questionNumber, saveResponse }) => {
   let options =
     images.map((image, idx) => (
-      <rb.Col xs={12} sm={6} className="option-container">
-        <div className="option">
+      <rb.Col xs={12} sm={6} className="option-container" key={idx}>
+        <div className="option" onClick={() => saveResponse(questionNumber, idx)}>
           {image}
 
           <div className="caption">
