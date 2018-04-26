@@ -11,7 +11,11 @@ class Survey extends React.Component {
       step: 0,
       responses: {
         1: null,
-        2: null
+        2: null,
+        3: null,
+        4: null,
+        5: null,
+        6: null
       }
     };
   }
