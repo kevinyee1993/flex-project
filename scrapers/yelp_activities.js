@@ -48,10 +48,10 @@ function scrape(resultNum, category) {
   .then(response => response.text());
 }
 
-let allActivities = [];
 
 //ignore linter here
-async function megaScrape(category) {
+module.exports = async function megaScrape(category) {
+  let allActivities = [];
 
   //0 is 10 results 0-10
   for(let page = 0; page < NUM_PAGES; page++) {

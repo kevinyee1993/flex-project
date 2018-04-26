@@ -5,7 +5,7 @@ export default ({ images, questionNumber, saveResponse }) => {
   let options =
     images.map((image, idx) => (
       <rb.Col xs={12} sm={6} className="option-container" key={idx}>
-        <div className="option" onClick={() => saveResponse(questionNumber, idx)}>
+        <div className="option large-opt" onClick={() => saveResponse(questionNumber, idx)}>
           {image}
         </div>
       </rb.Col>
