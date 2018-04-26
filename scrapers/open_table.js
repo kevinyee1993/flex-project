@@ -1,4 +1,5 @@
 //SCRAPER FOR OPENTABLE, SF RESTAURANTS, ALL CUISINE
+const PostToDatabase = require('../app/util/post_request');
 
 const fetch = require('node-fetch');
 const cheerio = require('cheerio');
@@ -70,7 +71,9 @@ async function megaScrape() {
     });
   }
 
-  console.log(allRestaurants);
+  for(let i = 0; i < allRestaurants.length; i++) {
+    await PostToDatabase('restaurants', allRestaurants[i]);
+  }
 }
-
+]
 megaScrape();

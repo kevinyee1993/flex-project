@@ -1,26 +1,43 @@
 {
   "name": "scraperPractice",
   "version": "1.0.0",
-  "description": "{# Trip Planner (think of new name later) **Trip Planner is an app that intelligently recommends trip itinerary suggestions based on a user’s background and preferences.**",
+  "description": "# Trip Planner (think of new name later) **Trip Planner is an app that intelligently recommends trip itinerary suggestions based on a user’s background and preferences.**",
   "main": "eventbrite.js",
   "dependencies": {
     "asyncawait": "^1.0.6",
+    "axios": "^0.18.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
     "body-parser": "^1.18.2",
     "cheerio": "^1.0.0-rc.2",
     "express": "^4.16.3",
     "jsonframe-cheerio": "^3.0.1",
-    "mongodb": "^2.2.16",
+    "lodash": "^4.17.9",
+    "mongodb": "^2.2.35",
     "node-fetch": "^2.1.2",
+<<<<<<< HEAD
     "python-virtualenv": "0.0.4",
+=======
+    "node-sass": "^4.8.3",
+    "react": "^16.3.2",
+    "react-bootstrap": "^0.32.1",
+    "react-dom": "^16.3.2",
+    "react-router-dom": "^4.2.2",
+>>>>>>> db06acf8ab288a483a4db6a53fe56eaeefbbfa05
     "request": "^2.85.0",
-    "request-promise": "^4.2.2"
+    "request-promise": "^4.2.2",
+    "webpack": "^3.9.1"
   },
   "devDependencies": {
     "nodemon": "^1.17.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "webpack": "webpack --watch",
+    "scss": "node-sass --include-path scss app/assets/stylesheets/main.scss app/assets/stylesheets/application.css"
   },
   "repository": {
     "type": "git",

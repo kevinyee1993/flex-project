@@ -1,0 +1,5 @@
+List of tech used:
+node.js
+Express
+MongoDB
+Axios for AJAX requests
