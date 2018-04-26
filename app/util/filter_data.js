@@ -9,29 +9,6 @@ let url = 'mongodb://testuser:password@ds161483.mlab.com:61483/flexproject';
 
 MongoClient.connect(url, function(err, db) {
 
-  // console.log(db.collection("Activities").find({price: "$$"}));
-  // if (err) throw err;
-  // var dbo = db.db("mydb");
-  // var query = { address: "Park Lane 38" };
-  // dbo.collection("customers").find(query).toArray(function(err, result) {
-  //   if (err) throw err;
-  //   console.log(result);
-  //   db.close();
-  // });
-
-
-
-  // if (err) throw err;
-  // // var dbo = db.db("mydb");
-  // var query = { price: "$$" };
-  // db.collection("Activities").find(query).toArray(function(err, result) {
-  //   if (err) throw err;
-  //   console.log(result);
-  //   db.close();
-  // });
-
-  // console.log(db.collection("Activities").find({ price: 1 }));
-
   if (err) throw err;
   // var dbo = db.db("mydb");
   var query = { price: 0 };

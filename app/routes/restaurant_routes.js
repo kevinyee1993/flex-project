@@ -31,11 +31,3 @@ module.exports = function(app, db) {
     });
 
 };
-
-//ajax request would use these routes
-//figure out how to add scraped json into db
-//inefficient way = loop through all json in the array
-//for each key value pair, loop through that and construct it that way
-//actually don't have to loop
-//when making post request, would need to also add data field
-//that data field could be json data and that should update the db
