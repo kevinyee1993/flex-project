@@ -13,6 +13,6 @@ probs = y_pred.tolist()
 bigboy = [zip(i, activities) for i in probs]
 smallboy = bigboy[0]
 smallboy.sort(reverse=True)
-print smallboy
+print smallboy[0:5]
 # print numpy.argsort(gnb_fit.predict_proba(numpy.array([3,4,2,1,4]).reshape(1,-1)), axis=1)[-5:]
 # print to std
