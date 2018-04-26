@@ -120,10 +120,10 @@ async function megaScrape(category) {
     });
   }
 
-  console.log(allActivities);
-  // for(let i = 0; i < allActivities.length; i++) {
-    // await PostToDatabase('activities', allActivities[i]);
-  // }
+  // console.log(allActivities);
+  for(let i = 0; i < allActivities.length; i++) {
+    await PostToDatabase('activities', allActivities[i]);
+  }
 }
 
 //categorizes all the subactivities into 1 of 4 main affinity categories
@@ -143,7 +143,7 @@ function checkMainCategory(category) {
 //change this to get different categories
 //going to have a whole bunch of activities of diff categories
 // megaScrape(LANDMARKS);
-megaScrape(NIGHTLIFE);
+// megaScrape(NIGHTLIFE);
 // megaScrape(SHOPPING);
 // megaScrape(SPAS);
 // megaScrape(MUSEUMS);

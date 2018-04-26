@@ -95,15 +95,15 @@ async function megaScrape(category) {
     });
   }
 
-  console.log(allLodging);
-  // for(let i = 0; i < allLodging.length; i++) {
-    // await PostToDatabase('lodgings', allLodging[i]);
-  // }
+  // console.log(allLodging);
+  for(let i = 0; i < allLodging.length; i++) {
+    await PostToDatabase('lodging', allLodging[i]);
+  }
 }
 
 
 //change this to get different categories
-// megaScrape(HOTELS);
-megaScrape(HOSTELS);
+megaScrape(HOTELS);
+// megaScrape(HOSTELS);
 
 //NOTE, NEED TO CHECK THE TAGS, SOME OF THE HOSTELS RETURNED ARE HOTELS

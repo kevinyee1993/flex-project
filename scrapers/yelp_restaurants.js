@@ -90,7 +90,7 @@ async function megaScrape() {
 
   //uncomment all the stuff below to add to database
   // for(let i = 0; i < allRestaurants.length; i++) {
-    // await PostToDatabase('restaurants', allRestaurants[i]);
+  //   await PostToDatabase('restaurants', allRestaurants[i]);
   // }
 }
 
