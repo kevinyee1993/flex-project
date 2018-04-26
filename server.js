@@ -16,6 +16,21 @@ const app            = express();
 
 const port = process.env.PORT || 8000;
 
+const virtualenv = require('python-virtualenv');
+const { spawn } = require('child_process');
+virtualenv.installEnv();
+virtualenv.installPackage('numpy');
+virtualenv.installPackage('pandas');
+virtualenv.installPackage('python-dateutil');
+virtualenv.installPackage('scikit-learn');
+virtualenv.installPackage('six');
+virtualenv.installPackage('pytz');
+virtualenv.installPackage('scipy');
+const source = spawn('pip', ['freeze']);
+source.stdout.on('data', (data) => {
+  console.log(`stdout: ${data}`);
+});
+
 //express can't process url encoded forms on its own
 //bodyParser downloaded helps us out with that
 
@@ -34,11 +49,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //console logs all the routes that are accessible
 console.log(app._router.stack);
 
-//importing routes for the server to use
-MongoClient.connect(db.url, (err, database) => {
-  if (err) return console.log(err);
-  require('./app/routes')(app, database);
-  app.listen(port, () => {
-    console.log('We are live on ' + port);
-  });
+
+app.listen(port, ()=> {
+  console.log('Hello world');
 });
