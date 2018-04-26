@@ -17,6 +17,7 @@ const app            = express();
 // const port = 8000;
 const port = process.env.PORT || 8000;
 
+<<<<<<< HEAD
 //TODO: dependencies not working here for some reason
 const virtualenv = require('python-virtualenv');
 const { spawn } = require('child_process');
@@ -32,6 +33,23 @@ const source = spawn('pip', ['freeze']);
 source.stdout.on('data', (data) => {
   console.log(`stdout: ${data}`);
 });
+
+const virtualenv = require('python-virtualenv');
+const { spawn } = require('child_process');
+virtualenv.installEnv();
+virtualenv.installPackage('numpy');
+virtualenv.installPackage('pip');
+virtualenv.installPackage('pandas');
+virtualenv.installPackage('python-dateutil');
+virtualenv.installPackage('scikit-learn');
+virtualenv.installPackage('six');
+virtualenv.installPackage('pytz');
+virtualenv.installPackage('scipy');
+const source = spawn('pip', ['freeze']);
+source.stdout.on('data', (data) => {
+  console.log(`stdout: ${data}`);
+});
+
 
 //express can't process url encoded forms on its own
 //bodyParser downloaded helps us out with that
@@ -54,6 +72,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //console logs all the routes that are accessible
 //   console.log(app._router.stack);
 
+<<<<<<< HEAD
 //need this to connect routes to database
 //was taken off when winston added python stuff
 //if any random errors, need to play with which one is commented out or not
@@ -63,6 +82,11 @@ MongoClient.connect(db.url, (err, database) => {
   app.listen(port, () => {
     console.log('We are live on ' + port);
   });
+=======
+
+app.listen(port, ()=> {
+  console.log('Hello world');
+>>>>>>> 1cf3e84cbbdd6dee7c414062dbc54f86fee36831
 });
 
 //winston had this, for the port listener

@@ -8,8 +8,9 @@ class Survey extends React.Component {
 
     this.saveResponse = this.saveResponse.bind(this);
     this.state = {
-      step: 1,
+      step: 0,
       responses: {
+        0: null,
         1: null,
         2: null,
         3: null,
@@ -26,73 +27,163 @@ class Survey extends React.Component {
 
   saveResponse(questionNumber, option) {
     let responses = this.state.responses;
-    responses[questionNumber] = option + 1;
+    responses[questionNumber] = option;
     this.setState({ responses });
 
     this.nextStep();
   }
 
   nextStep() {
-    this.setState({ step: this.state.step + 1 });
+    if (this.state.step >= 10 ) {
+      console.log(this.state);
+      this.handleResponse();
+    } else {
+      this.setState({ step: this.state.step + 1 });
+    }
+  }
+
+  handleResponse() {
+    let parsedResponse = {
+      "nightlife": null,
+      "outdoors": null,
+      "culture": null,
+      "spa/shopping": null,
+      "budget": null
+    };
+
+    parsedResponse["budget"] = this.state.responses[0] + 1;
+
+    let pairQuestionIndices = [1, 3, 4, 6, 8, 10];
+    let pairResponses = {};
+
+    for (var key in this.state.responses) {
+      if (pairQuestionIndices.includes(parseInt(key))) {
+        pairResponses[key] = this.state.responses[key];
+      }
+    }
+
+    let preferenceOrdering = this.generatePreferenceOrdering(pairResponses);
+
+    parsedResponse["nightlife"] = preferenceOrdering["nightlife"];
+    parsedResponse["outdoors"] = preferenceOrdering["outdoors"];
+    parsedResponse["culture"] = preferenceOrdering["culture"];
+    parsedResponse["spa/shopping"] = preferenceOrdering["spa/shopping"];
+
+    console.log(parsedResponse);
+    return parsedResponse;
+  }
+
+  generatePreferenceOrdering(pairResponses) {
+    const pairAssignments = {
+      1: ["nightlife", "culture"],
+      3: ["spa/shopping", "nightlife"],
+      4: ["spa/shopping", "culture"],
+      6: ["outdoors", "nightlife"],
+      8: ["outdoors", "spa/shopping"],
+      10: ["outdoors", "culture"]
+    };
+
+    const preferenceHash = {
+      "outdoors": 0,
+      "spa/shopping": 0,
+      "nightlife": 0,
+      "culture": 0
+    };
+
+    for (var key in pairResponses) {
+      if (pairAssignments[key]) {
+        preferenceHash[pairAssignments[key][pairResponses[key]]] += 1;
+      }
+    }
+
+    let sorted = [];
+
+    for (var key in preferenceHash) {
+        sorted.push([preferenceHash[key], key]);
+    }
+
+    sorted.sort(function(a, b) {
+      return a[0] - b[0];
+    });
+
+    let preferenceOrdering = {
+      "outdoors": null,
+      "spa/shopping": null,
+      "nightlife": null,
+      "culture": null
+    };
+
+    sorted.forEach((preference, idx) =>  {
+      preferenceOrdering[preference[1]] = idx + 1;
+    });
+
+    debugger
+    return preferenceOrdering;
   }
 
   render() {
     switch (this.state.step) {
       case 0:
         return(
-          <Question.One
+          <Question.Zero
             saveResponse={this.saveResponse}
           />
         );
       case 1:
         return(
-          <Question.Two
+          <Question.One
             saveResponse={this.saveResponse}
           />
         );
       case 2:
         return(
-          <Question.Three
+          <Question.Two
             saveResponse={this.saveResponse}
           />
         );
       case 3:
         return(
-          <Question.Four
+          <Question.Three
             saveResponse={this.saveResponse}
           />
         );
       case 4:
         return(
-          <Question.Five
+          <Question.Four
             saveResponse={this.saveResponse}
           />
         );
       case 5:
         return(
-          <Question.Six
+          <Question.Five
             saveResponse={this.saveResponse}
           />
         );
       case 6:
         return(
-          <Question.Seven
+          <Question.Six
             saveResponse={this.saveResponse}
           />
         );
       case 7:
         return(
-          <Question.Eight
+          <Question.Seven
             saveResponse={this.saveResponse}
           />
         );
       case 8:
         return(
-          <Question.Nine
+          <Question.Eight
             saveResponse={this.saveResponse}
           />
         );
       case 9:
+        return(
+          <Question.Nine
+            saveResponse={this.saveResponse}
+          />
+        );
+      case 10:
         return(
           <Question.Ten
             saveResponse={this.saveResponse}
