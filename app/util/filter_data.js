@@ -2,6 +2,17 @@
 //for their survey
 
 //need to define the params that we should take or whatever feel me
+//actually for activities, just need to take a name param that will
+//be determined by the AI
+//check if it's going to be an array of activities that are going to be
+//passed and if you need to grab all of them
+
+//might need to create another filter data for restaurants/lodging
+//or update this one to account for those as well
+
+//after user completes survey, need that data
+//then need to send all of this data back to the user
+//figure out how to do this
 
 var MongoClient = require('mongodb').MongoClient;
 // var url = "mongodb://localhost:27017/";

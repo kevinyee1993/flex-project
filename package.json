@@ -33,7 +33,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server.js",
     "webpack": "webpack --watch",
-    "scss": "node-sass --include-path scss app/assets/stylesheets/main.scss app/assets/stylesheets/application.css"
+    "scss": "node-sass --include-path scss app/assets/stylesheets/main.scss app/assets/stylesheets/application.css",
   },
   "repository": {
     "type": "git",
