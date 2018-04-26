@@ -1,16 +1,14 @@
 import React from 'react';
 import * as rb from 'react-bootstrap';
-import {
-  Question1,
-  Question2
-} from './actual_questions';
+import * as Question from './actual_questions';
 
 class Survey extends React.Component {
   constructor(props) {
     super(props);
 
+    this.saveResponse = this.saveResponse.bind(this);
     this.state = {
-      step: 1,
+      step: 0,
       responses: {
         1: null,
         2: null
@@ -19,36 +17,58 @@ class Survey extends React.Component {
   }
 
   saveResponse(questionNumber, option) {
-    console.log(questionNumber, option);
+    let responses = this.state.responses;
+    responses[questionNumber] = option + 1;
+    this.setState({ responses });
+
+    this.nextStep();
+  }
+
+  nextStep() {
+    this.setState({ step: this.state.step + 1 });
   }
 
   render() {
-    const question = "How do you like them apples?";
-
-    const images = [
-      <img src="https://images.unsplash.com/photo-1496939217462-7d42e9a74f0e" alt="option"/>,
-      <img src="https://images.unsplash.com/photo-1496939217462-7d42e9a74f0e" alt="option"/>,
-      <img src="https://images.unsplash.com/photo-1496939217462-7d42e9a74f0e" alt="option"/>,
-      <img src="https://images.unsplash.com/photo-1496939217462-7d42e9a74f0e" alt="option"/>
-    ];
-
-    const captions = [
-      "Lalala",
-      "Lalala",
-      "Lalala",
-      "Lalala"
-    ];
-
     switch (this.state.step) {
       case 0:
         return(
-          <Question1
+          <Question.One
             saveResponse={this.saveResponse}
           />
         );
       case 1:
         return(
-          <Question2
+          <Question.Two
+            saveResponse={this.saveResponse}
+          />
+        );
+      case 2:
+        return(
+          <Question.Three
+            saveResponse={this.saveResponse}
+          />
+        );
+      case 3:
+        return(
+          <Question.Four
+            saveResponse={this.saveResponse}
+          />
+        );
+      case 4:
+        return(
+          <Question.Five
+            saveResponse={this.saveResponse}
+          />
+        );
+      case 5:
+        return(
+          <Question.Six
+            saveResponse={this.saveResponse}
+          />
+        );
+      case 6:
+        return(
+          <Question.Seven
             saveResponse={this.saveResponse}
           />
         );
