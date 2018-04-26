@@ -32,7 +32,7 @@ const source = spawn('pip', ['freeze']);
 // });
 
 function doSomething() {
-  const process = spawn('python', ['./predict.py', [3,4,2,1,4]]);
+  const process = spawn('python', ['./predict.py', [3,1,2,4,4]]);
   process.stdout.on('data', (data) => {
     console.log(`stdout: ${data}`);
   });
@@ -54,10 +54,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //console logs all the routes that are accessible
-// console.log(app._router.stack);
+console.log(app._router.stack);
 
 
-app.listen(port, ()=> {
-  console.log('Hello world');
+MongoClient.connect(db.url, (err, database) => {
+ if (err) return console.log(err);
+ require('./app/routes')(app, database);
+ app.listen(port, () => {
+   console.log('We are live on ' + port);
+   doSomething();
+ });
 });
-doSomething();
