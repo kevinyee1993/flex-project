@@ -76,6 +76,24 @@ class Survey extends React.Component {
             saveResponse={this.saveResponse}
           />
         );
+      case 7:
+        return(
+          <Question.Eight
+            saveResponse={this.saveResponse}
+          />
+        );
+      case 8:
+        return(
+          <Question.Nine
+            saveResponse={this.saveResponse}
+          />
+        );
+      case 9:
+        return(
+          <Question.Ten
+            saveResponse={this.saveResponse}
+          />
+        );
       default:
     }
   }
