@@ -7,10 +7,6 @@ export default ({ images, captions, questionNumber, saveResponse }) => {
       <rb.Col xs={12} sm={4} className="option-container" key={idx}>
         <div className="option" onClick={() => saveResponse(questionNumber, idx)}>
           {image}
-
-          <div className="caption">
-            {captions[idx]}
-          </div>
         </div>
       </rb.Col>
   ));
