@@ -27,9 +27,16 @@ virtualenv.installPackage('six');
 virtualenv.installPackage('pytz');
 virtualenv.installPackage('scipy');
 const source = spawn('pip', ['freeze']);
-source.stdout.on('data', (data) => {
-  console.log(`stdout: ${data}`);
-});
+// source.stdout.on('data', (data) => {
+//   console.log(`stdout: ${data}`);
+// });
+
+function doSomething() {
+  const process = spawn('python', ['./predict.py', [3,4,2,1,4]]);
+  process.stdout.on('data', (data) => {
+    console.log(`stdout: ${data}`);
+  });
+}
 
 //express can't process url encoded forms on its own
 //bodyParser downloaded helps us out with that
@@ -47,9 +54,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //console logs all the routes that are accessible
-console.log(app._router.stack);
+// console.log(app._router.stack);
 
 
 app.listen(port, ()=> {
   console.log('Hello world');
 });
+doSomething();
