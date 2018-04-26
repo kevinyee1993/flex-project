@@ -11,6 +11,7 @@
     "jsonframe-cheerio": "^3.0.1",
     "mongodb": "^2.2.16",
     "node-fetch": "^2.1.2",
+    "python-virtualenv": "0.0.4",
     "request": "^2.85.0",
     "request-promise": "^4.2.2"
   },
