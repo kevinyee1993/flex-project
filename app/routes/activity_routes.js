@@ -62,8 +62,8 @@ module.exports = function(app, db) {
         res.send(item);
       }
     });
-
   });
+
 
   app.post('/activities', (req, res) => {
 
