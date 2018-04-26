@@ -15,4 +15,5 @@ const filterData = require('../../../app/util/filter_data');
 
 //rn first param = collection you want to filter from
 //2nd param = query filter
+
 filterData("Activities", { rating: "5.0 star rating" });
