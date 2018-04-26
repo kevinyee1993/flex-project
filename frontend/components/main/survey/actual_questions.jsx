@@ -113,7 +113,7 @@ export const Four = ({ saveResponse }) => {
 };
 
 export const Five = ({ saveResponse }) => {
-  const question = "Which image do you prefer?";
+  const question = "Which photo do you prefer?";
 
   let questionNumber = 5;
 
@@ -140,7 +140,7 @@ export const Five = ({ saveResponse }) => {
 };
 
 export const Six = ({ saveResponse }) => {
-  const question = "Which image do you prefer?";
+  const question = "Which photo do you prefer?";
 
   let questionNumber = 6;
 
