@@ -8,8 +8,9 @@ class Survey extends React.Component {
 
     this.saveResponse = this.saveResponse.bind(this);
     this.state = {
-      step: 1,
+      step: 0,
       responses: {
+        0: null,
         1: null,
         2: null,
         3: null,
@@ -40,59 +41,65 @@ class Survey extends React.Component {
     switch (this.state.step) {
       case 0:
         return(
-          <Question.One
+          <Question.Zero
             saveResponse={this.saveResponse}
           />
         );
       case 1:
         return(
-          <Question.Two
+          <Question.One
             saveResponse={this.saveResponse}
           />
         );
       case 2:
         return(
-          <Question.Three
+          <Question.Two
             saveResponse={this.saveResponse}
           />
         );
       case 3:
         return(
-          <Question.Four
+          <Question.Three
             saveResponse={this.saveResponse}
           />
         );
       case 4:
         return(
-          <Question.Five
+          <Question.Four
             saveResponse={this.saveResponse}
           />
         );
       case 5:
         return(
-          <Question.Six
+          <Question.Five
             saveResponse={this.saveResponse}
           />
         );
       case 6:
         return(
-          <Question.Seven
+          <Question.Six
             saveResponse={this.saveResponse}
           />
         );
       case 7:
         return(
-          <Question.Eight
+          <Question.Seven
             saveResponse={this.saveResponse}
           />
         );
       case 8:
         return(
-          <Question.Nine
+          <Question.Eight
             saveResponse={this.saveResponse}
           />
         );
       case 9:
+        return(
+          <Question.Nine
+            saveResponse={this.saveResponse}
+          />
+        );
+      case 10:
         return(
           <Question.Ten
             saveResponse={this.saveResponse}
