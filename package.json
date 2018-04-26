@@ -1,7 +1,7 @@
 {
   "name": "scraperPractice",
   "version": "1.0.0",
-  "description": "{# Trip Planner (think of new name later) **Trip Planner is an app that intelligently recommends trip itinerary suggestions based on a user’s background and preferences.**",
+  "description": "# Trip Planner (think of new name later) **Trip Planner is an app that intelligently recommends trip itinerary suggestions based on a user’s background and preferences.**",
   "main": "eventbrite.js",
   "dependencies": {
     "asyncawait": "^1.0.6",

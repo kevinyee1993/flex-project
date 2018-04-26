@@ -8,7 +8,7 @@ class Survey extends React.Component {
 
     this.saveResponse = this.saveResponse.bind(this);
     this.state = {
-      step: 0,
+      step: 1,
       responses: {
         1: null,
         2: null,
