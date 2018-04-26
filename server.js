@@ -72,7 +72,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //console logs all the routes that are accessible
 //   console.log(app._router.stack);
 
-<<<<<<< HEAD
 //need this to connect routes to database
 //was taken off when winston added python stuff
 //if any random errors, need to play with which one is commented out or not
@@ -82,12 +81,9 @@ MongoClient.connect(db.url, (err, database) => {
   app.listen(port, () => {
     console.log('We are live on ' + port);
   });
-=======
 
-app.listen(port, ()=> {
-  console.log('Hello world');
->>>>>>> 1cf3e84cbbdd6dee7c414062dbc54f86fee36831
-});
+
+
 
 //winston had this, for the port listener
 // app.listen(port, ()=> {
