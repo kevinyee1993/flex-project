@@ -165,3 +165,111 @@ export const Six = ({ saveResponse }) => {
     </rb.Grid>
   );
 };
+
+export const Seven = ({ saveResponse }) => {
+  const question = "Which photo do you prefer?";
+
+  let questionNumber = 7;
+
+  let images = [
+    <img src="https://images.unsplash.com/photo-1486218119243-13883505764c?w=500" alt="option"/>,
+    <img src="https://images.unsplash.com/photo-1513106580091-1d82408b8cd6?w=500" alt="option"/>
+  ];
+
+  let captions = [
+  ];
+
+  return(
+    <rb.Grid>
+      <Question question={question} />
+
+      <LargeImageOptions
+        images={images}
+        captions={captions}
+        questionNumber={questionNumber}
+        saveResponse={saveResponse}
+      />
+    </rb.Grid>
+  );
+};
+
+export const Eight = ({ saveResponse }) => {
+  const question = "Which photo do you prefer?";
+
+  let questionNumber = 8;
+
+  let images = [
+    <img src="https://images.unsplash.com/photo-1486218119243-13883505764c?w=500" alt="option"/>,
+    <img src="https://images.unsplash.com/photo-1513106580091-1d82408b8cd6?w=500" alt="option"/>
+  ];
+
+  let captions = [
+  ];
+
+  return(
+    <rb.Grid>
+      <Question question={question} />
+
+      <LargeImageOptions
+        images={images}
+        captions={captions}
+        questionNumber={questionNumber}
+        saveResponse={saveResponse}
+      />
+    </rb.Grid>
+  );
+};
+
+export const Nine = ({ saveResponse }) => {
+  const question = "Which photo do you prefer?";
+
+  let questionNumber = 9;
+
+  let images = [
+    <img src="https://images.unsplash.com/photo-1486218119243-13883505764c?w=500" alt="option"/>,
+    <img src="https://images.unsplash.com/photo-1513106580091-1d82408b8cd6?w=500" alt="option"/>
+  ];
+
+  let captions = [
+  ];
+
+  return(
+    <rb.Grid>
+      <Question question={question} />
+
+      <LargeImageOptions
+        images={images}
+        captions={captions}
+        questionNumber={questionNumber}
+        saveResponse={saveResponse}
+      />
+    </rb.Grid>
+  );
+};
+
+export const Ten = ({ saveResponse }) => {
+  const question = "Which photo do you prefer?";
+
+  let questionNumber = 10;
+
+  let images = [
+    <img src="https://images.unsplash.com/photo-1486218119243-13883505764c?w=500" alt="option"/>,
+    <img src="https://images.unsplash.com/photo-1513106580091-1d82408b8cd6?w=500" alt="option"/>
+  ];
+
+  let captions = [
+  ];
+
+  return(
+    <rb.Grid>
+      <Question question={question} />
+
+      <LargeImageOptions
+        images={images}
+        captions={captions}
+        questionNumber={questionNumber}
+        saveResponse={saveResponse}
+      />
+    </rb.Grid>
+  );
+};

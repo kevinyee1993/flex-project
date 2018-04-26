@@ -26,16 +26,16 @@ Which emoji are you?
 Pick your ideal home.
 
 ## Question 6:
-[1, 3] - Outdoors/Nature vs. 
+[1, 3] - Outdoors/Nature vs.
 
 ## Question 7:
 Pick a social network.
 
 ## Question 8:
-[1, 2]
+[1, 2] - Outdoors/Nature vs. Spa/Shopping
 
 ## Question 9:
 Pick a drink.
 
 ## Question 10:
-[1, 4]
+[1, 4] - Outdoors/Nature vs. Culture
