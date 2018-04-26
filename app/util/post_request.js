@@ -8,7 +8,7 @@ const axios = require('axios');
 module.exports = function(routeName, object) {
 
 //TODO: change this URL when in production
-  axios.post(`http://localhost:8000/${ routeName }`, object)
+  axios.post(`./${ routeName }`, object)
     .then(function (response) {
       // console.log(response);
       // console.log("posted to database");
