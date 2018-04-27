@@ -7,7 +7,9 @@ class SuggestDetail extends React.Component {
   }
 
   render() {
-    const dummy_thumbnail = {
+
+    // dummy data for suggest_detail
+    const dummy_data = {
       image: "https://images.unsplash.com/photo-1516712109157-6a67f5d73fa1?w=500",
       name: "Hipster Bullshit",
       tags: ["Bitch", "Weird"],
