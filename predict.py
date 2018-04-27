@@ -9,16 +9,17 @@ int_input = [ int(i) for i in raw_input ]
 x_train = df.loc[:, df.columns != 'activity']
 y_train = df['activity']
 gnb_fit = gnb.fit(x_train, y_train)
-
-#TODO: CHANGE THIE ARRAY BACK TO WHATEVER IT WAS BEFORE
-y_pred = gnb_fit.predict_proba(numpy.array([1,2,3,4,4]).reshape(1,-1))
+y_pred = gnb_fit.predict_proba(numpy.array(int_input).reshape(1,-1))
 activities = list(set(y_train))
 activities.sort()
 probs = y_pred.tolist()
 bigboy = [zip(i, activities) for i in probs]
-smallboy = bigboy[0]
-smallboy.sort(reverse=True)
+realPreds = bigboy[0]
+realPreds.sort(reverse=True)
+probs, acts = zip(*realPreds)
 # print smallboy[0:5]
 # print numpy.argsort(gnb_fit.predict_proba(numpy.array([3,4,2,1,4]).reshape(1,-1)), axis=1)[-5:]
 # print to std
-print smallboy
+dogs = map(list, realPreds)
+dong = [jong[1] for jong in dogs]
+print ','.join(dong)

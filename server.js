@@ -41,14 +41,6 @@ virtualenv.installPackage('scipy');
 // });
 
 
-function doSomething() {
-  const process = spawn('python', ['./predict.py', [3,1,2,4,4]]);
-  process.stdout.on('data', (data) => {
-    // console.log(`stdout: ${data}`);
-  });
-}
-
-
 
 //express can't process url encoded forms on its own
 //bodyParser downloaded helps us out with that
@@ -66,6 +58,21 @@ app.get('/', (request, res) => {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.get('/activities/survey/:data', (req, res) => {
+
+  let dataSplit = req.params.data.split("");
+  let dataInt = [];
+  dataSplit.forEach(char => dataInt.push(parseInt(char)));
+  function doSomething(dataInf) {
+    const process = spawn('python', ["./predict.py", dataInt]);
+    process.stdout.on('data', (data) => {
+      let jSonned = JSON.stringify(data.toString('utf-8'));
+      let chopped = jSonned.slice(1, jSonned.length - 3);
+      res.send(chopped.split(','));
+    });
+  }
+  doSomething(dataInt);
+});
 
 
 //console logs all the routes that are accessible
@@ -82,6 +89,5 @@ MongoClient.connect(db.url, (err, database) => {
  require('./app/routes')(app, database);
  app.listen(port, () => {
    console.log('We are live on ' + port);
-   doSomething();
  });
 });
