@@ -24,3 +24,21 @@
 
 .text {
   max-width: 100px; }
+
+.suggest-carousel .owl-prev {
+  width: 15px;
+  height: 100px;
+  position: absolute;
+  top: 40%;
+  margin-left: -20px;
+  display: block;
+  border: 0px solid black; }
+
+.suggest-carousel .owl-next {
+  width: 15px;
+  height: 100px;
+  position: absolute;
+  top: 40%;
+  right: -25px;
+  display: block;
+  border: 0px solid black; }
