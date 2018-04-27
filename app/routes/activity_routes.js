@@ -1,4 +1,15 @@
 var ObjectID = require('mongodb').ObjectID;
+const { spawn } = require('child_process');
+
+
+
+function doSomething(dataInt) {
+  const process = spawn('python', ['../../predict.py', dataInt]);
+  process.stdout.on('data', (data) => {
+    // res.send(`stdout: ${data}`);
+    return data;
+  });
+}
 
 // want to append the survey answers to the end of the url
 module.exports = function(app, db) {
@@ -9,6 +20,8 @@ module.exports = function(app, db) {
     let dataInt = [];
     dataSplit.forEach(char => dataInt.push(parseInt(char)));
     res.send(dataInt);
+
+    // console.log(doSomething(dataInt));
     // res.send(req.params.data.toString());
 
   });

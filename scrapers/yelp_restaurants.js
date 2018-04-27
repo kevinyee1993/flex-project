@@ -49,6 +49,10 @@ async function megaScrape() {
         //converts all $ prices to numbers so that it's easier to query
         let priceToNum = $price.text().length;
 
+        //used to just get the numbers from reviews and ratings
+        let numberPattern = /\d+/g;
+
+
         const restaurant = {
           name: $name.text(),
           numReviews: $numReviews.text(),

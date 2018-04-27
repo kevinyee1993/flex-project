@@ -44,7 +44,7 @@ virtualenv.installPackage('scipy');
 function doSomething() {
   const process = spawn('python', ['./predict.py', [3,1,2,4,4]]);
   process.stdout.on('data', (data) => {
-    console.log(`stdout: ${data}`);
+    // console.log(`stdout: ${data}`);
   });
 }
 
