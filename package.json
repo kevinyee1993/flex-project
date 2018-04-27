@@ -17,9 +17,7 @@
     "lodash": "^4.17.9",
     "mongodb": "^2.2.35",
     "node-fetch": "^2.1.2",
-
     "python-virtualenv": "0.0.4",
-
 
     "node-sass": "^4.8.3",
     "react": "^16.3.2",
