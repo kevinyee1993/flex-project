@@ -11,7 +11,7 @@ import {
 import Header from './header';
 import Footer from './footer';
 import Survey from './main/survey/survey';
-import ItineraryIndex from './main/itinerary_index';
+import SuggestIndex from './main/suggest_index/suggest_index';
 // import ItineraryDetail from './main/itinerary_detail';
 import NotFound from './404';
 
@@ -20,7 +20,7 @@ const App = () => (
     <Header />
     <Switch>
       <Route exact path='/survey' component={Survey} />
-      <Route exact path='/recommendations' component={ItineraryIndex} />
+      <Route exact path='/recommendations' component={SuggestIndex} />
       <Route component={NotFound} />
     </Switch>
     <Footer />

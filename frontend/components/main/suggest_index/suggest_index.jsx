@@ -20,6 +20,8 @@
 
 import React from 'react';
 import * as rb from 'react-bootstrap';
+import Header from './suggest_header';
+import Carousel from './suggest_carousel';
 
 class ItineraryIndex extends React.Component {
   constructor(props) {
@@ -27,10 +29,28 @@ class ItineraryIndex extends React.Component {
   }
 
   render() {
+    const dummy_thumbnail = {
+      image: "https://images.unsplash.com/photo-1516712109157-6a67f5d73fa1?w=500",
+      name: "Hipster Bullshit",
+      tags: ["Bitch", "Weird"],
+      rating: 4.5,
+      numReviews: 1234
+    };
+
     return(
-      <div>
-        <h1>i am itinerary index</h1>
-      </div>
+      <rb.Grid>
+        <Header text={"Your hotel recommendations, bitch:"} />
+        <Carousel text={"CAROUSEL BITCHES"} data={dummy_thumbnail}/>
+
+        <Header text={"Your restaurant recommendations, bitch:"} />
+        <Carousel text={"CAROUSEL BITCHES"} data={dummy_thumbnail}/>
+
+        <Header text={"Your activity recommendations, bitch:"} />
+        <Carousel text={"CAROUSEL BITCHES"} data={dummy_thumbnail}/>
+
+        <Header text={"More activity recommendations, bitch:"} />
+        <Carousel text={"CAROUSEL BITCHES"} data={dummy_thumbnail}/>
+      </rb.Grid>
     );
   }
 }

@@ -117,7 +117,6 @@ class Survey extends React.Component {
       preferenceOrdering[preference[1]] = idx + 1;
     });
 
-    debugger
     return preferenceOrdering;
   }
 
