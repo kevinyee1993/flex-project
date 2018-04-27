@@ -9,7 +9,7 @@ int_input = [ int(i) for i in raw_input ]
 x_train = df.loc[:, df.columns != 'activity']
 y_train = df['activity']
 gnb_fit = gnb.fit(x_train, y_train)
-y_pred = gnb_fit.predict_proba(numpy.array(int_input).reshape(1,-1))
+y_pred = gnb_fit.predict_proba(numpy.array([1,2,3,4,4]).reshape(1,-1))
 activities = list(set(y_train))
 activities.sort()
 probs = y_pred.tolist()

@@ -1,4 +1,4 @@
-#!/Users/Winston/Documents/GitHub/flex-project/venv/bin/python
+#!/Users/kevinyee/Desktop/scraperPractice/venv/bin/python
 
 import sys
 import getopt
