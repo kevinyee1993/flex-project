@@ -15,6 +15,7 @@ const async = require('asyncawait/async');
 
 
 //need to change this url to get different show pages
+//url can come from the yelp_restaurants scraper
 function scrape() {
   let url = `https://www.yelp.com/biz/papaito-rotisserie-hayward?osq=Restaurants`;
   return fetch(`${url}`)
@@ -48,6 +49,16 @@ function scrape() {
         console.log(restaurant);
     });
 });
+
+//https://s3-media4.fl.yelpcdn.com/bphoto/  ZYjFqvRORpscudIdYBxTmw  /o.jpg
+//the stuff surrounded by spaces need to be interpolated to new image
+//image url from yelp looks like this
+//https://www.yelp.com/biz_photos/papaito-rotisserie-hayward?select=J7MHArydoafasYy-st1oQA
+
+//where the stuff after select= is what you interpolate into that first link
+//also need to change the name of the
+
+
 
   //gets rid of all line breaks and extra spaces
   // for(let i = 0; i < allRestaurants.length; i++) {

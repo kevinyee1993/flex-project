@@ -40,10 +40,12 @@ async function megaScrape() {
         const $name = $element.find(".biz-name");
         const $numReviews = $element.find(".review-count");
         const $address = $element.find("address");
+        const $phone = $element.find(".biz-phone");
         const $category = $element.find(".category-str-list");
         const $rating = $element.find(".i-stars");
         const $price = $element.find(".business-attribute ,price-range");
         const $image = $element.find(".photo-box-img");
+        const $link = $element.find(".indexed-biz-name a")
         // console.log($rating.text());
 
         //converts all $ prices to numbers so that it's easier to query
@@ -51,17 +53,23 @@ async function megaScrape() {
 
         //used to just get the numbers from reviews and ratings
         let numberPattern = /\d+/g;
+        // let noChars = /^[ a-zA-z]/
+
+        // console.log($rating.attr('title').match(noChars));
 
 
         const restaurant = {
           name: $name.text(),
-          numReviews: $numReviews.text(),
-          address: $address.text(),
+          numReviews: parseInt($numReviews.text().match( numberPattern )[0]),
+          address: $address.text().replace(/([a-z])([A-Z])/g, '$1 $2'),
+          phone: $phone.text(),
           tags: $category.text(),
-          rating: $rating.attr('title'),
-          // price: $price.text(),
+
+          //gets rid of the "rating" text
+          rating: $rating.attr('title').substring(0,3),
           price: priceToNum,
           image: $image.attr('src'),
+          link: "https://www.yelp.com/" + $link.attr('href'),
         };
 
         restaurants.push(restaurant);
@@ -78,7 +86,7 @@ async function megaScrape() {
   for(let i = 0; i < allRestaurants.length; i++) {
     Object.keys(allRestaurants[i]).forEach( (key) => {
 
-      if(key === "price") {
+      if(key === "price" || key === "numReviews") {
         //do not clean up the data if we're looking at price
       } else {
         let value = allRestaurants[i][key].replace(/(?:\r\n|\r|\n)/g, ' ');
