@@ -1,6 +1,7 @@
 import React from 'react';
 import * as rb from 'react-bootstrap';
 import * as Question from './actual_questions';
+import { Redirect } from 'react-router-dom';
 
 class Survey extends React.Component {
   constructor(props) {
@@ -69,8 +70,7 @@ class Survey extends React.Component {
     parsedResponse["culture"] = preferenceOrdering["culture"];
     parsedResponse["spa/shopping"] = preferenceOrdering["spa/shopping"];
 
-    console.log(parsedResponse);
-    return parsedResponse;
+    this.props.history.push('/recommendations');
   }
 
   generatePreferenceOrdering(pairResponses) {

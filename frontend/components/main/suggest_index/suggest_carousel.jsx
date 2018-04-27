@@ -11,6 +11,11 @@ export default ({ text, data }) => {
       <rb.Col xs={12} >
         <OwlCarousel
           margin={15}
+          nav
+          navText={[
+           "<i class='fa fa-chevron-left'></i>",
+           "<i class='fa fa-chevron-right'></i>"
+          ]}
           responsive={{
             0: {
               items: 1
