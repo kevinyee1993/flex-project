@@ -12,4 +12,7 @@ const filterData = require('../../../app/util/filter_data');
 //if we have to persist that user survey data bc no point in keeping it around anymore
 //if keeping around all the user survey data, need to also get that specific
 //info
-filterData({ price: 2 });
+
+//rn first param = collection you want to filter from
+//2nd param = query filter
+filterData("Activities", { rating: "5.0 star rating" });

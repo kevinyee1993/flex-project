@@ -8,16 +8,19 @@
     border: 1px solid black;
     background-color: lightgray;
     border-radius: 3px;
-    max-width: 450px;
     margin: auto;
     margin-bottom: 20px; }
     .survey-answer .all-options .option-container .option img {
-      width: 100%;
-      padding: 7px; }
+      padding: 7px;
+      width: 100%; }
     .survey-answer .all-options .option-container .option .caption {
       text-align: center;
       font-weight: 500;
       padding: 9px 0 15px 0; }
+  .survey-answer .all-options .option-container .large-opt {
+    max-width: 450px; }
+  .survey-answer .all-options .option-container .small-opt {
+    max-width: 150px; }
 
 .text {
   max-width: 100px; }
