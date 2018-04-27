@@ -2,3 +2,4 @@ node_modules/
 config/db.js
 bundle.js
 bundle.js.map
+venv/

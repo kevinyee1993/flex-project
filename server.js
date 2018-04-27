@@ -27,9 +27,9 @@ virtualenv.installPackage('six');
 virtualenv.installPackage('pytz');
 virtualenv.installPackage('scipy');
 const source = spawn('pip', ['freeze']);
-// source.stdout.on('data', (data) => {
-//   console.log(`stdout: ${data}`);
-// });
+source.stdout.on('data', (data) => {
+  console.log(`stdout: ${data}`);
+});
 
 function doSomething() {
   const process = spawn('python', ['./predict.py', [3,1,2,4,4]]);
