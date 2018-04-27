@@ -14,10 +14,19 @@ const NUM_PAGES = 1;
 const async = require('asyncawait/async');
 
 
+//export this after!!!
+
 //need to change this url to get different show pages
 //url can come from the yelp_restaurants scraper
-function scrape() {
+//also need to take in url as param and then pass that into url
+function showScrape() {
   let url = `https://www.yelp.com/biz/papaito-rotisserie-hayward?osq=Restaurants`;
+  return fetch(`${url}`)
+  .then(response => response.text());
+}
+
+function showScrapeImages() {
+  let url = `https://www.yelp.com/biz_photos/papaito-rotisserie-hayward`;
   return fetch(`${url}`)
   .then(response => response.text());
 }
@@ -25,30 +34,58 @@ function scrape() {
 
 
     //0 gives 0 which gives first 10 results, 1 gives 10, 2 gives 20, etc.
-  scrape()
-    .then(body => {
-      const $ = cheerio.load(body);
+//   showScrape()
+//     .then(body => {
+//       const $ = cheerio.load(body);
+//
+//       $('#yelp_main_body').each((i, element) => {
+//
+//         const $element = $(element);
+//         const $review = $element.find(".js-from-biz-owner p");
+//
+//         const restaurant = {
+//           // name: $name.text(),
+//           review: $review.text(),
+//         };
+//
+//         Object.keys(restaurant).forEach(key => {
+//           let value = restaurant[key].replace(/(?:\r\n|\r|\n)/g, ' ');
+//           value = value.replace(/ +(?= )/g,'');
+//           value = value.trim();
+//           restaurant[key] = value;
+//         });
+//
+//         console.log(restaurant);
+//     });
+// });
 
-      $('#yelp_main_body').each((i, element) => {
+showScrapeImages()
+  .then(body => {
+    const $ = cheerio.load(body);
 
-        const $element = $(element);
-        const $review = $element.find(".js-from-biz-owner p");
+    let images = [];
+    $('.photo-box').each((i, element) => {
 
-        const restaurant = {
-          // name: $name.text(),
-          review: $review.text(),
-        };
-
-        Object.keys(restaurant).forEach(key => {
-          let value = restaurant[key].replace(/(?:\r\n|\r|\n)/g, ' ');
-          value = value.replace(/ +(?= )/g,'');
-          value = value.trim();
-          restaurant[key] = value;
-        });
-
-        console.log(restaurant);
+      const $element = $(element);
+      // const $review = $element.find(".js-from-biz-owner p");
+      const $image = $element.find("img");
+// butt = str.match(/bphoto\/(.*)\//)
+// console.log($image.attr("src").match(/bphoto\/(.*)\//));
+      if($image.attr("src")) {
+        // images.push($image.attr("src").match(/bphoto\/(.*)\//)[1]);
+        let imgCode = $image.attr("src").match(/bphoto\/(.*)\//)[1];
+        images.push(`https://s3-media4.fl.yelpcdn.com/bphoto/${ imgCode }/o.jpg`);
+      }
     });
+
+  const restaurant = {
+    // name: $name.text(),
+    images: images,
+  };
+
+  console.log(restaurant);
 });
+
 
 //https://s3-media4.fl.yelpcdn.com/bphoto/  ZYjFqvRORpscudIdYBxTmw  /o.jpg
 //the stuff surrounded by spaces need to be interpolated to new image
