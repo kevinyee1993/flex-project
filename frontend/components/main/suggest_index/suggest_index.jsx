@@ -23,7 +23,7 @@ import * as rb from 'react-bootstrap';
 import Header from './suggest_header';
 import Carousel from './suggest_carousel';
 
-class ItineraryIndex extends React.Component {
+class SuggestIndex extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -55,4 +55,4 @@ class ItineraryIndex extends React.Component {
   }
 }
 
-export default ItineraryIndex;
+export default SuggestIndex;
