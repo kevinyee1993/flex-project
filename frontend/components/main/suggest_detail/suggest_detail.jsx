@@ -1,6 +1,9 @@
 import React from 'react';
 import * as rb from 'react-bootstrap';
 import PhotoCarousel from './photo_carousel';
+import SuggestInfo from './suggest_info';
+import ActionSidebar from './action_sidebar';
+import SuggestCarousel from '../suggest_index/suggest_carousel';
 
 class SuggestDetail extends React.Component {
   constructor(props) {
@@ -53,10 +56,28 @@ class SuggestDetail extends React.Component {
     review: "Good stuff"
   };
 
+  const dummy_thumbnail = {
+    image: "https://images.unsplash.com/photo-1516712109157-6a67f5d73fa1?w=500",
+    name: "Hipster Bullshit",
+    tags: ["Bitch", "Weird"],
+    rating: 4.5,
+    numReviews: 1234
+  };
+
     return(
       <div>
         <PhotoCarousel photos={dummy_data.images}/>
         <rb.Grid className="suggest-detail">
+          <rb.Row>
+            <SuggestInfo data={dummy_data}/>
+            <ActionSidebar source={dummy_data.link}/>
+          </rb.Row>
+          <rb.Row className="more-recommendations">
+            <rb.Col xs={12}>
+              <h3>More restaurants for you:</h3>
+              <SuggestCarousel data={dummy_thumbnail} />
+            </rb.Col>
+          </rb.Row>
         </rb.Grid>
       </div>
     );
