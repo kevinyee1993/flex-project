@@ -42,3 +42,7 @@
   right: -25px;
   display: block;
   border: 0px solid black; }
+
+.photo-carousel {
+  max-height: 325px;
+  overflow: hidden; }
