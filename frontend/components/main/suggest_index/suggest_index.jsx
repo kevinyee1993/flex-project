@@ -24,6 +24,8 @@ import Header from './suggest_header';
 import Carousel from './suggest_carousel';
 const axios = require('axios');
 
+
+
 class SuggestIndex extends React.Component {
   constructor(props) {
     super(props);
@@ -46,15 +48,20 @@ class SuggestIndex extends React.Component {
 
   getActivities() {
     let name;
+    let arr = [];
     for (var i = 0; i < this.state.names.length; i++) {
       name = this.state.names[i];
-      axios({
+      arr.push(axios({
         method: 'GET',
         url: `/activity/${name}`
-      }).then((result) => {
-        console.log(result);
-      });
+      }));
     }
+    Promise.all(arr).then((response) =>
+      {
+        this.setState({activities: response.map(res => {
+          return res.data[0];
+        })});
+      });
   }
 
   render() {
@@ -67,23 +74,22 @@ class SuggestIndex extends React.Component {
       numReviews: 1234
     };
     if (this.state.names.length > 0) {
-      this.getActivities();
+      this.getActivities(this.state.names);
     }
-    return(
-      <rb.Grid>
-        <Header text={"Your hotel recommendations, bitch:"} />
-        <Carousel text={"CAROUSEL BITCHES"} data={dummy_thumbnail}/>
 
-        <Header text={"Your restaurant recommendations, bitch:"} />
-        <Carousel text={"CAROUSEL BITCHES"} data={dummy_thumbnail}/>
+    if (this.state.activities.length < 1) {
+      return (<h1>Loading!</h1>);
+    } else {
+      return(
+        <rb.Grid>
 
-        <Header text={"Your activity recommendations, bitch:"} />
-        <Carousel text={"CAROUSEL BITCHES"} data={dummy_thumbnail}/>
+          <Header text={"Your activity recommendations, bitch:"} />
+          <Carousel text={"CAROUSEL BITCHES"} data={this.state.activities}/>
 
-        <Header text={"More activity recommendations, bitch:"} />
-        <Carousel text={"CAROUSEL BITCHES"} data={dummy_thumbnail}/>
-      </rb.Grid>
-    );
+        </rb.Grid>
+      );
+    }
+
   }
 }
 
