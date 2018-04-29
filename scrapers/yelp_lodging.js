@@ -63,6 +63,8 @@ async function megaScrape(category) {
 
         let numberPattern = /\d+/g;
 
+        let bigPic = $image.attr("src").replace(/90s/, '1000s');
+
 // console.log(parseInt($numReviews.text().match( numberPattern )[0]));
 
         const lodging = {
@@ -76,7 +78,7 @@ async function megaScrape(category) {
           //gets rid of the "rating" text
           rating: $rating.attr('title').substring(0,3),
           price: priceToNum,
-          image: $image.attr('src'),
+          image: bigPic,
           link: "https://www.yelp.com/" + $link.attr('href'),
         };
 
@@ -113,7 +115,7 @@ async function megaScrape(category) {
 
 
 //change this to get different categories
-megaScrape(HOTELS);
+// megaScrape(HOTELS);
 // megaScrape(HOSTELS);
 
 //NOTE, NEED TO CHECK THE TAGS, SOME OF THE HOSTELS RETURNED ARE HOTELS

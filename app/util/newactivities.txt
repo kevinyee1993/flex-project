@@ -1,0 +1,58 @@
+//this is sample of what the data should look like at first, as long as the
+url is correct then the showpage scraper should be able to add all the info to this
+
+
+{
+    "_id": {
+        "$oid": "5ae5bfa9659c3f00dee33ee5"
+    },
+    "name": "Kintetsu Mall",
+    "numReviews": 53,
+    "address": "",
+    "phone": "(415) 440-1171",
+    "tags": "Shopping Centers",
+    "rating": "4.0",
+    "price": 2,
+    "image": "https://s3-media2.fl.yelpcdn.com/bphoto/In81ZzmYeOhJTI_O675G6w/90s.jpg",
+    "link": "https://www.yelp.com//biz/kintetsu-mall-san-francisco?osq=Shopping+Centers",
+    "category": "leisure",
+}
+
+
+
+Ferry Building Marketplace
+{
+    "name": "Ferry Building Marketplace",
+    "numReviews": 1610,
+    "address": "1 Ferry Bldg San Francisco, CA 94111 Embarcadero, SoMa",
+    "phone": "(415) 983-8030",
+    "tags": "Public Markets, Farmers Market",
+    "rating": "4.5",
+    "price": 2,
+    "image": "https://s3-media2.fl.yelpcdn.com/bphoto/In81ZzmYeOhJTI_O675G6w/90s.jpg",
+    "link": "https://www.yelp.com//biz/kintetsu-mall-san-francisco?osq=Shopping+Centers",
+    "category": "leisure",
+}
+
+
+
+
+
+California Academy of Sciences
+Lombard Street
+Mission District <-- not on yelp
+Palace of Fine Arts
+Corona Heights Park
+Lyon Street Steps
+de Young
+Baker Beach
+Ocean Beach
+
+Cable Cars <-- just use the powell st one idc
+Muir Woods National Monument
+SF on Tap Tours <-- make this price: 2
+Chinatown
+Pier 39
+Fisherman’s Wharf
+Billy Goat Hill
+Union Square
