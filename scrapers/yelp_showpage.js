@@ -84,17 +84,20 @@ async function megaScrape(data) {
           const $element = $(element);
           const $username = $element.find(".user-name");
           const $review = $element.find(".review-content p");
+          const $profilepic = $element.find("img");
+
+          //gets the bigger version of profile picture
+          let bigPic = $profilepic.attr("src").replace(/60s/, '300s');
 
           let reviewInfo = { username: $username.text(),
-          review: $review.text() };
+          review: $review.text(),
+          profilepic: bigPic};
 
           Object.keys(reviewInfo).forEach(key => {
-            // if(key) {
               let value = reviewInfo[key].replace(/(?:\r\n|\r|\n)/g, ' ');
               value = value.replace(/ +(?= )/g,'');
               value = value.trim();
               reviewInfo[key] = value;
-            // }
           });
 
           allReviews.push(reviewInfo);
