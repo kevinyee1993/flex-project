@@ -14,6 +14,11 @@ const NUM_PAGES = 1;
 const async = require('asyncawait/async');
 
 
+//connect to mongodb
+var MongoClient = require('mongodb').MongoClient;
+let url = 'mongodb://testuser:password@ds161483.mlab.com:61483/flexproject';
+
+
 //export this after!!!
 
 //need to change this url to get different show pages
@@ -151,11 +156,48 @@ async function megaScrape(data) {
       // restaurants.push(restaurant)
     });
 
-    console.log(megaObject);
+    // console.log(megaObject);
+    return megaObject;
 }
 
 //change this to take in any of the whatever whatevers
-megaScrape("noriega-produce-san-francisco");
+
+MongoClient.connect(url, function(err, db) {
+
+  // db.Restaurants.find().forEach(restaurant => {
+  //
+  //     megaScrape(restaurant.link.match(/biz\/(.*)\?/)[1])
+  //         .then(updateInfo => {
+  //           db.Restaurants.updateOne(
+  //             {"name": restaurant.name},
+  //             {$set: updateInfo},
+  //           )
+  //         })
+  // });
+
+//loops through all restaurants in database
+  db.collection('Restaurants', function(err, collection) {
+        collection.find(function(err, cursor) {
+            cursor.each(function(err, restaurant) {
+                if(restaurant != null){
+                    megaScrape(restaurant.link.match(/biz\/(.*)\?/)[1])
+                      .then(updateInfo => console.log(updateInfo))
+                }
+                else{
+                    db.close();
+                }
+            });
+        });
+    });
+
+});
+
+
+// megaScrape("noriega-produce-san-francisco")
+//   .then(object => console.log(object));
+
+
+
 
 
   // return megaObject;

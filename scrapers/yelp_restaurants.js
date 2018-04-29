@@ -1,6 +1,6 @@
 //SCRAPER FOR YELP, all restaurants
 const PostToDatabase = require('../app/util/post_request');
-const showPageInfo = require('./yelp_showpage');
+// const showPageInfo = require('./yelp_showpage');
 // const showImageInfo = require('./yelp_showpage');
 
 const fetch = require('node-fetch');

@@ -18,8 +18,8 @@
 //put the query in the params rather than creating it yourself in line 29
 module.exports  = function filterData(collection, query) {
   var MongoClient = require('mongodb').MongoClient;
-  // var url = "mongodb://localhost:27017/";
   let url = 'mongodb://testuser:password@ds161483.mlab.com:61483/flexproject';
+  // var url = "mongodb://localhost:27017/";
 
   MongoClient.connect(url, function(err, db) {
 
