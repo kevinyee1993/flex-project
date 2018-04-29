@@ -79,16 +79,25 @@ async function megaScrape(data) {
 
         let allReviews = [];
 
-        $('.review-content').each((i, element) => {
+        $('.review').each((i, element) => {
 
           const $element = $(element);
-          const $reviews = $element.find(".review-content p");
+          const $username = $element.find(".user-name");
+          const $review = $element.find(".review-content p");
 
-          let value = $reviews.text().replace(/(?:\r\n|\r|\n)/g, ' ');
-          value = value.replace(/ +(?= )/g,'');
-          value = value.trim();
+          let reviewInfo = { username: $username.text(),
+          review: $review.text() };
 
-          allReviews.push(value);
+          Object.keys(reviewInfo).forEach(key => {
+            // if(key) {
+              let value = reviewInfo[key].replace(/(?:\r\n|\r|\n)/g, ' ');
+              value = value.replace(/ +(?= )/g,'');
+              value = value.trim();
+              reviewInfo[key] = value;
+            // }
+          });
+
+          allReviews.push(reviewInfo);
 
 
           // const restaurant = {
