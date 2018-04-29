@@ -175,20 +175,51 @@ MongoClient.connect(url, function(err, db) {
   //         })
   // });
 
-//loops through all restaurants in database
+// loops through all restaurants in database
   db.collection('Restaurants', function(err, collection) {
         collection.find(function(err, cursor) {
             cursor.each(function(err, restaurant) {
-                if(restaurant != null){
+
+                if(restaurant){
+
+                  //should grab the correct restaurant then update it
                     megaScrape(restaurant.link.match(/biz\/(.*)\?/)[1])
-                      .then(updateInfo => console.log(updateInfo))
+                      .then(updateInfo => {
+                        let newValues = { $set: updateInfo };
+                        let query = { name: restaurant.name }
+
+                        //think the problem is right here because we have all the info we need
+                        db.collection("Restaurants").updateOne(query, newValues, function(err, res) {
+                          // console.log(updateInfo)
+                          if (err) throw err;
+                          // console.log("1 document updated");
+                          // db.close();
+                        });
+
+                       })
                 }
                 else{
-                    db.close();
+                    // db.close();
                 }
+
+
             });
         });
     });
+
+
+//just testing here with notes
+  // if (err) throw err;
+   // var db = db.db("mydb");
+   // var myquery = { title: "note title" };
+   // var newvalues = { $set: {name: "Mickey", address: "Canyon 123" } };
+   // db.collection("notes").updateOne(myquery, newvalues, function(err, res) {
+   //   if (err) throw err;
+   //   console.log("1 document updated");
+   //   db.close();
+   // });
+
+
 
 });
 
