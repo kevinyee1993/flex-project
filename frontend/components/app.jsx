@@ -9,14 +9,24 @@ import {
 } from 'react-router-dom';
 
 import Header from './header';
+import Footer from './footer';
 import Survey from './main/survey/survey';
+import SuggestIndex from './main/suggest_index/suggest_index';
+import SuggestDetail from './main/suggest_detail/suggest_detail';
+// import ItineraryDetail from './main/itinerary_detail';
+import NotFound from './404';
 
 const App = () => (
   <div>
     <Header />
-    <Survey />
+    <Switch>
+      <Route exact path='/survey' component={Survey} />
+      <Route exact path='/recommendations' component={SuggestIndex} />
+      <Route exact path='/recommendations/:id' component={SuggestDetail} />
+      <Route component={NotFound} />
+    </Switch>
+    <Footer />
   </div>
-
 );
 
 export default App;
