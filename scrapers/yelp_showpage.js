@@ -164,22 +164,11 @@ async function megaScrape(data) {
 
 MongoClient.connect(url, function(err, db) {
 
-  // db.Restaurants.find().forEach(restaurant => {
-  //
-  //     megaScrape(restaurant.link.match(/biz\/(.*)\?/)[1])
-  //         .then(updateInfo => {
-  //           db.Restaurants.updateOne(
-  //             {"name": restaurant.name},
-  //             {$set: updateInfo},
-  //           )
-  //         })
-  // });
-
 // loops through all restaurants in database
 
   //change this for lodging, restaurant, whatever
   // let collectionName = 'Restaurants';
-  let collectionName = 'Lodging';
+  let collectionName = 'Activities';
 
   db.collection(collectionName, function(err, collection) {
         collection.find(function(err, cursor) {
@@ -190,11 +179,11 @@ MongoClient.connect(url, function(err, db) {
                   //should grab the correct restaurant then update it
                     megaScrape(restaurant.link.match(/biz\/(.*)\?/)[1])
                       .then(updateInfo => {
-                        let newValues = { $set: updateInfo };
-                        let query = { name: restaurant.name }
+                        // let newValues = { $set: updateInfo };
+                        // let query = { name: restaurant.name }
 
                         //think the problem is right here because we have all the info we need
-                        db.collection(collectionName).updateOne(query, newValues, function(err, res) {
+                        db.collection(collectionName).updateOne({ name: restaurant.name }, { $set: updateInfo }, function(err, res) {
                           // console.log(updateInfo)
                           if (err) throw err;
                           // console.log("1 document updated");
@@ -211,19 +200,6 @@ MongoClient.connect(url, function(err, db) {
             });
         });
     });
-
-
-//just testing here with notes
-  // if (err) throw err;
-   // var db = db.db("mydb");
-   // var myquery = { title: "note title" };
-   // var newvalues = { $set: {name: "Mickey", address: "Canyon 123" } };
-   // db.collection("notes").updateOne(myquery, newvalues, function(err, res) {
-   //   if (err) throw err;
-   //   console.log("1 document updated");
-   //   db.close();
-   // });
-
 
 
 });
