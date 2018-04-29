@@ -2,6 +2,7 @@ import React from 'react';
 import * as rb from 'react-bootstrap';
 import * as Question from './actual_questions';
 import { Redirect } from 'react-router-dom';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class Survey extends React.Component {
   constructor(props) {
@@ -36,9 +37,9 @@ class Survey extends React.Component {
 
   nextStep() {
     if (this.state.step >= 10 ) {
-      console.log(this.state);
       this.handleResponse();
     } else {
+
       this.setState({ step: this.state.step + 1 });
     }
   }
@@ -120,73 +121,229 @@ class Survey extends React.Component {
     return preferenceOrdering;
   }
 
+  // yes i know this is a mess - should refactor, here is a note for self:
+  // https://mitchgavan.com/react-quiz/ -YK
   render() {
     switch (this.state.step) {
       case 0:
         return(
-          <Question.Zero
-            saveResponse={this.saveResponse}
-          />
+          <div className="question-container">
+            <ReactCSSTransitionGroup
+              className="container"
+              component="div"
+              transitionName="fade"
+              transitionEnterTimeout={800}
+              transitionLeaveTimeout={500}
+              transitionAppear
+              transitionAppearTimeout={500}
+              >
+              <div key={this.state.step}>
+                <Question.Zero
+                  saveResponse={this.saveResponse}
+                  />
+              </div>
+            </ReactCSSTransitionGroup>
+          </div>
         );
       case 1:
         return(
-          <Question.One
-            saveResponse={this.saveResponse}
-          />
+          <div className="question-container">
+            <ReactCSSTransitionGroup
+              className="container"
+              component="div"
+              transitionName="fade"
+              transitionEnterTimeout={800}
+              transitionLeaveTimeout={500}
+              transitionAppear
+              transitionAppearTimeout={500}
+              >
+              <div key={this.state.step}>
+                <Question.One
+                  saveResponse={this.saveResponse}
+                  />
+              </div>
+            </ReactCSSTransitionGroup>
+          </div>
         );
       case 2:
         return(
-          <Question.Two
-            saveResponse={this.saveResponse}
-          />
+          <div className="question-container">
+            <ReactCSSTransitionGroup
+              className="container"
+              component="div"
+              transitionName="fade"
+              transitionEnterTimeout={800}
+              transitionLeaveTimeout={500}
+              transitionAppear
+              transitionAppearTimeout={500}
+            >
+            <div key={this.state.step}>
+              <Question.Two
+                saveResponse={this.saveResponse}
+              />
+            </div>
+          </ReactCSSTransitionGroup>
+        </div>
         );
       case 3:
         return(
-          <Question.Three
-            saveResponse={this.saveResponse}
-          />
+          <div className="question-container">
+            <ReactCSSTransitionGroup
+              className="container"
+              component="div"
+              transitionName="fade"
+              transitionEnterTimeout={800}
+              transitionLeaveTimeout={500}
+              transitionAppear
+              transitionAppearTimeout={500}
+            >
+            <div key={this.state.step}>
+              <Question.Three
+                saveResponse={this.saveResponse}
+              />
+            </div>
+          </ReactCSSTransitionGroup>
+        </div>
         );
       case 4:
         return(
-          <Question.Four
-            saveResponse={this.saveResponse}
-          />
+            <div className="question-container">
+              <ReactCSSTransitionGroup
+                className="container"
+                component="div"
+                transitionName="fade"
+                transitionEnterTimeout={800}
+                transitionLeaveTimeout={500}
+                transitionAppear
+                transitionAppearTimeout={500}
+              >
+              <div key={this.state.step}>
+                <Question.Four
+                  saveResponse={this.saveResponse}
+                />
+              </div>
+            </ReactCSSTransitionGroup>
+          </div>
         );
       case 5:
         return(
-          <Question.Five
-            saveResponse={this.saveResponse}
-          />
+          <div className="question-container">
+            <ReactCSSTransitionGroup
+              className="container"
+              component="div"
+              transitionName="fade"
+              transitionEnterTimeout={800}
+              transitionLeaveTimeout={500}
+              transitionAppear
+              transitionAppearTimeout={500}
+            >
+            <div key={this.state.step}>
+              <Question.Five
+                saveResponse={this.saveResponse}
+              />
+            </div>
+          </ReactCSSTransitionGroup>
+        </div>
         );
       case 6:
         return(
-          <Question.Six
-            saveResponse={this.saveResponse}
-          />
+          <div className="question-container">
+            <ReactCSSTransitionGroup
+              className="container"
+              component="div"
+              transitionName="fade"
+              transitionEnterTimeout={800}
+              transitionLeaveTimeout={500}
+              transitionAppear
+              transitionAppearTimeout={500}
+            >
+            <div key={this.state.step}>
+              <Question.Six
+                saveResponse={this.saveResponse}
+              />
+            </div>
+          </ReactCSSTransitionGroup>
+        </div>
         );
       case 7:
         return(
-          <Question.Seven
-            saveResponse={this.saveResponse}
-          />
+          <div className="question-container">
+            <ReactCSSTransitionGroup
+              className="container"
+              component="div"
+              transitionName="fade"
+              transitionEnterTimeout={800}
+              transitionLeaveTimeout={500}
+              transitionAppear
+              transitionAppearTimeout={500}
+            >
+            <div key={this.state.step}>
+            <Question.Seven
+              saveResponse={this.saveResponse}
+              />
+            </div>
+          </ReactCSSTransitionGroup>
+        </div>
         );
       case 8:
         return(
-          <Question.Eight
-            saveResponse={this.saveResponse}
-          />
+          <div className="question-container">
+            <ReactCSSTransitionGroup
+              className="container"
+              component="div"
+              transitionName="fade"
+              transitionEnterTimeout={800}
+              transitionLeaveTimeout={500}
+              transitionAppear
+              transitionAppearTimeout={500}
+            >
+            <div key={this.state.step}>
+              <Question.Eight
+                saveResponse={this.saveResponse}
+                />
+            </div>
+          </ReactCSSTransitionGroup>
+        </div>
         );
       case 9:
         return(
-          <Question.Nine
-            saveResponse={this.saveResponse}
-          />
+          <div className="question-container">
+            <ReactCSSTransitionGroup
+              className="container"
+              component="div"
+              transitionName="fade"
+              transitionEnterTimeout={800}
+              transitionLeaveTimeout={500}
+              transitionAppear
+              transitionAppearTimeout={500}
+            >
+            <div key={this.state.step}>
+            <Question.Nine
+              saveResponse={this.saveResponse}
+              />
+            </div>
+          </ReactCSSTransitionGroup>
+        </div>
         );
       case 10:
         return(
-          <Question.Ten
-            saveResponse={this.saveResponse}
-          />
+          <div className="question-container">
+            <ReactCSSTransitionGroup
+              className="container"
+              component="div"
+              transitionName="fade"
+              transitionEnterTimeout={800}
+              transitionLeaveTimeout={500}
+              transitionAppear
+              transitionAppearTimeout={500}
+            >
+            <div key={this.state.step}>
+              <Question.Ten
+                saveResponse={this.saveResponse}
+                />
+            </div>
+          </ReactCSSTransitionGroup>
+        </div>
         );
       default:
     }
