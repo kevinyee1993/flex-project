@@ -41,10 +41,10 @@ function showScrapeImages(data) {
 
 
 // module.exports = async function showPageInfo(data) {
-  let megaObject = {};
 
 
 async function megaScrape(data) {
+  let megaObject = {};
 
   //gets all other data besides reviews
     await showScrapeText(data)
@@ -184,9 +184,10 @@ MongoClient.connect(url, function(err, db) {
 
                         //think the problem is right here because we have all the info we need
                         db.collection(collectionName).updateOne({ name: restaurant.name }, { $set: updateInfo }, function(err, res) {
-                          // console.log(updateInfo)
-                          if (err) throw err;
-                          // console.log("1 document updated");
+                          // console.log(updateInfo);
+
+                          // if (err) throw err;
+                          console.log("1 document updated");
                           // db.close();
                         });
 
