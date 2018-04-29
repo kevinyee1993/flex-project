@@ -1,6 +1,7 @@
 //SCRAPER FOR YELP, all restaurants
 const PostToDatabase = require('../app/util/post_request');
-
+// const showPageInfo = require('./yelp_showpage');
+// const showImageInfo = require('./yelp_showpage');
 
 const fetch = require('node-fetch');
 const cheerio = require('cheerio');
@@ -40,10 +41,12 @@ async function megaScrape() {
         const $name = $element.find(".biz-name");
         const $numReviews = $element.find(".review-count");
         const $address = $element.find("address");
+        const $phone = $element.find(".biz-phone");
         const $category = $element.find(".category-str-list");
         const $rating = $element.find(".i-stars");
         const $price = $element.find(".business-attribute ,price-range");
         const $image = $element.find(".photo-box-img");
+        const $link = $element.find(".indexed-biz-name a")
         // console.log($rating.text());
 
         //converts all $ prices to numbers so that it's easier to query
@@ -51,25 +54,63 @@ async function megaScrape() {
 
         //used to just get the numbers from reviews and ratings
         let numberPattern = /\d+/g;
+        // let noChars = /^[ a-zA-z]/
+
+        // console.log($rating.attr('title').match(noChars));
 
 
         const restaurant = {
           name: $name.text(),
-          numReviews: $numReviews.text(),
-          address: $address.text(),
+          numReviews: parseInt($numReviews.text().match( numberPattern )[0]),
+          address: $address.text().replace(/([a-z])([A-Z])/g, '$1 $2'),
+          phone: $phone.text(),
           tags: $category.text(),
-          rating: $rating.attr('title'),
-          // price: $price.text(),
+
+          //gets rid of the "rating" text
+          rating: $rating.attr('title').substring(0,3),
           price: priceToNum,
           image: $image.attr('src'),
+          link: "https://www.yelp.com/" + $link.attr('href'),
         };
 
+        // console.log(restaurant.link.match(/biz\/(.*)\?/)[1]);
+
+        // Object.assign( restaurant, showPageInfo(restaurant.link.match(/biz\/(.*)\?/)[1]) );
+
+        // restaurants.push( showPageInfo(restaurant.link.match(/biz\/(.*)\?/)[1]) );
+
+        // console.log( showPageInfo(restaurant.link.match(/biz\/(.*)\?/)[1]) );
+
+
+
+
+
+
+        // //SHIT IM WORKING ON RN
+        // just need to figure out a way to await this then it'll work
+        // showPageInfo(restaurant.link.match(/biz\/(.*)\?/)[1])
+        //   // .then (data => { restaurants.push(data) });
+        //   .then (data => { Object.assign(restaurant, data);
+        //     restaurants.push(restaurant);
+        //     // allRestaurants = allRestaurants.concat(restaurants);
+        //     console.log(restaurants);
+        //     // allRestaurants = allRestaurants.concat(restaurants);
+        //     // console.log(allRestaurants);
+        //     // console.log("hello this is show page info");
+        //   });
+
+
+
+
+          // .then (data => { console.log(data) });
+        // console.log(restaurant.link);
         restaurants.push(restaurant);
+        // console.log(restaurants);
       });
 
 
     allRestaurants = allRestaurants.concat(restaurants);
-
+    // console.log(allRestaurants);
     });
 
   }
@@ -78,7 +119,7 @@ async function megaScrape() {
   for(let i = 0; i < allRestaurants.length; i++) {
     Object.keys(allRestaurants[i]).forEach( (key) => {
 
-      if(key === "price") {
+      if(key === "price" || key === "numReviews") {
         //do not clean up the data if we're looking at price
       } else {
         let value = allRestaurants[i][key].replace(/(?:\r\n|\r|\n)/g, ' ');
@@ -90,6 +131,8 @@ async function megaScrape() {
   }
 
   //this is just to test what we're getting back
+  // showPageInfo();
+
   console.log(allRestaurants);
 
   //uncomment all the stuff below to add to database

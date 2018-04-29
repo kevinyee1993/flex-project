@@ -50,7 +50,11 @@ function scrape(resultNum, category) {
 
 
 //ignore linter here
-module.exports = async function megaScrape(category) {
+// module.exports =
+
+//ignore linter here
+// module.exports =
+async function megaScrape(category) {
   let allActivities = [];
 
   //0 is 10 results 0-10
@@ -69,11 +73,12 @@ module.exports = async function megaScrape(category) {
         const $name = $element.find(".biz-name");
         const $numReviews = $element.find(".review-count");
         const $address = $element.find("address");
+        const $phone = $element.find(".biz-phone");
         const $category = $element.find(".category-str-list");
         const $rating = $element.find(".i-stars");
         const $price = $element.find(".business-attribute ,price-range");
         const $image = $element.find(".photo-box-img");
-        // console.log($rating.text());
+        const $link = $element.find(".indexed-biz-name a")
 
 
         //set this up to switch the main categories depending on what you searched for
@@ -81,17 +86,21 @@ module.exports = async function megaScrape(category) {
 
         //converts all $ prices to numbers so that it's easier to query
         let priceToNum = $price.text().length;
+        let numberPattern = /\d+/g;
+
 
         const activity = {
           name: $name.text(),
-          numReviews: $numReviews.text(),
-          address: $address.text(),
+          numReviews: parseInt($numReviews.text().match( numberPattern )[0]),
+          address: $address.text().replace(/([a-z])([A-Z])/g, '$1 $2'),
+          phone: $phone.text(),
           tags: $category.text(),
-          rating: $rating.attr('title'),
-          // price: $price.text(),
+
+          //gets rid of the "rating" text
+          rating: $rating.attr('title').substring(0,3),
           price: priceToNum,
           image: $image.attr('src'),
-          //change this to mainCategory for yihwan's survey data but not necessarily for winston's AI
+          link: "https://www.yelp.com/" + $link.attr('href'),
           category: mainCategory,
         };
 
@@ -109,7 +118,7 @@ module.exports = async function megaScrape(category) {
   for(let i = 0; i < allActivities.length; i++) {
     Object.keys(allActivities[i]).forEach( (key) => {
 
-      if(key === "price") {
+      if(key === "price" || key === "numReviews") {
         //do not clean up the data if we're looking at price
       } else {
         let value = allActivities[i][key].replace(/(?:\r\n|\r|\n)/g, ' ');
@@ -124,6 +133,8 @@ module.exports = async function megaScrape(category) {
   for(let i = 0; i < allActivities.length; i++) {
     await PostToDatabase('activities', allActivities[i]);
   }
+
+
 }
 
 //categorizes all the subactivities into 1 of 4 main affinity categories
