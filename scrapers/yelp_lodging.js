@@ -113,7 +113,7 @@ async function megaScrape(category) {
 
 
 //change this to get different categories
-// megaScrape(HOTELS);
-megaScrape(HOSTELS);
+megaScrape(HOTELS);
+// megaScrape(HOSTELS);
 
 //NOTE, NEED TO CHECK THE TAGS, SOME OF THE HOSTELS RETURNED ARE HOTELS

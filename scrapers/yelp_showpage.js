@@ -178,7 +178,8 @@ MongoClient.connect(url, function(err, db) {
 // loops through all restaurants in database
 
   //change this for lodging, restaurant, whatever
-  let collectionName = 'Restaurants';
+  // let collectionName = 'Restaurants';
+  let collectionName = 'Lodging';
 
   db.collection(collectionName, function(err, collection) {
         collection.find(function(err, cursor) {
