@@ -1,26 +1,5 @@
-//this is sample of what the data should look like at first, as long as the
-url is correct then the showpage scraper should be able to add all the info to this
 
-
-{
-    "_id": {
-        "$oid": "5ae5bfa9659c3f00dee33ee5"
-    },
-    "name": "Kintetsu Mall",
-    "numReviews": 53,
-    "address": "",
-    "phone": "(415) 440-1171",
-    "tags": "Shopping Centers",
-    "rating": "4.0",
-    "price": 2,
-    "image": "https://s3-media2.fl.yelpcdn.com/bphoto/In81ZzmYeOhJTI_O675G6w/90s.jpg",
-    "link": "https://www.yelp.com//biz/kintetsu-mall-san-francisco?osq=Shopping+Centers",
-    "category": "leisure",
-}
-
-
-
-//Ferry Building Marketplace
+Ferry Building Marketplace
 {
     "name": "Ferry Building Marketplace",
     "numReviews": 1610,
@@ -36,7 +15,8 @@ url is correct then the showpage scraper should be able to add all the info to t
 
 
 
-//California Academy of Sciences
+
+California Academy of Sciences
 {
     "name": "California Academy of Sciences",
     "numReviews": 2871,
@@ -51,7 +31,8 @@ url is correct then the showpage scraper should be able to add all the info to t
 }
 
 
-//Lombard Street
+
+Lombard Street
 {
     "name": "Lombard Street",
     "numReviews": 680,
@@ -67,7 +48,7 @@ url is correct then the showpage scraper should be able to add all the info to t
 
 
 
-//Palace of Fine Arts
+Palace of Fine Arts
 {
     "name": "Palace of Fine Arts",
     "numReviews": 872,
@@ -83,7 +64,7 @@ url is correct then the showpage scraper should be able to add all the info to t
 
 
 
-//Corona Heights Park
+Corona Heights Park
 {
     "name": "Corona Heights Park",
     "numReviews": 173,
@@ -99,7 +80,7 @@ url is correct then the showpage scraper should be able to add all the info to t
 
 
 
-//Lyon Street Steps
+Lyon Street Steps
 {
     "name": "Lyon Street Steps",
     "numReviews": 306,
@@ -114,7 +95,7 @@ url is correct then the showpage scraper should be able to add all the info to t
 }
 
 
-//de Young
+de Young
 {
     "name": "de Young",
     "numReviews": 1475,
@@ -129,7 +110,7 @@ url is correct then the showpage scraper should be able to add all the info to t
 }
 
 
-//Baker Beach
+Baker Beach
 {
     "name": "Baker Beach",
     "numReviews": 649,
@@ -144,7 +125,7 @@ url is correct then the showpage scraper should be able to add all the info to t
 }
 
 
-//Ocean Beach
+Ocean Beach
 {
     "name": "Ocean Beach",
     "numReviews": 793,
@@ -158,14 +139,142 @@ url is correct then the showpage scraper should be able to add all the info to t
     "category": "outdoor",
 }
 
+
 Cable Cars <-- just use the powell st one idc
+{
+    "name": "Cable Car - Powell/Hyde Line",
+    "numReviews": 293,
+    "address": "Powell Market St San Francisco, CA 94103",
+    "phone": "",
+    "tags": "Cable Cars",
+    "rating": "3.5",
+    "price": 0,
+    "image": "https://s3-media3.fl.yelpcdn.com/bphoto/e0rU0WYhnNNPGVt_u9s6tA/1000s.jpg",
+    "link": "https://www.yelp.com/biz/cable-car-powell-hyde-line-san-francisco",
+    "category": "culture",
+}
+
+
 Muir Woods National Monument
+{
+    "name": "Muir Woods National Monument",
+    "numReviews": 1320,
+    "address": "1 Muir Woods Rd Mill Valley, CA 94941",
+    "phone": "(415) 561-2850",
+    "tags": "Parks, Hiking",
+    "rating": "4.5",
+    "price": 0,
+    "image": "https://s3-media2.fl.yelpcdn.com/bphoto/taVzEABkwCFQzge5Z8b4MQ/o.jpg",
+    "link": "https://www.yelp.com/biz/muir-woods-national-monument-mill-valley",
+    "category": "outdoor",
+}
+
+
 SF on Tap Tours <-- make this price: 2
-Chinatown
+{
+    "name": "SF on Tap Tours",
+    "numReviews": 67,
+    "address": "Serving San Francisco and the Surrounding Area",
+    "phone": "(415) 938-4677",
+    "tags": "Walking Tours, Beer Tours, Team Building Activities",
+    "rating": "5.0",
+    "price": 2,
+    "image": "https://s3-media3.fl.yelpcdn.com/bphoto/ilG20dsIgTYvNwO0Rc5WSw/o.jpg",
+    "link": "https://www.yelp.com/biz/sf-on-tap-tours-san-francisco-3",
+    "category": "culture",
+}
+
+
+Pier 39
+{
+    "name": "Pier 39",
+    "numReviews": 1162,
+    "address": "The Embarcadero And Beach St",
+    "phone": "(415) 705-5500",
+    "tags": "Local Flavor, Landmarks & Historical Buildings",
+    "rating": "4.0",
+    "price": 0,
+    "image": "https://s3-media2.fl.yelpcdn.com/bphoto/QdJ6z1W2nLIAk3pgLkgEfg/1000s.jpg",
+    "link": "https://www.yelp.com/biz/pier-39-san-francisco",
+    "category": "culture",
+}
+
+
+Fisherman’s Wharf
+{
+    "name": "Fisherman’s Wharf",
+    "numReviews": 677,
+    "address": "North Beach/Telegraph Hill",
+    "phone": "(415) 673-3530",
+    "tags": "Local Flavor",
+    "rating": "4.0",
+    "price": 0,
+    "image": "https://s3-media3.fl.yelpcdn.com/bphoto/RwuWl7W0nXa3EYcq4W8KEQ/1000s.jpg",
+    "link": "https://www.yelp.com/biz/fishermans-wharf-san-francisco-3",
+    "category": "culture",
+}
+
+Billy Goat Hill
+{
+    "name": "Billy Goat Hill",
+    "numReviews": 159,
+    "address": "300 Beacon St San Francisco, CA 94131",
+    "phone": "",
+    "tags": "Parks",
+    "rating": "4.0",
+    "price": 0,
+    "image": "https://s3-media4.fl.yelpcdn.com/bphoto/FxogchcbLhCrP1WkWTO_qQ/1000s.jpg",
+    "link": "https://www.yelp.com/biz/billy-goat-hill-san-francisco",
+    "category": "outdoor",
+}
+
+
+Union Square
+{
+    "name": "Union Square",
+    "numReviews": 11,
+    "address": "333 Post St",
+    "phone": "(415) 477-2610",
+    "tags": "Shopping Centers",
+    "rating": "4.0",
+    "price": 4,
+    "image": "https://s3-media1.fl.yelpcdn.com/bphoto/yUG9b0DmiJ_8IPl0udEt8g/1000s.jpg",
+    "link": "https://www.yelp.com/biz/union-square-san-francisco-16",
+    "category": "leisure",
+}
+
+golden gate bridge
+{
+    "name": "Golden Gate Bridge",
+    "numReviews": 1696,
+    "address": "San Francisco, CA 94129",
+    "phone": "(415) 921-5858",
+    "tags": "Landmarks & Historical Buildings",
+    "rating": "4.5",
+    "price": 0,
+    "image": "https://s3-media1.fl.yelpcdn.com/bphoto/xLcNLmsP5eDFtH4FKSHd3Q/o.jpg",
+    "link": "https://www.yelp.com/biz/golden-gate-bridge-san-francisco",
+    "category": "culture",
+}
+
+
+Ferry Building Marketplace
+California Academy of Sciences
+Lombard Street
+Palace of Fine Arts
+Corona Heights Park
+Lyon Street Steps
+de Young
+Baker Beach
+Ocean Beach
+Cable Car - Powell/Hyde Line
+Muir Woods National Monument
+SF on Tap Tours
 Pier 39
 Fisherman’s Wharf
 Billy Goat Hill
 Union Square
+Golden Gate Bridge
 
-
+Chinatown
 Mission District <-- not on yelp
