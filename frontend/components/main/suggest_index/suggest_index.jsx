@@ -22,22 +22,42 @@ import React from 'react';
 import * as rb from 'react-bootstrap';
 import Header from './suggest_header';
 import Carousel from './suggest_carousel';
+const axios = require('axios');
 
 class SuggestIndex extends React.Component {
   constructor(props) {
     super(props);
     this.userData = this.props.match.params.userData;
     this.state = {
-      nameArray: []
+      names: [],
+      activities: [],
     };
   }
 
   componentDidMount() {
+    axios({
+      method: 'GET',
+      url: `/recommendations/${this.userData}`
+    }).then((result) => {
+      this.setState({names: result.data});
+      console.log(result.data);
+    });
+  }
 
+  getActivities() {
+    let name;
+    for (var i = 0; i < this.state.names.length; i++) {
+      name = this.state.names[i];
+      axios({
+        method: 'GET',
+        url: `/activity/${name}`
+      }).then((result) => {
+        console.log(result);
+      });
+    }
   }
 
   render() {
-    debugger;
     // dummy data for suggest_index
     const dummy_thumbnail = {
       image: "https://images.unsplash.com/photo-1516712109157-6a67f5d73fa1?w=500",
@@ -46,7 +66,9 @@ class SuggestIndex extends React.Component {
       rating: 4.5,
       numReviews: 1234
     };
-
+    if (this.state.names.length > 0) {
+      this.getActivities();
+    }
     return(
       <rb.Grid>
         <Header text={"Your hotel recommendations, bitch:"} />
