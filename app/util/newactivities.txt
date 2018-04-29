@@ -20,7 +20,7 @@ url is correct then the showpage scraper should be able to add all the info to t
 
 
 
-Ferry Building Marketplace
+//Ferry Building Marketplace
 {
     "name": "Ferry Building Marketplace",
     "numReviews": 1610,
@@ -29,17 +29,44 @@ Ferry Building Marketplace
     "tags": "Public Markets, Farmers Market",
     "rating": "4.5",
     "price": 2,
-    "image": "https://s3-media2.fl.yelpcdn.com/bphoto/In81ZzmYeOhJTI_O675G6w/90s.jpg",
-    "link": "https://www.yelp.com//biz/kintetsu-mall-san-francisco?osq=Shopping+Centers",
-    "category": "leisure",
+    "image": "https://s3-media1.fl.yelpcdn.com/bphoto/PTV0WeX6QYGr1U2sZsFZjg/1000s.jpg",
+    "link": "https://www.yelp.com/biz/ferry-building-marketplace-san-francisco",
+    "category": "culture",
 }
 
 
 
+//California Academy of Sciences
+{
+    "name": "California Academy of Sciences",
+    "numReviews": 2871,
+    "address": "55 Music Concourse Dr San Francisco, CA 94118",
+    "phone": "(415) 379-8000",
+    "tags": "Museums, Aquariums",
+    "rating": "4.0",
+    "price": 0,
+    "image": "https://s3-media3.fl.yelpcdn.com/bphoto/zuZSmTVZoOzCFUyFAPU_6A/1000s.jpg",
+    "link": "https://www.yelp.com/biz/california-academy-of-sciences-san-francisco",
+    "category": "culture",
+}
 
 
-California Academy of Sciences
-Lombard Street
+//Lombard Street
+{
+    "name": "Lombard Street",
+    "numReviews": 680,
+    "address": "1000-1099 Lombard St San Francisco, CA 94133",
+    "phone": "",
+    "tags": "Local Flavor",
+    "rating": "4.0",
+    "price": 0,
+    "image": "https://s3-media3.fl.yelpcdn.com/bphoto/crY6DFOR0UZApl2E4V4Tcw/1000s.jpg",
+    "link": "https://www.yelp.com/biz/lombard-street-san-francisco-3",
+    "category": "culture",
+}
+
+
+
 Mission District <-- not on yelp
 Palace of Fine Arts
 Corona Heights Park
