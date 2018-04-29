@@ -77,7 +77,31 @@
     justify-content: space-between;
     align-items: center; }
     .suggest-detail .suggest-info .from-owner .from-owner-header .toggle-btn {
-      cursor: pointer; }
+      cursor: pointer;
+      color: red; }
+  .suggest-detail .suggest-info .review-block {
+    margin-top: 35px;
+    padding: 10px 0;
+    border-top: 1px solid black; }
+    .suggest-detail .suggest-info .review-block .review-index {
+      list-style-type: none;
+      padding: 0;
+      margin: 0; }
+      .suggest-detail .suggest-info .review-block .review-index li {
+        border-top: 1px solid gray; }
+      .suggest-detail .suggest-info .review-block .review-index li:first-child {
+        border-top: none; }
+      .suggest-detail .suggest-info .review-block .review-index .review-item {
+        padding: 25px 0; }
+        .suggest-detail .suggest-info .review-block .review-index .review-item .review-top {
+          display: flex;
+          align-items: center;
+          padding-bottom: 15px; }
+          .suggest-detail .suggest-info .review-block .review-index .review-item .review-top .avatar {
+            max-width: 60px; }
+          .suggest-detail .suggest-info .review-block .review-index .review-item .review-top .username {
+            margin-left: 15px;
+            font-weight: 600; }
   .suggest-detail .more-recommendations {
     margin-top: 25px; }
   .suggest-detail .action-sidebar {

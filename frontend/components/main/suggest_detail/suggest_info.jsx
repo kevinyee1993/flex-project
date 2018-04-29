@@ -11,6 +11,7 @@ export default ({ data }) => {
     <rb.Col xs={12} sm={8} className="suggest-info">
       <HeaderInfo data={data} />
       <FromOwner data={data} />
+      <Reviews reviews={data.reviews} />
     </rb.Col>
   );
 };
