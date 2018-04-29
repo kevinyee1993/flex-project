@@ -19,8 +19,8 @@ const async = require('asyncawait/async');
 //need to change this url to get different show pages
 //url can come from the yelp_restaurants scraper
 //also need to take in url as param and then pass that into url
-function showScrape(data) {
-  let url = `https://www.yelp.com/biz/${ data }?osq=Restaurants`;
+function showScrapeText(data) {
+  let url = `https://www.yelp.com/biz/${ data }`;
   return fetch(`${url}`)
   // return fetch(`https://www.yelp.com//biz/noriega-produce-san-francisco?osq=restaurants`)
   .then(response => response.text());
@@ -34,7 +34,6 @@ function showScrapeImages(data) {
   .then(response => response.text());
 }
 
-let restaurants = []
 
 // module.exports = async function showPageInfo(data) {
   let megaObject = {};
@@ -42,18 +41,22 @@ let restaurants = []
 
 async function megaScrape(data) {
 
-    await showScrape(data)
+  //gets all other data besides reviews
+    await showScrapeText(data)
       .then(body => {
         const $ = cheerio.load(body);
 
         $('#yelp_main_body').each((i, element) => {
 
           const $element = $(element);
-          const $review = $element.find(".js-from-biz-owner p");
+          const $ownerDesc = $element.find(".js-from-biz-owner p");
+          const $neighborhood = $element.find(".neighborhood-str-list");
+          // const $reviews = $element.find(".review-content p");
 
           const restaurant = {
-            // name: $name.text(),
-            review: $review.text(),
+            ownerDesc: $ownerDesc.text(),
+            neighborhood: $neighborhood.text(),
+            // reviews: $reviews.text(),
           };
 
           Object.keys(restaurant).forEach(key => {
@@ -67,6 +70,42 @@ async function megaScrape(data) {
           // return restaurant;
           Object.assign(megaObject, restaurant);
       });
+  });
+
+  //to get user reviews in an array
+    await showScrapeText(data)
+      .then(body => {
+        const $ = cheerio.load(body);
+
+        let allReviews = [];
+
+        $('.review-content').each((i, element) => {
+
+          const $element = $(element);
+          const $reviews = $element.find(".review-content p");
+
+          let value = $reviews.text().replace(/(?:\r\n|\r|\n)/g, ' ');
+          value = value.replace(/ +(?= )/g,'');
+          value = value.trim();
+
+          allReviews.push(value);
+
+
+          // const restaurant = {
+          //   reviews: $reviews.text(),
+          // };
+          //
+          // Object.keys(restaurant).forEach(key => {
+          //   let value = restaurant[key].replace(/(?:\r\n|\r|\n)/g, ' ');
+          //   value = value.replace(/ +(?= )/g,'');
+          //   value = value.trim();
+          //   restaurant[key] = value;
+          // });
+          //
+          // Object.assign(megaObject, restaurant);
+      });
+
+      Object.assign(megaObject, { reviews: allReviews });
   });
 
 
@@ -103,7 +142,7 @@ async function megaScrape(data) {
     console.log(megaObject);
 }
 
-
+//change this to take in any of the whatever whatevers
 megaScrape("noriega-produce-san-francisco");
 
 
