@@ -26,11 +26,19 @@ import Carousel from './suggest_carousel';
 class SuggestIndex extends React.Component {
   constructor(props) {
     super(props);
+    this.userData = this.props.match.params.userData;
+    this.state = {
+      nameArray: []
+    };
+  }
+
+  componentDidMount() {
+
   }
 
   render() {
-
-    // dummy data for suggest_index 
+    debugger;
+    // dummy data for suggest_index
     const dummy_thumbnail = {
       image: "https://images.unsplash.com/photo-1516712109157-6a67f5d73fa1?w=500",
       name: "Hipster Bullshit",
