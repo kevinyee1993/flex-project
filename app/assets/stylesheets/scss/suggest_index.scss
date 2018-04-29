@@ -1,0 +1,38 @@
+.suggest-carousel {
+
+  .carousel-card {
+
+    .tags {
+
+    }
+
+    .name {
+
+    }
+
+    .ratings-reviews {
+
+    }
+  }
+
+  .owl-prev {
+    width: 15px;
+    height: 100px;
+    position: absolute;
+    top: 40%;
+    margin-left: -20px;
+    display: block;
+    border:0px solid black;
+  }
+
+  .owl-next {
+      width: 15px;
+      height: 100px;
+      position: absolute;
+      top: 40%;
+      right: -25px;
+      display: block;
+      border:0px solid black;
+  }
+  // .owl-prev i, .owl-next i {transform : scale(1,6); color: #ccc;}
+}
