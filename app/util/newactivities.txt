@@ -67,13 +67,96 @@ url is correct then the showpage scraper should be able to add all the info to t
 
 
 
-Mission District <-- not on yelp
-Palace of Fine Arts
-Corona Heights Park
-Lyon Street Steps
-de Young
-Baker Beach
-Ocean Beach
+//Palace of Fine Arts
+{
+    "name": "Palace of Fine Arts",
+    "numReviews": 872,
+    "address": "3601 Lyon St San Francisco, CA 94123",
+    "phone": "(415) 608-2220",
+    "tags": "Landmarks & Historical Buildings, Venues & Event Spaces",
+    "rating": "4.5",
+    "price": 0,
+    "image": "https://s3-media3.fl.yelpcdn.com/bphoto/qrVb0NOV6QxUa8OpSLOeVg/300s.jpg",
+    "link": "https://www.yelp.com/biz/palace-of-fine-arts-san-francisco",
+    "category": "culture",
+}
+
+
+
+//Corona Heights Park
+{
+    "name": "Corona Heights Park",
+    "numReviews": 173,
+    "address": "32 Museum Way San Francisco, CA 94114",
+    "phone": "",
+    "tags": "Dog Parks",
+    "rating": "4.5",
+    "price": 0,
+    "image": "https://s3-media2.fl.yelpcdn.com/bphoto/bAM41gZJRYdtM6wVxUVIFQ/o.jpg",
+    "link": "https://www.yelp.com/biz/corona-heights-park-san-francisco",
+    "category": "outdoor",
+}
+
+
+
+//Lyon Street Steps
+{
+    "name": "Lyon Street Steps",
+    "numReviews": 306,
+    "address": "Lyon Street & Green St San Francisco, CA 94123",
+    "phone": "",
+    "tags": "Landmarks & Historical Buildings",
+    "rating": "5.0",
+    "price": 0,
+    "image": "https://s3-media4.fl.yelpcdn.com/bphoto/Oyx0pJ7Nm8YTI-aRYj14Og/o.jpg",
+    "link": "https://www.yelp.com/biz/lyon-street-steps-san-francisco",
+    "category": "culture",
+}
+
+
+//de Young
+{
+    "name": "de Young",
+    "numReviews": 1475,
+    "address": "50 Hagiwara Tea Garden Dr San Francisco, CA 94118",
+    "phone": "(415) 750-3600",
+    "tags": "Art Museums",
+    "rating": "4.0",
+    "price": 0,
+    "image": "https://s3-media3.fl.yelpcdn.com/bphoto/scsPIfH_Gz6c1hWj81tn1w/1000s.jpg",
+    "link": "https://www.yelp.com/biz/de-young-san-francisco",
+    "category": "culture",
+}
+
+
+//Baker Beach
+{
+    "name": "Baker Beach",
+    "numReviews": 649,
+    "address": "1770 Gibson Rd San Francisco, CA 94129",
+    "phone": "(415) 561-4323",
+    "tags": "Parks, Beaches, Fishing",
+    "rating": "4.5",
+    "price": 0,
+    "image": "https://s3-media1.fl.yelpcdn.com/bphoto/dLP8EBIrsuJingn-u4qsDg/o.jpg",
+    "link": "https://www.yelp.com/biz/baker-beach-san-francisco",
+    "category": "outdoor",
+}
+
+
+//Ocean Beach
+{
+    "name": "Ocean Beach",
+    "numReviews": 793,
+    "address": "Point Lobos Ave, Great Hwy San Francisco, CA 94121",
+    "phone": "(415) 426-5240",
+    "tags": "Parks, Beaches, Surfing",
+    "rating": "4.0",
+    "price": 0,
+    "image": "https://s3-media3.fl.yelpcdn.com/bphoto/oK5XIFpMQSWRMFxOlXKxNw/1000s.jpg",
+    "link": "https://www.yelp.com/biz/ocean-beach-san-francisco",
+    "category": "outdoor",
+}
 
 Cable Cars <-- just use the powell st one idc
 Muir Woods National Monument
@@ -83,3 +166,6 @@ Pier 39
 Fisherman’s Wharf
 Billy Goat Hill
 Union Square
+
+
+Mission District <-- not on yelp
