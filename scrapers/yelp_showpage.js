@@ -176,7 +176,11 @@ MongoClient.connect(url, function(err, db) {
   // });
 
 // loops through all restaurants in database
-  db.collection('Restaurants', function(err, collection) {
+
+  //change this for lodging, restaurant, whatever
+  let collectionName = 'Restaurants';
+
+  db.collection(collectionName, function(err, collection) {
         collection.find(function(err, cursor) {
             cursor.each(function(err, restaurant) {
 
@@ -189,7 +193,7 @@ MongoClient.connect(url, function(err, db) {
                         let query = { name: restaurant.name }
 
                         //think the problem is right here because we have all the info we need
-                        db.collection("Restaurants").updateOne(query, newValues, function(err, res) {
+                        db.collection(collectionName).updateOne(query, newValues, function(err, res) {
                           // console.log(updateInfo)
                           if (err) throw err;
                           // console.log("1 document updated");
