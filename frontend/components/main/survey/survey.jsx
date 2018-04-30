@@ -71,7 +71,7 @@ class Survey extends React.Component {
     parsedResponse["culture"] = preferenceOrdering["culture"];
     parsedResponse["spa/shopping"] = preferenceOrdering["spa/shopping"];
 
-    this.props.history.push('/recommendations');
+    this.props.history.push(`/recommendations/${Object.values(parsedResponse).join("")}`);
   }
 
   generatePreferenceOrdering(pairResponses) {

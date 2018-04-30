@@ -3,8 +3,8 @@ import * as rb from 'react-bootstrap';
 import OwlCarousel from 'react-owl-carousel';
 import CarouselCard from './suggest_carousel_card';
 
-export default ({ text, data }) => {
-
+export default ({ userData, text, data }) => {
+  const allCards = data.slice(0,16).map(datum => (<CarouselCard userData={userData} data={datum}/>));
   return(
 
     <rb.Row className="suggest-carousel">
@@ -28,16 +28,7 @@ export default ({ text, data }) => {
             }
           }}
           >
-
-          <CarouselCard data={data}/>
-          <CarouselCard data={data}/>
-          <CarouselCard data={data}/>
-          <CarouselCard data={data}/>
-          <CarouselCard data={data}/>
-          <CarouselCard data={data}/>
-          <CarouselCard data={data}/>
-          <CarouselCard data={data}/>
-          <CarouselCard data={data}/>
+          {allCards}
 
         </OwlCarousel>
 

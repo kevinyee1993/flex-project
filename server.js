@@ -58,7 +58,7 @@ app.get('/', (request, res) => {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/activities/survey/:data', (req, res) => {
+app.get('/recommendations/:data', (req, res) => {
 
   let dataSplit = req.params.data.split("");
   let dataInt = [];
@@ -69,6 +69,7 @@ app.get('/activities/survey/:data', (req, res) => {
       let jSonned = JSON.stringify(data.toString('utf-8'));
       let chopped = jSonned.slice(1, jSonned.length - 3);
       res.send(chopped.split(','));
+      console.log(chopped.split(','));
     });
   }
   doSomething(dataInt);

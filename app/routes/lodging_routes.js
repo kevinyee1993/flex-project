@@ -31,6 +31,13 @@ module.exports = function(app, db) {
       });
     });
 
+    app.get('/lodging', (req, res) => {
+      db.collection("Lodging").find({}).toArray(function(err, result) {
+        if (err) throw err;
+        res.send(result);
+      });
+    });
+
     app.get('/lodging/:name', (req, res) => {
       // const name = req.params.name;
       // const details = { 'name': new ObjectID(name) };
