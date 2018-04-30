@@ -12,7 +12,8 @@ const ExpandedAbout = ({ fullAbout, toggleText }) => {
 };
 
 const CondensedAbout = ({ fullAbout, toggleText }) => {
-  const condensedAbout = fullAbout.slice(0, 300) + "...";
+  let condensedAbout = fullAbout.slice(0, 300) + "...";
+  if (condensedAbout.length <= 3) condensedAbout = `The owner has not left a description.`;
   return(
     <div>
       {condensedAbout}

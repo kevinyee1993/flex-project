@@ -135,11 +135,11 @@ class SuggestIndex extends React.Component {
         <rb.Grid>
           <Header text={"Our Top Picks:"} />
           <Carousel text={"CAROUSEL BITCHES"} data={this.state.defaults} userData={this.userData} type={"activities"}/>
-          <Header text={"Your activity recommendations, bitch:"} />
+          <Header text={"Your activity recommendations:"} />
           <Carousel text={"CAROUSEL BITCHES"} data={this.state.activities} userData={this.userData} type={"activities"}/>
-          <Header text={"Your lodging suxors:"} />
+          <Header text={"Your lodging recommendations:"} />
           <Carousel text={"xdxdxd"} data={this.state.lodging} userData={this.userData} type={"lodging"}/>
-          <Header text={"Your restaurant recommendations, bitch:"} />
+          <Header text={"Your restaurant recommendations:"} />
           <Carousel text={"xdxd"} data={this.state.restaurants} userData={this.userData} type={"restaurants"}/>
 
         </rb.Grid>

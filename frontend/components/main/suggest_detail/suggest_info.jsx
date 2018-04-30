@@ -12,7 +12,7 @@ export default ({ data }) => {
     <rb.Col xs={12} sm={8} className="suggest-info">
       <HeaderInfo data={data} />
       <FromOwner data={data} />
-      <Reviews reviews={data.reviews} />
+      <Reviews reviews={data.reviews.filter(review => review.username.length > 0)} />
       <NavInfo data={data}/>
 
     </rb.Col>

@@ -4,7 +4,7 @@ import OwlCarousel from 'react-owl-carousel';
 import CarouselCard from './suggest_carousel_card';
 
 export default ({ userData, text, data, type }) => {
-  const allCards = data.slice(0,16).map(datum => (<CarouselCard userData={userData} item={datum} data={data} type={type}/>));
+  const allCards = data.slice(0,20).map(datum => (<CarouselCard userData={userData} item={datum} data={data} type={type}/>));
   return(
 
     <rb.Row className="suggest-carousel">
