@@ -18,16 +18,16 @@ const app            = express();
 const port = process.env.PORT || 8000;
 
 
-const virtualenv = require('python-virtualenv');
+// const virtualenv = require('python-virtualenv');
 const { spawn } = require('child_process');
-virtualenv.installEnv();
-virtualenv.installPackage('numpy');
-virtualenv.installPackage('pandas');
-virtualenv.installPackage('python-dateutil');
-virtualenv.installPackage('scikit-learn');
-virtualenv.installPackage('six');
-virtualenv.installPackage('pytz');
-virtualenv.installPackage('scipy');
+// virtualenv.installEnv();
+// virtualenv.installPackage('numpy');
+// virtualenv.installPackage('pandas');
+// virtualenv.installPackage('python-dateutil');
+// virtualenv.installPackage('scikit-learn');
+// virtualenv.installPackage('six');
+// virtualenv.installPackage('pytz');
+// virtualenv.installPackage('scipy');
 
 //express can't process url encoded forms on its own
 //bodyParser downloaded helps us out with that
@@ -50,16 +50,15 @@ app.get('/recommendations/:data', (req, res) => {
   let dataSplit = req.params.data.split("");
   let dataInt = [];
   dataSplit.forEach(char => dataInt.push(parseInt(char)));
-  function doSomething(dataInf) {
+  function sendPrediction(dataInf) {
     const process = spawn('python', ["./predict.py", dataInt]);
     process.stdout.on('data', (data) => {
       let jSonned = JSON.stringify(data.toString('utf-8'));
       let chopped = jSonned.slice(1, jSonned.length - 3);
       res.send(chopped.split(','));
-      console.log(chopped.split(','));
     });
   }
-  doSomething(dataInt);
+  sendPrediction(dataInt);
 });
 
 
