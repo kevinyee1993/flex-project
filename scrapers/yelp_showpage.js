@@ -56,11 +56,13 @@ async function megaScrape(data) {
           const $element = $(element);
           const $ownerDesc = $element.find(".js-from-biz-owner p");
           const $neighborhood = $element.find(".neighborhood-str-list");
+          const $businessUrl = $element.find(".biz-website a");
           // const $reviews = $element.find(".review-content p");
 
           const restaurant = {
             ownerDesc: $ownerDesc.text(),
             neighborhood: $neighborhood.text(),
+            businessUrl: $businessUrl.text(),
             // reviews: $reviews.text(),
           };
 
@@ -187,7 +189,7 @@ MongoClient.connect(url, function(err, db) {
                           // console.log(updateInfo);
 
                           // if (err) throw err;
-                          console.log("1 document updated");
+                          // console.log("1 document updated");
                           // db.close();
                         });
 
