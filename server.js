@@ -18,17 +18,9 @@ const app            = express();
 const port = process.env.PORT || 8000;
 
 
-//TODO: dependencies not working here for some reason
-const virtualenv = require('python-virtualenv');
+
 const { spawn } = require('child_process');
-virtualenv.installEnv();
-virtualenv.installPackage('numpy');
-virtualenv.installPackage('pandas');
-virtualenv.installPackage('python-dateutil');
-virtualenv.installPackage('scikit-learn');
-virtualenv.installPackage('six');
-virtualenv.installPackage('pytz');
-virtualenv.installPackage('scipy');
+
 // const source = spawn('pip', ['freeze']);
 // source.stdout.on('data', (data) => {
 //   console.log(`stdout: ${data}`);
@@ -85,7 +77,7 @@ app.get('/recommendations/:data', (req, res) => {
 
 
 
-MongoClient.connect(db.url, (err, database) => {
+MongoClient.connect(db, (err, database) => {
  if (err) return console.log(err);
  require('./app/routes')(app, database);
  app.listen(port, () => {
