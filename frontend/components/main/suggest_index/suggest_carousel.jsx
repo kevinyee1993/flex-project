@@ -33,7 +33,6 @@ export default ({ text, data }) => {
           >
           {allCards}
 
-
         </OwlCarousel>
 
       </rb.Col>

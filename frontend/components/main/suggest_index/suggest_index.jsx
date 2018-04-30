@@ -49,6 +49,7 @@ class SuggestIndex extends React.Component {
   getActivities() {
     let name;
     let arr = [];
+    let compArr;
     for (var i = 0; i < this.state.names.length; i++) {
       name = this.state.names[i];
       arr.push(axios({
@@ -58,9 +59,10 @@ class SuggestIndex extends React.Component {
     }
     Promise.all(arr).then((response) =>
       {
-        this.setState({activities: response.map(res => {
+        compArr = response.map(res => {
           return res.data[0];
-        })});
+        });
+        this.setState({activities: compArr});
       });
   }
 
@@ -73,7 +75,7 @@ class SuggestIndex extends React.Component {
       rating: 4.5,
       numReviews: 1234
     };
-    if (this.state.names.length > 0) {
+    if ((this.state.names.length > 0) && this.state.activities.length < 1) {
       this.getActivities(this.state.names);
     }
 
