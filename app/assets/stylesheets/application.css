@@ -102,6 +102,11 @@
           .suggest-detail .suggest-info .review-block .review-index .review-item .review-top .username {
             margin-left: 15px;
             font-weight: 600; }
+    .suggest-detail .suggest-info .review-block .toggle-btn-reviews {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      font-weight: 600; }
   .suggest-detail .suggest-info .nav-container {
     border: 1px solid black;
     border-bottom: none;
@@ -116,15 +121,16 @@
       padding: 15px; }
   .suggest-detail .more-recommendations {
     margin-top: 25px; }
-  .suggest-detail .action-sidebar .action-sidebar-container {
-    border: 1px solid black;
-    border-top: 4px solid black;
+  .suggest-detail .action-sidebar {
     position: -webkit-sticky;
     position: sticky;
-    top: 25px;
-    padding: 10px 25px; }
-    .suggest-detail .action-sidebar .action-sidebar-container .social-share {
-      text-align: center; }
+    top: 25px; }
+    .suggest-detail .action-sidebar .action-sidebar-container {
+      border: 1px solid black;
+      border-top: 4px solid black;
+      padding: 10px 25px; }
+      .suggest-detail .action-sidebar .action-sidebar-container .social-share {
+        text-align: center; }
 
 .fade-enter {
   opacity: 0; }

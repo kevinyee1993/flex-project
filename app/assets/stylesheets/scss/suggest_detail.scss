@@ -115,6 +115,13 @@
           }
         }
       }
+
+      .toggle-btn-reviews {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        font-weight: 600;
+      }
     }
 
     .nav-container {
@@ -142,14 +149,14 @@
   }
 
   .action-sidebar {
+    position: -webkit-sticky;  // required for Safari
+    position: sticky;
+    top: 25px;
     .action-sidebar-container {
 
       border: 1px solid black;
       border-top: 4px solid black;
 
-      position: -webkit-sticky;  // required for Safari
-      position: sticky;
-      top: 25px;
 
 
       padding: 10px 25px;
