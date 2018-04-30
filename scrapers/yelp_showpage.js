@@ -170,7 +170,7 @@ MongoClient.connect(url, function(err, db) {
 
   //change this for lodging, restaurant, whatever
   // let collectionName = 'Restaurants';
-  let collectionName = 'Activities';
+  let collectionName = 'Restaurants';
 
   db.collection(collectionName, function(err, collection) {
         collection.find(function(err, cursor) {
