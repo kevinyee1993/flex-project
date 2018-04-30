@@ -14,7 +14,10 @@
 
   .suggest-info {
 
+    .suggest-info-container {
 
+    }
+    
     .sd-tags {
       font-weight: 600;
       text-transform: uppercase;
@@ -64,9 +67,72 @@
 
         .toggle-btn {
           cursor: pointer;
+          color: red;
+        }
+
+      }
+    }
+
+    .review-block {
+      margin-top: 35px;
+      padding: 10px 0;
+      border-top: 1px solid black;
+
+      .review-index {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+
+        li {
+          border-top: 1px solid gray;
+        }
+
+        li:first-child {
+          border-top: none;
+        }
+
+        .review-item {
+          padding: 25px 0;
+
+          .review-top {
+            display: flex;
+            align-items: center;
+            padding-bottom: 15px;
+
+            .avatar {
+              max-width: 60px;
+            }
+
+            .username {
+              margin-left: 15px;
+              font-weight: 600;
+            }
+          }
+
+          .review-text {
+
+          }
         }
       }
     }
+
+    .nav-container {
+      border: 1px solid black;
+      border-bottom: none;
+
+      .nav-header {
+        font-weight: 600;
+      }
+
+      .nav-item {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid black;
+        padding: 15px;
+      }
+    }
+
   }
 
   .more-recommendations {
@@ -74,11 +140,22 @@
   }
 
   .action-sidebar {
-    border: 1px solid black;
-    border-top: 4px solid black;
+    .action-sidebar-container {
+
+      border: 1px solid black;
+      border-top: 4px solid black;
+
+      position: -webkit-sticky;  // required for Safari
+      position: sticky;
+      top: 25px;
+
+
+      padding: 10px 25px;
+
+      .social-share {
+        text-align: center;
+      }
+    }
   }
 
-  .social-share {
-    text-align: center;
-  }
 }
