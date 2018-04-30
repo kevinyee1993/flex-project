@@ -46,7 +46,6 @@ class SuggestIndex extends React.Component {
       url: `/recommendations/${this.userData}`
     }).then((result) => {
       this.setState({names: result.data});
-      console.log(result.data);
     });
     this.getRestaurants();
     this.getLodging();
@@ -54,6 +53,7 @@ class SuggestIndex extends React.Component {
   }
 
   getActivities() {
+    let budget = this.userData[4];
     let name;
     let arr = [];
     let compArr;
@@ -61,7 +61,7 @@ class SuggestIndex extends React.Component {
       name = this.state.names[i];
       arr.push(axios({
         method: 'GET',
-        url: `/activity/${name}`
+        url: `/activities/${name}`
       }));
     }
     Promise.all(arr).then((response) =>
@@ -69,7 +69,7 @@ class SuggestIndex extends React.Component {
         compArr = response.map(res => {
           return res.data[0];
         });
-        this.setState({activities: compArr});
+        this.setState({activities: compArr.filter(el => el.price <= budget)});
       });
   }
 
@@ -82,7 +82,7 @@ class SuggestIndex extends React.Component {
       name = this.defaultNames[i];
       arr.push(axios({
         method: 'GET',
-        url: `/activity/${name}`
+        url: `/activities/${name}`
       }));
     }
     Promise.all(arr).then((response) =>
@@ -134,13 +134,13 @@ class SuggestIndex extends React.Component {
       return(
         <rb.Grid>
           <Header text={"Our Top Picks:"} />
-          <Carousel text={"CAROUSEL BITCHES"} data={this.state.defaults} userData={this.userData}/>
+          <Carousel text={"CAROUSEL BITCHES"} data={this.state.defaults} userData={this.userData} type={"activities"}/>
           <Header text={"Your activity recommendations, bitch:"} />
-          <Carousel text={"CAROUSEL BITCHES"} data={this.state.activities} userData={this.userData}/>
+          <Carousel text={"CAROUSEL BITCHES"} data={this.state.activities} userData={this.userData} type={"activities"}/>
           <Header text={"Your lodging suxors:"} />
-          <Carousel text={"xdxdxd"} data={this.state.lodging} userData={this.userData}/>
+          <Carousel text={"xdxdxd"} data={this.state.lodging} userData={this.userData} type={"lodging"}/>
           <Header text={"Your restaurant recommendations, bitch:"} />
-          <Carousel text={"xdxd"} data={this.state.restaurants} userData={this.userData}/>
+          <Carousel text={"xdxd"} data={this.state.restaurants} userData={this.userData} type={"restaurants"}/>
 
         </rb.Grid>
       );

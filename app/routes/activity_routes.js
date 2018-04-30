@@ -10,7 +10,7 @@ module.exports = function(app, db) {
 
   //find activity by name
   //use this url along with the name of an activity appended to it
-  app.get('/activity/:name', (req, res) => {
+  app.get('/activities/:name', (req, res) => {
     // const name = req.params.name;
     // const details = { 'name': new ObjectID(name) };
     console.log(req.params.name);
