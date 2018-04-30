@@ -1,5 +1,5 @@
 
-Ferry Building Marketplace
+//Ferry Building Marketplace
 {
     "name": "Ferry Building Marketplace",
     "numReviews": 1610,
@@ -10,13 +10,13 @@ Ferry Building Marketplace
     "price": 2,
     "image": "https://s3-media1.fl.yelpcdn.com/bphoto/PTV0WeX6QYGr1U2sZsFZjg/1000s.jpg",
     "link": "https://www.yelp.com/biz/ferry-building-marketplace-san-francisco",
-    "category": "culture",
+    "category": "culture"
 }
 
 
 
 
-California Academy of Sciences
+//California Academy of Sciences
 {
     "name": "California Academy of Sciences",
     "numReviews": 2871,
@@ -27,12 +27,12 @@ California Academy of Sciences
     "price": 0,
     "image": "https://s3-media3.fl.yelpcdn.com/bphoto/zuZSmTVZoOzCFUyFAPU_6A/1000s.jpg",
     "link": "https://www.yelp.com/biz/california-academy-of-sciences-san-francisco",
-    "category": "culture",
+    "category": "culture"
 }
 
 
 
-Lombard Street
+//Lombard Street
 {
     "name": "Lombard Street",
     "numReviews": 680,
@@ -43,12 +43,12 @@ Lombard Street
     "price": 0,
     "image": "https://s3-media3.fl.yelpcdn.com/bphoto/crY6DFOR0UZApl2E4V4Tcw/1000s.jpg",
     "link": "https://www.yelp.com/biz/lombard-street-san-francisco-3",
-    "category": "culture",
+    "category": "culture"
 }
 
 
 
-Palace of Fine Arts
+//Palace of Fine Arts
 {
     "name": "Palace of Fine Arts",
     "numReviews": 872,
@@ -59,12 +59,12 @@ Palace of Fine Arts
     "price": 0,
     "image": "https://s3-media3.fl.yelpcdn.com/bphoto/qrVb0NOV6QxUa8OpSLOeVg/300s.jpg",
     "link": "https://www.yelp.com/biz/palace-of-fine-arts-san-francisco",
-    "category": "culture",
+    "category": "culture"
 }
 
 
 
-Corona Heights Park
+//Corona Heights Park
 {
     "name": "Corona Heights Park",
     "numReviews": 173,
@@ -75,12 +75,12 @@ Corona Heights Park
     "price": 0,
     "image": "https://s3-media2.fl.yelpcdn.com/bphoto/bAM41gZJRYdtM6wVxUVIFQ/o.jpg",
     "link": "https://www.yelp.com/biz/corona-heights-park-san-francisco",
-    "category": "outdoor",
+    "category": "outdoor"
 }
 
 
 
-Lyon Street Steps
+//Lyon Street Steps
 {
     "name": "Lyon Street Steps",
     "numReviews": 306,
@@ -91,11 +91,11 @@ Lyon Street Steps
     "price": 0,
     "image": "https://s3-media4.fl.yelpcdn.com/bphoto/Oyx0pJ7Nm8YTI-aRYj14Og/o.jpg",
     "link": "https://www.yelp.com/biz/lyon-street-steps-san-francisco",
-    "category": "culture",
+    "category": "culture"
 }
 
 
-de Young
+//de Young
 {
     "name": "de Young",
     "numReviews": 1475,
@@ -106,11 +106,11 @@ de Young
     "price": 0,
     "image": "https://s3-media3.fl.yelpcdn.com/bphoto/scsPIfH_Gz6c1hWj81tn1w/1000s.jpg",
     "link": "https://www.yelp.com/biz/de-young-san-francisco",
-    "category": "culture",
+    "category": "culture"
 }
 
 
-Baker Beach
+//Baker Beach
 {
     "name": "Baker Beach",
     "numReviews": 649,
@@ -121,11 +121,11 @@ Baker Beach
     "price": 0,
     "image": "https://s3-media1.fl.yelpcdn.com/bphoto/dLP8EBIrsuJingn-u4qsDg/o.jpg",
     "link": "https://www.yelp.com/biz/baker-beach-san-francisco",
-    "category": "outdoor",
+    "category": "outdoor"
 }
 
 
-Ocean Beach
+//Ocean Beach
 {
     "name": "Ocean Beach",
     "numReviews": 793,
@@ -136,11 +136,11 @@ Ocean Beach
     "price": 0,
     "image": "https://s3-media3.fl.yelpcdn.com/bphoto/oK5XIFpMQSWRMFxOlXKxNw/1000s.jpg",
     "link": "https://www.yelp.com/biz/ocean-beach-san-francisco",
-    "category": "outdoor",
+    "category": "outdoor"
 }
 
 
-Cable Cars <-- just use the powell st one idc
+//Cable Cars <-- just use the powell st one idc
 {
     "name": "Cable Car - Powell/Hyde Line",
     "numReviews": 293,
@@ -151,11 +151,11 @@ Cable Cars <-- just use the powell st one idc
     "price": 0,
     "image": "https://s3-media3.fl.yelpcdn.com/bphoto/e0rU0WYhnNNPGVt_u9s6tA/1000s.jpg",
     "link": "https://www.yelp.com/biz/cable-car-powell-hyde-line-san-francisco",
-    "category": "culture",
+    "category": "culture"
 }
 
 
-Muir Woods National Monument
+//Muir Woods National Monument
 {
     "name": "Muir Woods National Monument",
     "numReviews": 1320,
@@ -166,11 +166,11 @@ Muir Woods National Monument
     "price": 0,
     "image": "https://s3-media2.fl.yelpcdn.com/bphoto/taVzEABkwCFQzge5Z8b4MQ/o.jpg",
     "link": "https://www.yelp.com/biz/muir-woods-national-monument-mill-valley",
-    "category": "outdoor",
+    "category": "outdoor"
 }
 
 
-SF on Tap Tours <-- make this price: 2
+//SF on Tap Tours <-- make this price: 2
 {
     "name": "SF on Tap Tours",
     "numReviews": 67,
@@ -181,11 +181,11 @@ SF on Tap Tours <-- make this price: 2
     "price": 2,
     "image": "https://s3-media3.fl.yelpcdn.com/bphoto/ilG20dsIgTYvNwO0Rc5WSw/o.jpg",
     "link": "https://www.yelp.com/biz/sf-on-tap-tours-san-francisco-3",
-    "category": "culture",
+    "category": "culture"
 }
 
 
-Pier 39
+//Pier 39
 {
     "name": "Pier 39",
     "numReviews": 1162,
@@ -196,11 +196,11 @@ Pier 39
     "price": 0,
     "image": "https://s3-media2.fl.yelpcdn.com/bphoto/QdJ6z1W2nLIAk3pgLkgEfg/1000s.jpg",
     "link": "https://www.yelp.com/biz/pier-39-san-francisco",
-    "category": "culture",
+    "category": "culture"
 }
 
 
-Fisherman’s Wharf
+//Fisherman’s Wharf
 {
     "name": "Fisherman’s Wharf",
     "numReviews": 677,
@@ -211,10 +211,10 @@ Fisherman’s Wharf
     "price": 0,
     "image": "https://s3-media3.fl.yelpcdn.com/bphoto/RwuWl7W0nXa3EYcq4W8KEQ/1000s.jpg",
     "link": "https://www.yelp.com/biz/fishermans-wharf-san-francisco-3",
-    "category": "culture",
+    "category": "culture"
 }
 
-Billy Goat Hill
+//Billy Goat Hill
 {
     "name": "Billy Goat Hill",
     "numReviews": 159,
@@ -225,11 +225,11 @@ Billy Goat Hill
     "price": 0,
     "image": "https://s3-media4.fl.yelpcdn.com/bphoto/FxogchcbLhCrP1WkWTO_qQ/1000s.jpg",
     "link": "https://www.yelp.com/biz/billy-goat-hill-san-francisco",
-    "category": "outdoor",
+    "category": "outdoor"
 }
 
 
-Union Square
+//Union Square
 {
     "name": "Union Square",
     "numReviews": 11,
@@ -240,10 +240,10 @@ Union Square
     "price": 4,
     "image": "https://s3-media1.fl.yelpcdn.com/bphoto/yUG9b0DmiJ_8IPl0udEt8g/1000s.jpg",
     "link": "https://www.yelp.com/biz/union-square-san-francisco-16",
-    "category": "leisure",
+    "category": "leisure"
 }
 
-golden gate bridge
+//golden gate bridge
 {
     "name": "Golden Gate Bridge",
     "numReviews": 1696,
@@ -254,7 +254,7 @@ golden gate bridge
     "price": 0,
     "image": "https://s3-media1.fl.yelpcdn.com/bphoto/xLcNLmsP5eDFtH4FKSHd3Q/o.jpg",
     "link": "https://www.yelp.com/biz/golden-gate-bridge-san-francisco",
-    "category": "culture",
+    "category": "culture"
 }
 
 
