@@ -22,7 +22,7 @@ const App = () => (
     <Switch>
       <Route exact path='/survey' component={Survey} />
       <Route exact path='/recommendations/:userData' component={SuggestIndex} />
-      <Route exact path='/recommendations/:userData/item/:id' component={SuggestDetail} />
+      <Route exact path='/recommendations/:userData/:type/:name' component={SuggestDetail} />
       <Route component={NotFound} />
     </Switch>
     <Footer />
