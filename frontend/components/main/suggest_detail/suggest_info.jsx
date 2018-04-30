@@ -14,6 +14,7 @@ export default ({ data }) => {
       <FromOwner data={data} />
       <Reviews reviews={data.reviews} />
       <NavInfo data={data}/>
+
     </rb.Col>
   );
 };

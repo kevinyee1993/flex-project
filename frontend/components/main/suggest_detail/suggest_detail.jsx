@@ -187,10 +187,8 @@ class SuggestDetail extends React.Component {
             <ActionSidebar source={dummy_data.link}/>
           </rb.Row>
           <rb.Row className="more-recommendations">
-            <rb.Col xs={12}>
               <h3>More restaurants for you:</h3>
               <SuggestCarousel data={dummy_thumbnail} />
-            </rb.Col>
           </rb.Row>
         </rb.Grid>
       </div>

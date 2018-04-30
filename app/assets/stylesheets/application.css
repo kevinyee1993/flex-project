@@ -105,6 +105,8 @@
   .suggest-detail .suggest-info .nav-container {
     border: 1px solid black;
     border-bottom: none; }
+    .suggest-detail .suggest-info .nav-container .nav-header {
+      font-weight: 600; }
     .suggest-detail .suggest-info .nav-container .nav-item {
       display: flex;
       justify-content: space-between;
@@ -112,11 +114,15 @@
       padding: 15px; }
   .suggest-detail .more-recommendations {
     margin-top: 25px; }
-  .suggest-detail .action-sidebar {
+  .suggest-detail .action-sidebar .action-sidebar-container {
     border: 1px solid black;
-    border-top: 4px solid black; }
-  .suggest-detail .social-share {
-    text-align: center; }
+    border-top: 4px solid black;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 25px;
+    padding: 10px 25px; }
+    .suggest-detail .action-sidebar .action-sidebar-container .social-share {
+      text-align: center; }
 
 .fade-enter {
   opacity: 0; }

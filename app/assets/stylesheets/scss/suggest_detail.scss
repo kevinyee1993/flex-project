@@ -14,7 +14,10 @@
 
   .suggest-info {
 
+    .suggest-info-container {
 
+    }
+    
     .sd-tags {
       font-weight: 600;
       text-transform: uppercase;
@@ -137,11 +140,22 @@
   }
 
   .action-sidebar {
-    border: 1px solid black;
-    border-top: 4px solid black;
+    .action-sidebar-container {
+
+      border: 1px solid black;
+      border-top: 4px solid black;
+
+      position: -webkit-sticky;  // required for Safari
+      position: sticky;
+      top: 25px;
+
+
+      padding: 10px 25px;
+
+      .social-share {
+        text-align: center;
+      }
+    }
   }
 
-  .social-share {
-    text-align: center;
-  }
 }
