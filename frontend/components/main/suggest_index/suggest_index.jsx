@@ -73,6 +73,7 @@ class SuggestIndex extends React.Component {
       });
   }
 
+
   getDefaults() {
     let arr = [];
     let compArr;
@@ -114,9 +115,10 @@ class SuggestIndex extends React.Component {
   }
 
   render() {
+
     // dummy data for suggest_index
     const dummy_thumbnail = {
-      image: "https://images.unsplash.com/photo-1516712109157-6a67f5d73fa1?w=500",
+      image: "https://s3-media1.fl.yelpcdn.com/bphoto/PTV0WeX6QYGr1U2sZsFZjg/1000s.jpg",
       name: "Hipster Bullshit",
       tags: ["Bitch", "Weird"],
       rating: 4.5,

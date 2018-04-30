@@ -41,10 +41,10 @@ function showScrapeImages(data) {
 
 
 // module.exports = async function showPageInfo(data) {
-  let megaObject = {};
 
 
 async function megaScrape(data) {
+  let megaObject = {};
 
   //gets all other data besides reviews
     await showScrapeText(data)
@@ -56,11 +56,13 @@ async function megaScrape(data) {
           const $element = $(element);
           const $ownerDesc = $element.find(".js-from-biz-owner p");
           const $neighborhood = $element.find(".neighborhood-str-list");
+          const $businessUrl = $element.find(".biz-website a");
           // const $reviews = $element.find(".review-content p");
 
           const restaurant = {
             ownerDesc: $ownerDesc.text(),
             neighborhood: $neighborhood.text(),
+            businessUrl: $businessUrl.text(),
             // reviews: $reviews.text(),
           };
 
@@ -168,7 +170,7 @@ MongoClient.connect(url, function(err, db) {
 
   //change this for lodging, restaurant, whatever
   // let collectionName = 'Restaurants';
-  let collectionName = 'Activities';
+  let collectionName = 'Restaurants';
 
   db.collection(collectionName, function(err, collection) {
         collection.find(function(err, cursor) {
@@ -184,8 +186,9 @@ MongoClient.connect(url, function(err, db) {
 
                         //think the problem is right here because we have all the info we need
                         db.collection(collectionName).updateOne({ name: restaurant.name }, { $set: updateInfo }, function(err, res) {
-                          // console.log(updateInfo)
-                          if (err) throw err;
+                          // console.log(updateInfo);
+
+                          // if (err) throw err;
                           // console.log("1 document updated");
                           // db.close();
                         });

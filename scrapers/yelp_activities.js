@@ -87,7 +87,7 @@ async function megaScrape(category) {
         //converts all $ prices to numbers so that it's easier to query
         let priceToNum = $price.text().length;
         let numberPattern = /\d+/g;
-
+        let bigPic = $image.attr("src").replace(/90s/, '1000s');
 
         const activity = {
           name: $name.text(),
@@ -99,7 +99,7 @@ async function megaScrape(category) {
           //gets rid of the "rating" text
           rating: $rating.attr('title').substring(0,3),
           price: priceToNum,
-          image: $image.attr('src'),
+          image: bigPic,
           link: "https://www.yelp.com/" + $link.attr('href'),
           category: mainCategory,
         };

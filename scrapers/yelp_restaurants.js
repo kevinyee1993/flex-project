@@ -10,12 +10,12 @@ const cheerio = require('cheerio');
 //shows 10 results per page and the number above represents the first
 //result you want to start with
 //need to multiply NUM_PAGES by 10 or something
-const NUM_PAGES = 1;
+const NUM_PAGES = 4;
 
 const async = require('asyncawait/async');
 
 function scrape(resultNum) {
-  let url = `https://www.yelp.com/search?find_desc=restaurants&find_loc=San+Francisco,+CA&sortby=rating&start=`;
+  let url = `https://www.yelp.com/search?find_desc=restaurants&find_loc=San+Francisco,+CA&sortby=review_count&start=`;
   return fetch(`${url}${resultNum}`)
   .then(response => response.text());
 }
@@ -52,6 +52,8 @@ async function megaScrape() {
         //converts all $ prices to numbers so that it's easier to query
         let priceToNum = $price.text().length;
 
+        let bigPic = $image.attr("src").replace(/90s/, '1000s');
+
         //used to just get the numbers from reviews and ratings
         let numberPattern = /\d+/g;
         // let noChars = /^[ a-zA-z]/
@@ -69,7 +71,7 @@ async function megaScrape() {
           //gets rid of the "rating" text
           rating: $rating.attr('title').substring(0,3),
           price: priceToNum,
-          image: $image.attr('src'),
+          image: bigPic,
           link: "https://www.yelp.com/" + $link.attr('href'),
         };
 
@@ -133,12 +135,12 @@ async function megaScrape() {
   //this is just to test what we're getting back
   // showPageInfo();
 
-  console.log(allRestaurants);
+  // console.log(allRestaurants);
 
   //uncomment all the stuff below to add to database
-  // for(let i = 0; i < allRestaurants.length; i++) {
-  //   await PostToDatabase('restaurants', allRestaurants[i]);
-  // }
+  for(let i = 0; i < allRestaurants.length; i++) {
+    await PostToDatabase('restaurants', allRestaurants[i]);
+  }
 }
 
 megaScrape();

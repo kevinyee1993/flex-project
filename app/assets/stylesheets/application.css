@@ -69,13 +69,68 @@
         display: inline-block;
         padding-left: 5px;
         font-weight: 500; }
+  .suggest-detail .suggest-info .from-owner .from-owner-header {
+    border-top: 1px solid black;
+    margin-top: 35px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .suggest-detail .suggest-info .from-owner .from-owner-header .toggle-btn {
+      cursor: pointer;
+      color: red; }
+  .suggest-detail .suggest-info .review-block {
+    margin-top: 35px;
+    padding: 10px 0;
+    border-top: 1px solid black; }
+    .suggest-detail .suggest-info .review-block .review-index {
+      list-style-type: none;
+      padding: 0;
+      margin: 0; }
+      .suggest-detail .suggest-info .review-block .review-index li {
+        border-top: 1px solid gray; }
+      .suggest-detail .suggest-info .review-block .review-index li:first-child {
+        border-top: none; }
+      .suggest-detail .suggest-info .review-block .review-index .review-item {
+        padding: 25px 0; }
+        .suggest-detail .suggest-info .review-block .review-index .review-item .review-top {
+          display: flex;
+          align-items: center;
+          padding-bottom: 15px; }
+          .suggest-detail .suggest-info .review-block .review-index .review-item .review-top .avatar {
+            max-width: 60px; }
+          .suggest-detail .suggest-info .review-block .review-index .review-item .review-top .username {
+            margin-left: 15px;
+            font-weight: 600; }
+    .suggest-detail .suggest-info .review-block .toggle-btn-reviews {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      font-weight: 600; }
+  .suggest-detail .suggest-info .nav-container {
+    border: 1px solid black;
+    border-bottom: none;
+    max-width: 500px;
+    margin: 25px auto; }
+    .suggest-detail .suggest-info .nav-container .nav-header {
+      font-weight: 600; }
+    .suggest-detail .suggest-info .nav-container .nav-item {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid black;
+      padding: 15px; }
   .suggest-detail .more-recommendations {
     margin-top: 25px; }
   .suggest-detail .action-sidebar {
-    border: 1px solid black;
-    border-top: 4px solid black; }
-  .suggest-detail .social-share {
-    text-align: center; }
+    position: -webkit-sticky;
+    position: sticky;
+    top: 25px; }
+    .suggest-detail .action-sidebar .action-sidebar-container {
+      border: 1px solid black;
+      border-top: 4px solid black;
+      padding: 10px 25px; }
+      .suggest-detail .action-sidebar .action-sidebar-container .social-share {
+        text-align: center; }
 
 .fade-enter {
   opacity: 0; }
