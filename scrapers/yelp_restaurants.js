@@ -10,12 +10,12 @@ const cheerio = require('cheerio');
 //shows 10 results per page and the number above represents the first
 //result you want to start with
 //need to multiply NUM_PAGES by 10 or something
-const NUM_PAGES = 2;
+const NUM_PAGES = 4;
 
 const async = require('asyncawait/async');
 
 function scrape(resultNum) {
-  let url = `https://www.yelp.com/search?find_desc=restaurants&find_loc=San+Francisco,+CA&sortby=rating&start=`;
+  let url = `https://www.yelp.com/search?find_desc=restaurants&find_loc=San+Francisco,+CA&sortby=review_count&start=`;
   return fetch(`${url}${resultNum}`)
   .then(response => response.text());
 }
