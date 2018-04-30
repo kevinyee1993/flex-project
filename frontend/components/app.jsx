@@ -21,8 +21,8 @@ const App = () => (
     <Header />
     <Switch>
       <Route exact path='/survey' component={Survey} />
-      <Route exact path='/recommendations' component={SuggestIndex} />
-      <Route exact path='/recommendations/:id' component={SuggestDetail} />
+      <Route exact path='/recommendations/:userData' component={SuggestIndex} />
+      <Route exact path='/recommendations/:userData/item/:id' component={SuggestDetail} />
       <Route component={NotFound} />
     </Switch>
     <Footer />

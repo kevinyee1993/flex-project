@@ -28,6 +28,13 @@ module.exports = function(app, db) {
     });
   });
 
+  app.get('/restaurants', (req, res) => {
+    db.collection("Restaurants").find({}).toArray(function(err, result) {
+      if (err) throw err;
+      res.send(result);
+    });
+  });
+
   //post route for restaurants
   app.post('/restaurants', (req, res) => {
 
