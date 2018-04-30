@@ -7,7 +7,7 @@ export default ({ userData, data }) => {
 
   return(
 
-    <Link to={`/recommendations/${userData}/`}>
+    <Link to={`/recommendations/${userData}/1`}>
       <section className="carousel-card">
         <img src={data.image}/>
         <div className="tags">{data.tags.split(',  ')}</div>

@@ -30,6 +30,7 @@ class SuggestIndex extends React.Component {
   constructor(props) {
     super(props);
     this.userData = this.props.match.params.userData;
+    this.defaultNames = ["Golden Gate Bridge", "Golden Gate Park", "Ferry Building Marketplace", "Dolores Park", "California Academy of Sciences", "Union Square", "Lombard Street"];
     this.state = {
       names: [],
       defaults: [],
@@ -49,6 +50,7 @@ class SuggestIndex extends React.Component {
     });
     this.getRestaurants();
     this.getLodging();
+    this.getDefaults();
   }
 
   getActivities() {
@@ -68,6 +70,26 @@ class SuggestIndex extends React.Component {
           return res.data[0];
         });
         this.setState({activities: compArr});
+      });
+  }
+
+  getDefaults() {
+    let arr = [];
+    let compArr;
+    let name;
+    for (let i = 0; i < this.defaultNames.length; i++) {
+      name = this.defaultNames[i];
+      arr.push(axios({
+        method: 'GET',
+        url: `/activity/${name}`
+      }));
+    }
+    Promise.all(arr).then((response) =>
+      {
+        compArr = response.map(res => {
+          return res.data[0];
+        });
+        this.setState({defaults: compArr});
       });
   }
 
@@ -101,20 +123,22 @@ class SuggestIndex extends React.Component {
       numReviews: 1234
     };
     if ((this.state.names.length > 0) && this.state.activities.length < 1) {
-      this.getActivities(this.state.names);
+      this.getActivities();
     }
 
-    if ((this.state.activities.length < 1) || (this.state.restaurants.length < 1) || (this.state.lodging.length < 1)) {
+    if ((this.state.activities.length < 1) || (this.state.restaurants.length < 1) || (this.state.lodging.length < 1) || (this.state.defaults.length < 1)) {
       return (<h1>Loading!</h1>);
     } else {
       return(
         <rb.Grid>
+          <Header text={"Our Top Picks:"} />
+          <Carousel text={"CAROUSEL BITCHES"} data={this.state.defaults} userData={this.userData}/>
+          <Header text={"Your activity recommendations, bitch:"} />
+          <Carousel text={"CAROUSEL BITCHES"} data={this.state.activities} userData={this.userData}/>
           <Header text={"Your lodging suxors:"} />
           <Carousel text={"xdxdxd"} data={this.state.lodging} userData={this.userData}/>
           <Header text={"Your restaurant recommendations, bitch:"} />
           <Carousel text={"xdxd"} data={this.state.restaurants} userData={this.userData}/>
-          <Header text={"Your activity recommendations, bitch:"} />
-          <Carousel text={"CAROUSEL BITCHES"} data={this.state.activities} userData={this.userData}/>
 
         </rb.Grid>
       );
