@@ -159,3 +159,12 @@
 
 .question-container {
   position: relative; }
+
+footer {
+  height: 35px;
+  width: 100vw;
+  margin-top: 25px;
+  text-align: center;
+  bottom: 0;
+  background-color: black;
+  color: white; }

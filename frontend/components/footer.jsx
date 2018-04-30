@@ -9,9 +9,9 @@ class Header extends React.Component {
   render() {
 
     return(
-      <div>
-        i am footer. 
-      </div>
+      <footer>
+        i am footer.
+      </footer>
     );
   }
 }
