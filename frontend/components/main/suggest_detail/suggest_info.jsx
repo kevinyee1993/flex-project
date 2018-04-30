@@ -4,6 +4,7 @@ import * as utils from '../../../frontend_utils';
 import HeaderInfo from './suggest_info_components/header_info';
 import FromOwner from './suggest_info_components/from_owner';
 import Reviews from './suggest_info_components/reviews';
+import NavInfo from './suggest_info_components/nav_info';
 
 export default ({ data }) => {
 
@@ -12,6 +13,7 @@ export default ({ data }) => {
       <HeaderInfo data={data} />
       <FromOwner data={data} />
       <Reviews reviews={data.reviews} />
+      <NavInfo data={data}/>
     </rb.Col>
   );
 };

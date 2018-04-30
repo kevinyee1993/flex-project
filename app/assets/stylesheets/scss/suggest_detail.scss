@@ -114,6 +114,22 @@
       }
     }
 
+    .nav-container {
+      border: 1px solid black;
+      border-bottom: none;
+
+      .nav-header {
+        font-weight: 600;
+      }
+
+      .nav-item {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid black;
+        padding: 15px;
+      }
+    }
+
   }
 
   .more-recommendations {

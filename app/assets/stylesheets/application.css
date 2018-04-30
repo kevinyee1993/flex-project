@@ -102,6 +102,14 @@
           .suggest-detail .suggest-info .review-block .review-index .review-item .review-top .username {
             margin-left: 15px;
             font-weight: 600; }
+  .suggest-detail .suggest-info .nav-container {
+    border: 1px solid black;
+    border-bottom: none; }
+    .suggest-detail .suggest-info .nav-container .nav-item {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid black;
+      padding: 15px; }
   .suggest-detail .more-recommendations {
     margin-top: 25px; }
   .suggest-detail .action-sidebar {

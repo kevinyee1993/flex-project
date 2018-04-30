@@ -37,7 +37,7 @@ class Reviews extends React.Component {
   }
 
   render() {
-    let toggleText = "+ All Reviews";
+    let toggleText = "+ More Reviews";
 
     if (this.state.expandedAbout) {
       toggleText = "- Fewer Reviews";
