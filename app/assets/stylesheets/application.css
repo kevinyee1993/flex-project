@@ -104,7 +104,9 @@
             font-weight: 600; }
   .suggest-detail .suggest-info .nav-container {
     border: 1px solid black;
-    border-bottom: none; }
+    border-bottom: none;
+    max-width: 500px;
+    margin: 25px auto; }
     .suggest-detail .suggest-info .nav-container .nav-header {
       font-weight: 600; }
     .suggest-detail .suggest-info .nav-container .nav-item {

@@ -17,7 +17,7 @@
     .suggest-info-container {
 
     }
-    
+
     .sd-tags {
       font-weight: 600;
       text-transform: uppercase;
@@ -120,6 +120,8 @@
     .nav-container {
       border: 1px solid black;
       border-bottom: none;
+      max-width: 500px;
+      margin: 25px auto;
 
       .nav-header {
         font-weight: 600;
