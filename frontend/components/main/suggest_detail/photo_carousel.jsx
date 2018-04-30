@@ -5,7 +5,7 @@ import * as utils from '../../../frontend_utils';
 
 export default ({ photos }) => {
 
-  const parsedPhotos = photos.map((photo, idx) => {
+  const parsedPhotos = photos.slice(1,photos.length).map((photo, idx) => {
 
     return(
       <rb.Image className="photo-carousel-item" responsive src={photo}/>
