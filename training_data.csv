@@ -247,12 +247,15 @@ nightlife,outdoor,culture,leisure,budget,activity
 3,4,2,1,2,Ghirardelli Square
 3,4,2,1,3,Ghirardelli Square
 4,3,2,1,2,Ghirardelli Square
+4,3,2,1,2,Ghirardelli Square
+4,3,2,1,3,Ghirardelli Square
 4,3,2,1,3,Ghirardelli Square
 3,4,1,2,2,Ghirardelli Square
 3,4,1,2,3,Ghirardelli Square
 4,3,1,2,2,Ghirardelli Square
 4,3,1,2,3,Ghirardelli Square
 3,4,2,1,2,Ghirardelli Square
+3,4,2,1,3,Ghirardelli Square
 3,4,2,1,3,Ghirardelli Square
 4,3,2,1,2,Ghirardelli Square
 4,3,2,1,3,Ghirardelli Square
@@ -501,3 +504,387 @@ nightlife,outdoor,culture,leisure,budget,activity
 2,4,1,3,3,Mr Smith's
 2,3,1,4,2,Mr Smith's
 2,3,1,4,3,Mr Smith's
+1,4,2,3,3,Temple Nightclub
+1,4,2,3,4,Temple Nightclub
+1,4,2,3,4,Temple Nightclub
+1,4,2,3,3,Temple Nightclub
+1,4,2,3,4,Temple Nightclub
+1,4,2,3,3,Temple Nightclub
+1,4,2,3,4,Temple Nightclub
+1,4,3,2,3,Temple Nightclub
+1,4,3,2,4,Temple Nightclub
+2,4,1,3,3,Temple Nightclub
+2,4,1,3,4,Temple Nightclub
+2,3,1,4,3,Temple Nightclub
+2,3,1,4,4,Temple Nightclub
+1,4,3,2,3,Temple Nightclub
+1,4,3,2,4,Temple Nightclub
+2,4,1,3,3,Temple Nightclub
+2,4,1,3,4,Temple Nightclub
+2,3,1,4,3,Temple Nightclub
+2,3,1,4,4,Temple Nightclub
+1,4,2,3,2,Temple Nightclub
+1,4,2,3,2,Temple Nightclub
+1,4,2,3,2,Temple Nightclub
+1,4,2,3,2,Temple Nightclub
+1,4,2,3,2,Temple Nightclub
+4,1,3,2,1,Corona Heights Park
+3,1,4,2,1,Corona Heights Park
+4,1,3,2,1,Corona Heights Park
+3,1,4,2,1,Corona Heights Park
+4,1,3,2,1,Corona Heights Park
+3,1,4,2,1,Corona Heights Park
+4,1,3,2,1,Corona Heights Park
+3,1,4,2,1,Corona Heights Park
+4,1,3,2,2,Corona Heights Park
+3,1,4,2,2,Corona Heights Park
+4,1,2,3,1,Corona Heights Park
+3,1,2,4,1,Corona Heights Park
+4,1,2,3,2,Corona Heights Park
+3,1,2,4,2,Corona Heights Park
+4,1,2,3,3,Corona Heights Park
+3,1,2,4,3,Corona Heights Park
+4,2,3,1,1,Corona Heights Park
+4,2,3,1,1,Corona Heights Park
+4,2,3,1,1,Corona Heights Park
+4,2,3,1,1,Corona Heights Park
+4,1,2,3,1,The Presidio
+4,1,2,3,2,The Presidio
+3,1,2,4,1,The Presidio
+3,1,2,4,2,The Presidio
+4,2,1,3,1,The Presidio
+4,2,1,3,2,The Presidio
+3,2,1,4,1,The Presidio
+3,2,1,4,2,The Presidio
+4,3,1,2,1,The Presidio
+4,3,1,2,2,The Presidio
+4,1,3,2,1,The Presidio
+4,1,3,2,2,The Presidio
+4,1,2,3,1,The Presidio
+4,1,2,3,2,The Presidio
+3,1,2,4,1,The Presidio
+3,1,2,4,2,The Presidio
+4,2,1,3,1,The Presidio
+4,2,1,3,2,The Presidio
+3,2,1,4,1,The Presidio
+3,2,1,4,2,The Presidio
+4,3,1,2,1,The Presidio
+4,3,1,2,2,The Presidio
+4,1,3,2,1,The Presidio
+4,1,3,2,2,The Presidio
+4,1,2,3,3,The Presidio
+4,1,2,3,4,The Presidio
+3,1,2,4,3,The Presidio
+3,1,2,4,4,The Presidio
+4,2,1,3,3,The Presidio
+4,2,1,3,4,The Presidio
+3,2,1,4,3,The Presidio
+4,3,1,2,3,The Presidio
+4,1,3,2,3,The Presidio
+3,2,1,4,1,The Presidio
+3,1,2,4,1,The Presidio
+3,2,1,4,2,The Presidio
+3,1,2,4,2,The Presidio
+3,4,1,2,1,Fisherman's Wharf
+3,4,1,2,2,Fisherman's Wharf
+3,4,1,2,3,Fisherman's Wharf
+4,3,1,2,1,Fisherman's Wharf
+3,4,1,2,1,Fisherman's Wharf
+3,4,1,2,2,Fisherman's Wharf
+3,4,1,2,3,Fisherman's Wharf
+4,3,1,2,1,Fisherman's Wharf
+4,3,1,2,2,Fisherman's Wharf
+3,4,1,2,1,Fisherman's Wharf
+3,4,1,2,2,Fisherman's Wharf
+3,4,1,2,3,Fisherman's Wharf
+4,3,1,2,1,Fisherman's Wharf
+4,3,1,2,2,Fisherman's Wharf
+4,3,1,2,3,Fisherman's Wharf
+4,3,1,2,3,Fisherman's Wharf
+3,4,2,1,1,Fisherman's Wharf
+3,4,2,1,2,Fisherman's Wharf
+4,3,2,1,1,Fisherman's Wharf
+4,3,2,1,2,Fisherman's Wharf
+3,4,1,2,1,Pier 39
+3,4,1,2,2,Pier 39
+3,4,1,2,3,Pier 39
+4,3,1,2,1,Pier 39
+3,4,1,2,1,Pier 39
+3,4,1,2,2,Pier 39
+3,4,1,2,3,Pier 39
+4,3,1,2,1,Pier 39
+4,3,1,2,2,Pier 39
+3,4,1,2,1,Pier 39
+3,4,1,2,2,Pier 39
+3,4,1,2,3,Pier 39
+4,3,1,2,1,Pier 39
+4,3,1,2,2,Pier 39
+4,3,1,2,3,Pier 39
+4,3,1,2,3,Pier 39
+3,4,2,1,1,Pier 39
+3,4,2,1,2,Pier 39
+4,3,2,1,1,Pier 39
+4,3,2,1,2,Pier 39
+1,4,3,2,2,SF on Tap Tours
+1,4,3,2,3,SF on Tap Tours
+2,4,3,1,2,SF on Tap Tours
+2,4,3,1,3,SF on Tap Tours
+1,4,3,2,2,SF on Tap Tours
+1,4,3,2,3,SF on Tap Tours
+2,4,3,1,2,SF on Tap Tours
+2,4,3,1,3,SF on Tap Tours
+1,4,3,2,2,SF on Tap Tours
+1,4,3,2,3,SF on Tap Tours
+2,4,3,1,2,SF on Tap Tours
+2,4,3,1,3,SF on Tap Tours
+1,3,4,2,2,SF on Tap Tours
+1,3,4,2,3,SF on Tap Tours
+2,3,4,1,2,SF on Tap Tours
+2,3,4,1,3,SF on Tap Tours
+1,3,4,2,2,SF on Tap Tours
+1,3,4,2,3,SF on Tap Tours
+2,3,4,1,2,SF on Tap Tours
+2,3,4,1,3,SF on Tap Tours
+3,4,1,2,1,Palace of Fine Arts
+3,4,1,2,2,Palace of Fine Arts
+3,4,1,2,3,Palace of Fine Arts
+4,3,1,2,1,Palace of Fine Arts
+3,4,1,2,1,Palace of Fine Arts
+3,4,1,2,2,Palace of Fine Arts
+3,4,1,2,3,Palace of Fine Arts
+4,3,1,2,1,Palace of Fine Arts
+4,3,1,2,2,Palace of Fine Arts
+3,4,1,2,1,Palace of Fine Arts
+3,4,1,2,2,Palace of Fine Arts
+3,4,1,2,3,Palace of Fine Arts
+4,3,1,2,1,Palace of Fine Arts
+4,3,1,2,2,Palace of Fine Arts
+4,3,1,2,3,Palace of Fine Arts
+4,3,1,2,3,Palace of Fine Arts
+3,4,2,1,1,Palace of Fine Arts
+3,4,2,1,2,Palace of Fine Arts
+4,3,2,1,1,Palace of Fine Arts
+4,3,2,1,2,Palace of Fine Arts
+3,4,1,2,1,San Francisco Museum of Modern Art
+3,4,1,2,2,San Francisco Museum of Modern Art
+3,4,1,2,3,San Francisco Museum of Modern Art
+4,3,1,2,1,San Francisco Museum of Modern Art
+3,4,1,2,1,San Francisco Museum of Modern Art
+3,4,1,2,2,San Francisco Museum of Modern Art
+3,4,1,2,3,San Francisco Museum of Modern Art
+4,3,1,2,1,San Francisco Museum of Modern Art
+4,3,1,2,2,San Francisco Museum of Modern Art
+3,4,1,2,1,San Francisco Museum of Modern Art
+3,4,1,2,2,San Francisco Museum of Modern Art
+3,4,1,2,3,San Francisco Museum of Modern Art
+4,3,1,2,1,San Francisco Museum of Modern Art
+4,3,1,2,2,San Francisco Museum of Modern Art
+4,3,1,2,3,San Francisco Museum of Modern Art
+4,3,1,2,3,San Francisco Museum of Modern Art
+3,4,2,1,1,San Francisco Museum of Modern Art
+3,4,2,1,2,San Francisco Museum of Modern Art
+4,3,2,1,1,San Francisco Museum of Modern Art
+4,3,2,1,2,San Francisco Museum of Modern Art
+3,4,1,2,1,The Walt Disney Family Museum
+3,4,1,2,2,The Walt Disney Family Museum
+3,4,1,2,3,The Walt Disney Family Museum
+4,3,1,2,1,The Walt Disney Family Museum
+3,4,1,2,1,The Walt Disney Family Museum
+3,4,1,2,2,The Walt Disney Family Museum
+3,4,1,2,3,The Walt Disney Family Museum
+4,3,1,2,1,The Walt Disney Family Museum
+4,3,1,2,2,The Walt Disney Family Museum
+3,4,1,2,1,The Walt Disney Family Museum
+3,4,1,2,2,The Walt Disney Family Museum
+3,4,1,2,3,The Walt Disney Family Museum
+4,3,1,2,1,The Walt Disney Family Museum
+4,3,1,2,2,The Walt Disney Family Museum
+4,3,1,2,3,The Walt Disney Family Museum
+4,3,1,2,3,The Walt Disney Family Museum
+3,4,2,1,1,The Walt Disney Family Museum
+3,4,2,1,2,The Walt Disney Family Museum
+4,3,2,1,1,The Walt Disney Family Museum
+4,3,2,1,2,The Walt Disney Family Museum
+3,4,1,2,1,de Young
+3,4,1,2,2,de Young
+3,4,1,2,3,de Young
+4,3,1,2,1,de Young
+3,4,1,2,1,de Young
+3,4,1,2,2,de Young
+3,4,1,2,3,de Young
+4,3,1,2,1,de Young
+4,3,1,2,2,de Young
+3,4,1,2,1,de Young
+3,4,1,2,2,de Young
+3,4,1,2,3,de Young
+4,3,1,2,1,de Young
+4,3,1,2,2,de Young
+4,3,1,2,3,de Young
+4,3,1,2,3,de Young
+3,4,2,1,1,de Young
+3,4,2,1,2,de Young
+4,3,2,1,1,de Young
+4,3,2,1,2,de Young
+3,4,1,2,1,Legion of Honor
+3,4,1,2,2,Legion of Honor
+3,4,1,2,3,Legion of Honor
+4,3,1,2,1,Legion of Honor
+3,4,1,2,1,Legion of Honor
+3,4,1,2,2,Legion of Honor
+3,4,1,2,3,Legion of Honor
+4,3,1,2,1,Legion of Honor
+4,3,1,2,2,Legion of Honor
+3,4,1,2,1,Legion of Honor
+3,4,1,2,2,Legion of Honor
+3,4,1,2,3,Legion of Honor
+4,3,1,2,1,Legion of Honor
+4,3,1,2,2,Legion of Honor
+4,3,1,2,3,Legion of Honor
+4,3,1,2,3,Legion of Honor
+3,4,2,1,1,Legion of Honor
+3,4,2,1,2,Legion of Honor
+4,3,2,1,1,Legion of Honor
+4,3,2,1,2,Legion of Honor
+3,4,1,2,1,Asian Art Museum
+3,4,1,2,2,Asian Art Museum
+3,4,1,2,3,Asian Art Museum
+4,3,1,2,1,Asian Art Museum
+3,4,1,2,1,Asian Art Museum
+3,4,1,2,2,Asian Art Museum
+3,4,1,2,3,Asian Art Museum
+4,3,1,2,1,Asian Art Museum
+4,3,1,2,2,Asian Art Museum
+3,4,1,2,1,Asian Art Museum
+3,4,1,2,2,Asian Art Museum
+3,4,1,2,3,Asian Art Museum
+4,3,1,2,1,Asian Art Museum
+4,3,1,2,2,Asian Art Museum
+4,3,1,2,3,Asian Art Museum
+4,3,1,2,3,Asian Art Museum
+3,4,2,1,1,Asian Art Museum
+3,4,2,1,2,Asian Art Museum
+4,3,2,1,1,Asian Art Museum
+4,3,2,1,2,Asian Art Museum
+4,1,3,2,1,Baker Beach
+4,1,3,2,2,Baker Beach
+4,1,3,2,3,Baker Beach
+4,1,3,2,4,Baker Beach
+3,1,4,2,1,Baker Beach
+3,1,4,2,2,Baker Beach
+3,1,4,2,3,Baker Beach
+3,1,4,2,4,Baker Beach
+4,1,3,2,1,Baker Beach
+4,1,3,2,2,Baker Beach
+4,1,3,2,3,Baker Beach
+4,1,3,2,4,Baker Beach
+3,1,4,2,1,Baker Beach
+3,1,4,2,2,Baker Beach
+3,1,4,2,3,Baker Beach
+3,1,4,2,4,Baker Beach
+4,2,3,1,1,Baker Beach
+4,2,3,1,2,Baker Beach
+4,2,3,1,3,Baker Beach
+3,2,4,1,1,Baker Beach
+3,2,4,1,2,Baker Beach
+3,2,4,1,3,Baker Beach
+4,1,3,2,1,Ocean Beach
+4,1,3,2,2,Ocean Beach
+4,1,3,2,3,Ocean Beach
+4,1,3,2,4,Ocean Beach
+3,1,4,2,1,Ocean Beach
+3,1,4,2,2,Ocean Beach
+3,1,4,2,3,Ocean Beach
+3,1,4,2,4,Ocean Beach
+4,1,3,2,1,Ocean Beach
+4,1,3,2,2,Ocean Beach
+4,1,3,2,3,Ocean Beach
+4,1,3,2,4,Ocean Beach
+3,1,4,2,1,Ocean Beach
+3,1,4,2,2,Ocean Beach
+3,1,4,2,3,Ocean Beach
+3,1,4,2,4,Ocean Beach
+4,2,3,1,1,Ocean Beach
+4,2,3,1,2,Ocean Beach
+4,2,3,1,3,Ocean Beach
+3,2,4,1,1,Ocean Beach
+3,2,4,1,2,Ocean Beach
+3,2,4,1,3,Ocean Beach
+4,1,3,2,1,Billy Goat Hill
+4,1,3,2,2,Billy Goat Hill
+4,1,3,2,3,Billy Goat Hill
+4,1,3,2,4,Billy Goat Hill
+3,1,4,2,1,Billy Goat Hill
+3,1,4,2,2,Billy Goat Hill
+3,1,4,2,3,Billy Goat Hill
+3,1,4,2,4,Billy Goat Hill
+4,1,3,2,1,Billy Goat Hill
+4,1,3,2,2,Billy Goat Hill
+4,1,3,2,3,Billy Goat Hill
+4,1,3,2,4,Billy Goat Hill
+3,1,4,2,1,Billy Goat Hill
+3,1,4,2,2,Billy Goat Hill
+3,1,4,2,3,Billy Goat Hill
+3,1,4,2,4,Billy Goat Hill
+4,2,3,1,1,Billy Goat Hill
+4,2,3,1,2,Billy Goat Hill
+4,2,3,1,3,Billy Goat Hill
+3,2,4,1,1,Billy Goat Hill
+3,2,4,1,2,Billy Goat Hill
+3,2,4,1,3,Billy Goat Hill
+4,1,2,3,1,Muir Woods National Monument
+4,1,2,3,2,Muir Woods National Monument
+3,1,2,4,1,Muir Woods National Monument
+3,1,2,4,2,Muir Woods National Monument
+4,2,1,3,1,Muir Woods National Monument
+4,2,1,3,2,Muir Woods National Monument
+3,2,1,4,1,Muir Woods National Monument
+3,2,1,4,2,Muir Woods National Monument
+4,3,1,2,1,Muir Woods National Monument
+4,3,1,2,2,Muir Woods National Monument
+4,1,3,2,1,Muir Woods National Monument
+4,1,3,2,2,Muir Woods National Monument
+4,1,2,3,1,Muir Woods National Monument
+4,1,2,3,2,Muir Woods National Monument
+3,1,2,4,1,Muir Woods National Monument
+3,1,2,4,2,Muir Woods National Monument
+4,2,1,3,1,Muir Woods National Monument
+4,2,1,3,2,Muir Woods National Monument
+3,2,1,4,1,Muir Woods National Monument
+3,2,1,4,2,Muir Woods National Monument
+4,3,1,2,1,Muir Woods National Monument
+4,3,1,2,2,Muir Woods National Monument
+4,1,3,2,1,Muir Woods National Monument
+4,1,3,2,2,Muir Woods National Monument
+4,1,2,3,3,Muir Woods National Monument
+4,1,2,3,4,Muir Woods National Monument
+3,1,2,4,3,Muir Woods National Monument
+3,1,2,4,4,Muir Woods National Monument
+4,2,1,3,3,Muir Woods National Monument
+4,2,1,3,4,Muir Woods National Monument
+3,2,1,4,3,Muir Woods National Monument
+4,3,1,2,3,Muir Woods National Monument
+4,1,3,2,3,Muir Woods National Monument
+3,2,1,4,1,Muir Woods National Monument
+3,1,2,4,1,Muir Woods National Monument
+3,2,1,4,2,Muir Woods National Monument
+3,1,2,4,2,Muir Woods National Monument
+3,4,1,2,1,Lyon Street Steps
+3,4,1,2,2,Lyon Street Steps
+3,4,1,2,3,Lyon Street Steps
+4,3,1,2,1,Lyon Street Steps
+3,4,1,2,1,Lyon Street Steps
+3,4,1,2,2,Lyon Street Steps
+3,4,1,2,3,Lyon Street Steps
+4,3,1,2,1,Lyon Street Steps
+4,3,1,2,2,Lyon Street Steps
+3,4,1,2,1,Lyon Street Steps
+3,4,1,2,2,Lyon Street Steps
+3,4,1,2,3,Lyon Street Steps
+4,3,1,2,1,Lyon Street Steps
+4,3,1,2,2,Lyon Street Steps
+4,3,1,2,3,Lyon Street Steps
+4,3,1,2,3,Lyon Street Steps
+3,4,2,1,1,Lyon Street Steps
+3,4,2,1,2,Lyon Street Steps
+4,3,2,1,1,Lyon Street Steps
+4,3,2,1,2,Lyon Street Steps
