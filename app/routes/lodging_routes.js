@@ -31,7 +31,7 @@ module.exports = function(app, db) {
       });
     });
 
-    app.get('/lodgings', (req, res) => {
+    app.get('/lodging', (req, res) => {
       db.collection("Lodging").find({}).toArray(function(err, result) {
         if (err) throw err;
         res.send(result);

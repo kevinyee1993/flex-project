@@ -32,7 +32,10 @@ class SuggestIndex extends React.Component {
     this.userData = this.props.match.params.userData;
     this.state = {
       names: [],
+      defaults: [],
       activities: [],
+      restaurants: [],
+      lodging: []
     };
   }
 
@@ -44,6 +47,8 @@ class SuggestIndex extends React.Component {
       this.setState({names: result.data});
       console.log(result.data);
     });
+    this.getRestaurants();
+    this.getLodging();
   }
 
   getActivities() {
@@ -66,6 +71,26 @@ class SuggestIndex extends React.Component {
       });
   }
 
+  getLodging() {
+    let budget = this.userData[4];
+    axios({
+      method: 'GET',
+      url: '/lodging'
+    }).then((result) => {
+      this.setState({lodging: result.data.filter(el => el.price <= budget)});
+    });
+  }
+
+  getRestaurants() {
+    let budget = this.userData[4];
+    axios({
+      method: 'GET',
+      url: '/restaurants'
+    }).then((result) => {
+      this.setState({restaurants: result.data.filter(el => el.price <= budget)});
+    });
+  }
+
   render() {
     // dummy data for suggest_index
     const dummy_thumbnail = {
@@ -79,14 +104,17 @@ class SuggestIndex extends React.Component {
       this.getActivities(this.state.names);
     }
 
-    if (this.state.activities.length < 1) {
+    if ((this.state.activities.length < 1) || (this.state.restaurants.length < 1) || (this.state.lodging.length < 1)) {
       return (<h1>Loading!</h1>);
     } else {
       return(
         <rb.Grid>
-
+          <Header text={"Your lodging suxors:"} />
+          <Carousel text={"xdxdxd"} data={this.state.lodging} userData={this.userData}/>
+          <Header text={"Your restaurant recommendations, bitch:"} />
+          <Carousel text={"xdxd"} data={this.state.restaurants} userData={this.userData}/>
           <Header text={"Your activity recommendations, bitch:"} />
-          <Carousel text={"CAROUSEL BITCHES"} data={this.state.activities}/>
+          <Carousel text={"CAROUSEL BITCHES"} data={this.state.activities} userData={this.userData}/>
 
         </rb.Grid>
       );

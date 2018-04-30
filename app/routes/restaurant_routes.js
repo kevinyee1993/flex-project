@@ -27,6 +27,7 @@ module.exports = function(app, db) {
       res.send(result);
     });
   });
+
   app.get('/restaurants', (req, res) => {
     db.collection("Restaurants").find({}).toArray(function(err, result) {
       if (err) throw err;
