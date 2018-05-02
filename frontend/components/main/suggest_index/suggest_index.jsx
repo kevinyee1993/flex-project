@@ -129,9 +129,12 @@ class SuggestIndex extends React.Component {
     }
 
     if ((this.state.activities.length < 1) || (this.state.restaurants.length < 1) || (this.state.lodging.length < 1) || (this.state.defaults.length < 1)) {
-      return (<h1>Loading!</h1>);
+      return (
+          <h1>Loading!</h1>
+      );
     } else {
       return(
+        <div>
         <rb.Grid>
           <Header text={"Our Top Picks:"} />
           <Carousel text={"CAROUSEL BITCHES"} data={this.state.defaults} userData={this.userData} type={"activities"}/>
@@ -141,8 +144,10 @@ class SuggestIndex extends React.Component {
           <Carousel text={"xdxdxd"} data={this.state.lodging} userData={this.userData} type={"lodging"}/>
           <Header text={"Your restaurant recommendations:"} />
           <Carousel text={"xdxd"} data={this.state.restaurants} userData={this.userData} type={"restaurants"}/>
-
         </rb.Grid>
+        
+        <footer className="suggest-index-footer"> TESTSUGGESTINDEXFOOTER </footer>
+      </div>
       );
     }
 

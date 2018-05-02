@@ -7,11 +7,8 @@ class Header extends React.Component {
   }
 
   render() {
-
     return(
-      <footer>
-        i am footer.
-      </footer>
+      null
     );
   }
 }

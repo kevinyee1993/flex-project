@@ -259,6 +259,8 @@ class SuggestDetail extends React.Component {
               <SuggestCarousel data={this.state.otherRecs} userData={this.userData} type={this.type}/>
             </rb.Row>
           </rb.Grid>
+
+          <footer className="suggest-index-footer"> TESTSUGGESTINDEXFOOTER </footer>
         </div>
       );
     }
