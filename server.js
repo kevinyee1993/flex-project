@@ -85,7 +85,7 @@ app.get('/recommendations/:data', (req, res) => {
 
 
 
-MongoClient.connect(db.url, (err, database) => {
+MongoClient.connect(db, (err, database) => {
  if (err) return console.log(err);
  require('./app/routes')(app, database);
  app.listen(port, () => {
