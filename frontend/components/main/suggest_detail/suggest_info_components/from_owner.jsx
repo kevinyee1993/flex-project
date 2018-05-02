@@ -5,7 +5,7 @@ import * as utils from '../../../../frontend_utils';
 const ExpandedAbout = ({ fullAbout, toggleText }) => {
 
   return(
-    <div>
+    <div className="from-owner-text">
       {fullAbout}
     </div>
   );
@@ -15,7 +15,7 @@ const CondensedAbout = ({ fullAbout, toggleText }) => {
   let condensedAbout = fullAbout.slice(0, 300) + "...";
   if (condensedAbout.length <= 3) condensedAbout = `The owner has not left a description.`;
   return(
-    <div>
+    <div className="from-owner-text">
       {condensedAbout}
     </div>
   );

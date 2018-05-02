@@ -48,14 +48,21 @@
   overflow: hidden; }
 
 .suggest-detail {
+  color: #484848;
   margin-top: 25px; }
   .suggest-detail .suggest-info .sd-tags {
     font-weight: 600;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    color: #008489; }
   .suggest-detail .suggest-info .sd-name h2 {
-    margin-top: 2px; }
+    font-weight: 600;
+    margin-top: 2px;
+    color: #484848; }
   .suggest-detail .suggest-info .sd-ratings-reviews {
     margin-top: -10px; }
+    .suggest-detail .suggest-info .sd-ratings-reviews .review {
+      color: #484848;
+      font-weight: 500; }
   .suggest-detail .suggest-info .sd-info-block {
     margin-top: 25px;
     font-size: 18px; }
@@ -69,26 +76,37 @@
         display: inline-block;
         padding-left: 5px;
         font-weight: 500; }
-  .suggest-detail .suggest-info .from-owner .from-owner-header {
-    border-top: 1px solid black;
-    margin-top: 35px;
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
-    .suggest-detail .suggest-info .from-owner .from-owner-header .toggle-btn {
-      cursor: pointer;
-      color: red; }
+  .suggest-detail .suggest-info .from-owner {
+    font-size: 18px;
+    line-height: 24px; }
+    .suggest-detail .suggest-info .from-owner .from-owner-header {
+      border-top: 1px solid #dbdbdb;
+      margin-top: 35px;
+      padding: 10px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .suggest-detail .suggest-info .from-owner .from-owner-header h4 {
+        font-weight: 400; }
+      .suggest-detail .suggest-info .from-owner .from-owner-header .toggle-btn {
+        cursor: pointer;
+        color: #008489; }
   .suggest-detail .suggest-info .review-block {
     margin-top: 35px;
     padding: 10px 0;
-    border-top: 1px solid black; }
+    border-top: 1px solid #dbdbdb; }
+    .suggest-detail .suggest-info .review-block .review-block-header {
+      font-size: 18px; }
+      .suggest-detail .suggest-info .review-block .review-block-header h4 {
+        font-weight: 400; }
     .suggest-detail .suggest-info .review-block .review-index {
+      font-size: 18px;
+      line-height: 24px;
       list-style-type: none;
       padding: 0;
       margin: 0; }
       .suggest-detail .suggest-info .review-block .review-index li {
-        border-top: 1px solid gray; }
+        border-top: 1px solid #dbdbdb; }
       .suggest-detail .suggest-info .review-block .review-index li:first-child {
         border-top: none; }
       .suggest-detail .suggest-info .review-block .review-index .review-item {
@@ -104,30 +122,41 @@
             font-weight: 600; }
     .suggest-detail .suggest-info .review-block .toggle-btn-reviews {
       cursor: pointer;
+      font-size: 18px;
+      color: #008489;
       display: flex;
       justify-content: center;
-      font-weight: 600; }
+      font-weight: 300; }
   .suggest-detail .suggest-info .nav-container {
-    border: 1px solid black;
+    border: 1px solid #dbdbdb;
     border-bottom: none;
-    max-width: 500px;
-    margin: 25px auto; }
+    max-width: 550px;
+    margin: 25px auto;
+    font-size: 18px;
+    color: #484848;
+    -webkit-box-shadow: 5px 5px 29px 5px #dbdbdb;
+    -moz-box-shadow: 5px 5px 29px 5px #dbdbdb;
+    box-shadow: 5px 5px 29px 5px #dbdbdb; }
+    .suggest-detail .suggest-info .nav-container a {
+      color: #008489; }
     .suggest-detail .suggest-info .nav-container .nav-header {
       font-weight: 600; }
     .suggest-detail .suggest-info .nav-container .nav-item {
       display: flex;
       justify-content: space-between;
-      border-bottom: 1px solid black;
+      border-bottom: 1px solid #dbdbdb;
       padding: 15px; }
   .suggest-detail .more-recommendations {
     margin-top: 25px; }
+    .suggest-detail .more-recommendations h3 {
+      font-weight: 500; }
   .suggest-detail .action-sidebar {
     position: -webkit-sticky;
     position: sticky;
     top: 25px; }
     .suggest-detail .action-sidebar .action-sidebar-container {
-      border: 1px solid black;
-      border-top: 4px solid black;
+      border: 1px solid #dbdbdb;
+      border-top: 4px solid #008489;
       padding: 10px 25px; }
       .suggest-detail .action-sidebar .action-sidebar-container .social-share {
         text-align: center; }
@@ -160,7 +189,17 @@
 .question-container {
   position: relative; }
 
+<<<<<<< HEAD
 /* footer {
+=======
+.loading-spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+footer {
+>>>>>>> 958e27f474d9f32ba593c3f9fb7da851893b46dc
   height: 35px;
   width: 100vw;
   margin-top: 25px;

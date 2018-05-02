@@ -70,7 +70,6 @@ class Survey extends React.Component {
     parsedResponse["outdoors"] = preferenceOrdering["outdoors"];
     parsedResponse["culture"] = preferenceOrdering["culture"];
     parsedResponse["spa/shopping"] = preferenceOrdering["spa/shopping"];
-
     this.props.history.push(`/recommendations/${Object.values(parsedResponse).join("")}`);
   }
 
@@ -104,7 +103,7 @@ class Survey extends React.Component {
     }
 
     sorted.sort(function(a, b) {
-      return a[0] - b[0];
+      return b[0] - a[0];
     });
 
     let preferenceOrdering = {

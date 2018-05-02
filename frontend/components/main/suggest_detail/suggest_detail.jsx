@@ -4,6 +4,7 @@ import PhotoCarousel from './photo_carousel';
 import SuggestInfo from './suggest_info';
 import ActionSidebar from './action_sidebar';
 import SuggestCarousel from '../suggest_index/suggest_carousel';
+import {ScaleLoader} from 'halogenium';
 const axios = require('axios');
 
 class SuggestDetail extends React.Component {
@@ -244,7 +245,15 @@ class SuggestDetail extends React.Component {
       this.getActivities();
     }
     if (this.state.item == null || this.state.otherRecs.length < 1) {
-      return (<h1>Hello!</h1>);
+      return (
+        <div>
+          <ScaleLoader
+            className="loading-spinner"
+            color="#008489"
+            size="16px"
+            margin="4px"/>
+        </div>
+      );
     } else {
       return(
         <div>
