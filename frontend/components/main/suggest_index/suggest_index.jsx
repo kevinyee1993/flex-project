@@ -23,7 +23,7 @@ import * as rb from 'react-bootstrap';
 import Header from './suggest_header';
 import Carousel from './suggest_carousel';
 const axios = require('axios');
-
+import {ScaleLoader} from 'halogenium';
 
 
 class SuggestIndex extends React.Component {
@@ -129,7 +129,15 @@ class SuggestIndex extends React.Component {
     }
 
     if ((this.state.activities.length < 1) || (this.state.restaurants.length < 1) || (this.state.lodging.length < 1) || (this.state.defaults.length < 1)) {
-      return (<h1>Loading!</h1>);
+      return (
+        <div>
+          <ScaleLoader
+            className="loading-spinner"
+            color="#008489"
+            size="16px"
+            margin="4px"/>
+        </div>
+      );
     } else {
       return(
         <rb.Grid>
