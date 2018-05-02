@@ -70,7 +70,6 @@ class Survey extends React.Component {
     parsedResponse["outdoors"] = preferenceOrdering["outdoors"];
     parsedResponse["culture"] = preferenceOrdering["culture"];
     parsedResponse["spa/shopping"] = preferenceOrdering["spa/shopping"];
-    debugger;
     this.props.history.push(`/recommendations/${Object.values(parsedResponse).join("")}`);
   }
 
