@@ -3,7 +3,14 @@ import * as rb from 'react-bootstrap';
 import * as utils from '../../../../frontend_utils';
 
 export default ({ data }) => {
-
+  let bongdong = "$";
+  let dingLa = "";
+  for (var i = 1; i <= data.price; i++) {
+    dingLa += bongdong;
+  }
+  if (dingLa == "") {
+    dingLa = "Free";
+  }
   return(
     <div className="header-info">
       <div className="sd-header">
@@ -31,7 +38,7 @@ export default ({ data }) => {
             </span>
           </span>
           <span className="detail">
-            Economical
+            {dingLa}
           </span>
         </div>
 
