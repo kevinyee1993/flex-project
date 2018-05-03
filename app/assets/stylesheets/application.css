@@ -189,9 +189,6 @@
 .question-container {
   position: relative; }
 
-<<<<<<< HEAD
-/* footer {
-=======
 .loading-spinner {
   position: fixed;
   top: 50%;
@@ -199,48 +196,10 @@
   transform: translate(-50%, -50%); }
 
 footer {
->>>>>>> 958e27f474d9f32ba593c3f9fb7da851893b46dc
   height: 35px;
   width: 100vw;
   margin-top: 25px;
-  top: 100%;
   text-align: center;
   bottom: 0;
   background-color: black;
-  color: white;
-} */
-
-
-.survey-footer {
-  position: absolute;
-  height: 35px;
-  width: 100vw;
-  /* margin-top: 500px; */
-  /* margin-top: 100%; */
-  /* margin-top: 30%; */
-  top: 50vw;
-  text-align: center;
-  bottom: 0;
-  background-color: black;
-  color: white;
-  /* position: relative; */
-}
-
-
-.suggest-index-footer {
-  height: 35px;
-  width: 100vw;
-  /* margin-top: 500px; */
-  /* margin-top: 25px; */
-  margin-top: 25px;
-  text-align: center;
-  bottom: 0;
-  background-color: black;
-  color: white;
-  overflow: visible;
-  /* position: absolute; */
-}
-
-/* .og-footer {
-  display: none;
-} */
+  color: white; }
