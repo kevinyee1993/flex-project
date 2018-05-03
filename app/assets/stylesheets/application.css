@@ -74,7 +74,7 @@
   top: 40%;
   margin-left: -20px;
   display: block;
-  border: 0px solid black; }
+  border: 0px solid #dbdbdb; }
 
 .suggest-carousel .owl-next {
   width: 15px;
@@ -83,7 +83,7 @@
   top: 40%;
   right: -25px;
   display: block;
-  border: 0px solid black; }
+  border: 0px solid #dbdbdb; }
 
 .main {
   margin-bottom: 75px; }
