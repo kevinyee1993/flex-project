@@ -22,6 +22,11 @@ export default ({ data }) => {
         <span>{data.phone}</span>
         <span><a href={"tel:+" + data.phone}>Call</a></span>
       </div>
+
+      <div className="nav-item">
+        <span>{data.businessUrl}</span>
+        <span><a target="_blank" href={ "http://" + data.businessUrl}>View</a></span>
+      </div>
     </div>
   );
 };
