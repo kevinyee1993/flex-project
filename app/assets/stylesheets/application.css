@@ -29,6 +29,9 @@
   color: #484848;
   font-weight: 600; }
 
+.suggest-carousel .carousel-card img {
+  max-height: 273.75px; }
+
 .suggest-carousel .carousel-card .tags {
   text-transform: uppercase;
   color: #008489;

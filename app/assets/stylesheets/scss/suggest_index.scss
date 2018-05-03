@@ -13,6 +13,10 @@
 
   .carousel-card {
 
+    img {
+      // position: absolute;
+      max-height: 273.75px;
+    }
     .tags {
       text-transform: uppercase;
       color: $blue-ish;
