@@ -1,17 +1,53 @@
+@import './globals.scss';
+
+.suggest-header {
+
+  h3 {
+    color: $grey;
+    font-weight: 600;
+  }
+}
+
 .suggest-carousel {
+
 
   .carousel-card {
 
     .tags {
+      text-transform: uppercase;
+      color: $blue-ish;
+      font-weight: 600;
+      margin-top: 5px;
+    }
 
+    .tags:hover {
+      text-decoration: none;
     }
 
     .name {
+      margin-top: 5px;
+      color: $grey;
+      font-size: 18px;
+      font-weight: 600;
+    }
 
+    .name:hover {
+      text-decoration: none;
     }
 
     .ratings-reviews {
 
+      .rating {
+        color: $blue-ish;
+      }
+
+      .review {
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.2px;
+        color: $grey;
+        font-weight: 500;
+      }
     }
   }
 

@@ -25,6 +25,38 @@
 .text {
   max-width: 100px; }
 
+.suggest-header h3 {
+  color: #484848;
+  font-weight: 600; }
+
+.suggest-carousel .carousel-card .tags {
+  text-transform: uppercase;
+  color: #008489;
+  font-weight: 600;
+  margin-top: 5px; }
+
+.suggest-carousel .carousel-card .tags:hover {
+  text-decoration: none; }
+
+.suggest-carousel .carousel-card .name {
+  margin-top: 5px;
+  color: #484848;
+  font-size: 18px;
+  font-weight: 600; }
+
+.suggest-carousel .carousel-card .name:hover {
+  text-decoration: none; }
+
+.suggest-carousel .carousel-card .ratings-reviews .rating {
+  color: #008489; }
+
+.suggest-carousel .carousel-card .ratings-reviews .review {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+  color: #484848;
+  font-weight: 500; }
+
 .suggest-carousel .owl-prev {
   width: 15px;
   height: 100px;
