@@ -19,12 +19,14 @@ import NotFound from './404';
 const App = () => (
   <div>
     <Header />
-    <Switch>
-      <Route exact path='/survey' component={Survey} />
-      <Route exact path='/recommendations/:userData' component={SuggestIndex} />
-      <Route exact path='/recommendations/:userData/:type/:name' component={SuggestDetail} />
-      <Route component={NotFound} />
-    </Switch>
+    <div className="main">
+      <Switch>
+        <Route exact path='/survey' component={Survey} />
+        <Route exact path='/recommendations/:userData' component={SuggestIndex} />
+        <Route exact path='/recommendations/:userData/:type/:name' component={SuggestDetail} />
+        <Route component={NotFound} />
+      </Switch>
+    </div>
     <Footer />
   </div>
 );

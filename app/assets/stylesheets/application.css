@@ -1,3 +1,6 @@
+.main {
+  margin-bottom: 75px; }
+
 .survey-question h3 {
   font-weight: 600;
   color: #484848; }
@@ -25,6 +28,9 @@
 
 .text {
   max-width: 100px; }
+
+.main {
+  margin-bottom: 75px; }
 
 .suggest-header h3 {
   color: #484848;
@@ -78,6 +84,9 @@
   right: -25px;
   display: block;
   border: 0px solid black; }
+
+.main {
+  margin-bottom: 75px; }
 
 .photo-carousel {
   max-height: 325px;
@@ -236,8 +245,9 @@
 footer {
   height: 35px;
   width: 100vw;
-  margin-top: 25px;
+  position: fixed;
   text-align: center;
   bottom: 0;
+  left: 0;
   background-color: black;
   color: white; }

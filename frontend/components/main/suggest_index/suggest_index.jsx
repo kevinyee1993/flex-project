@@ -151,8 +151,6 @@ class SuggestIndex extends React.Component {
           <Header text={"Your restaurant recommendations:"} />
           <Carousel data={this.state.restaurants} userData={this.userData} type={"restaurants"}/>
         </rb.Grid>
-
-        <footer className="suggest-index-footer"> TESTSUGGESTINDEXFOOTER </footer>
       </div>
       );
     }
@@ -160,4 +158,6 @@ class SuggestIndex extends React.Component {
   }
 }
 
+// 
+// <footer className="suggest-index-footer"> TESTSUGGESTINDEXFOOTER </footer>
 export default SuggestIndex;

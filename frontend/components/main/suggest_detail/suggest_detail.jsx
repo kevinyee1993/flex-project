@@ -269,11 +269,11 @@ class SuggestDetail extends React.Component {
             </rb.Row>
           </rb.Grid>
 
-          <footer className="suggest-index-footer"> TESTSUGGESTINDEXFOOTER </footer>
         </div>
       );
     }
   }
 }
 
+// <footer className="suggest-index-footer"> TESTSUGGESTINDEXFOOTER </footer>
 export default SuggestDetail;
