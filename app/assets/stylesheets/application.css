@@ -146,6 +146,8 @@
       justify-content: space-between;
       border-bottom: 1px solid #dbdbdb;
       padding: 15px; }
+    .suggest-detail .suggest-info .nav-container .title {
+      font-weight: 500; }
   .suggest-detail .more-recommendations {
     margin-top: 25px; }
     .suggest-detail .more-recommendations h3 {

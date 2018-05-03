@@ -9,7 +9,7 @@ export default ({ data }) => {
         <rb.Image src="https://i.imgur.com/iwbypjK.png" responsive/>
       </div>
 
-      <div className="nav-item">
+      <div className="nav-item title">
         {data.name}
       </div>
 
@@ -21,11 +21,6 @@ export default ({ data }) => {
       <div className="nav-item">
         <span>{data.phone}</span>
         <span><a href={"tel:+" + data.phone}>Call</a></span>
-      </div>
-
-      <div className="nav-item">
-        <span>URL</span>
-        <span>View</span>
       </div>
     </div>
   );
