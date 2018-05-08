@@ -142,17 +142,15 @@ class SuggestIndex extends React.Component {
       return(
         <div>
         <rb.Grid>
-          <Header text={"Our Top Picks:"} />
-          <Carousel text={"CAROUSEL BITCHES"} data={this.state.defaults} userData={this.userData} type={"activities"}/>
+          <Header text={"Our top picks:"} />
+          <Carousel data={this.state.defaults} userData={this.userData} type={"activities"}/>
           <Header text={"Your activity recommendations:"} />
-          <Carousel text={"CAROUSEL BITCHES"} data={this.state.activities} userData={this.userData} type={"activities"}/>
+          <Carousel data={this.state.activities} userData={this.userData} type={"activities"}/>
           <Header text={"Your lodging recommendations:"} />
-          <Carousel text={"xdxdxd"} data={this.state.lodging} userData={this.userData} type={"lodging"}/>
+          <Carousel data={this.state.lodging} userData={this.userData} type={"lodging"}/>
           <Header text={"Your restaurant recommendations:"} />
-          <Carousel text={"xdxd"} data={this.state.restaurants} userData={this.userData} type={"restaurants"}/>
+          <Carousel data={this.state.restaurants} userData={this.userData} type={"restaurants"}/>
         </rb.Grid>
-
-        <footer className="suggest-index-footer"> TESTSUGGESTINDEXFOOTER </footer>
       </div>
       );
     }
@@ -160,4 +158,6 @@ class SuggestIndex extends React.Component {
   }
 }
 
+// 
+// <footer className="suggest-index-footer"> TESTSUGGESTINDEXFOOTER </footer>
 export default SuggestIndex;

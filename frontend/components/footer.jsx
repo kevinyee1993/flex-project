@@ -8,7 +8,9 @@ class Header extends React.Component {
 
   render() {
     return(
-      null
+      <footer>
+        i am footer
+      </footer>
     );
   }
 }

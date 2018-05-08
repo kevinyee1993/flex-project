@@ -47,7 +47,7 @@ body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 {
 }
 
 a, a:hover, a:focus {
-  color: #0061ff;
+  text-decoration: none;
 }
 a .material-icons, a:hover .material-icons, a:focus .material-icons {
   vertical-align: middle;
@@ -2110,7 +2110,7 @@ legend {
   line-height: 1.42857;
 }
 .navbar, .navbar.navbar-default {
-  background-color: #0061ff;
+  background-color: #008489;
   color: #ffffff;
 }
 .navbar .navbar-form .form-group input.form-control::-moz-placeholder,

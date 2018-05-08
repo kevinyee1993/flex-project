@@ -143,8 +143,6 @@ class Survey extends React.Component {
               </div>
             </ReactCSSTransitionGroup>
 
-            <footer className="survey-footer"> TESTSURVEYFOOTER </footer>
-
           </div>
         );
       case 1:
@@ -166,7 +164,6 @@ class Survey extends React.Component {
               </div>
             </ReactCSSTransitionGroup>
 
-            <footer className="survey-footer"> TESTSURVEYFOOTER </footer>
           </div>
         );
       case 2:
@@ -187,7 +184,6 @@ class Survey extends React.Component {
               />
             </div>
           </ReactCSSTransitionGroup>
-          <footer className="survey-footer"> TESTSURVEYFOOTER </footer>
         </div>
         );
       case 3:
@@ -208,7 +204,6 @@ class Survey extends React.Component {
               />
             </div>
           </ReactCSSTransitionGroup>
-          <footer className="survey-footer"> TESTSURVEYFOOTER </footer>
         </div>
         );
       case 4:
@@ -229,7 +224,6 @@ class Survey extends React.Component {
                 />
               </div>
             </ReactCSSTransitionGroup>
-            <footer className="survey-footer"> TESTSURVEYFOOTER </footer>
           </div>
         );
       case 5:
@@ -250,7 +244,6 @@ class Survey extends React.Component {
               />
             </div>
           </ReactCSSTransitionGroup>
-          <footer className="survey-footer"> TESTSURVEYFOOTER </footer>
         </div>
         );
       case 6:
@@ -271,7 +264,6 @@ class Survey extends React.Component {
               />
             </div>
           </ReactCSSTransitionGroup>
-          <footer className="survey-footer"> TESTSURVEYFOOTER </footer>
         </div>
         );
       case 7:
@@ -292,7 +284,6 @@ class Survey extends React.Component {
               />
             </div>
           </ReactCSSTransitionGroup>
-          <footer className="survey-footer"> TESTSURVEYFOOTER </footer>
         </div>
         );
       case 8:
@@ -313,7 +304,6 @@ class Survey extends React.Component {
                 />
             </div>
           </ReactCSSTransitionGroup>
-          <footer className="survey-footer"> TESTSURVEYFOOTER </footer>
         </div>
         );
       case 9:
@@ -334,7 +324,6 @@ class Survey extends React.Component {
               />
             </div>
           </ReactCSSTransitionGroup>
-          <footer className="survey-footer"> TESTSURVEYFOOTER </footer>
         </div>
         );
       case 10:
@@ -355,7 +344,6 @@ class Survey extends React.Component {
                 />
             </div>
           </ReactCSSTransitionGroup>
-          <footer className="survey-footer"> TESTSURVEYFOOTER </footer>
         </div>
         );
       default:
@@ -363,4 +351,5 @@ class Survey extends React.Component {
   }
 }
 
+// <footer className="survey-footer"> TESTSURVEYFOOTER </footer>
 export default Survey;
