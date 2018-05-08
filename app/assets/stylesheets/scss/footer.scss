@@ -34,6 +34,13 @@ footer {
           font-size: 20px;
           padding: 15px 5px 10px 5px;
         }
+
+        a:hover {
+          color: white;
+        }
+        .fa:hover {
+          color: $blue-ish;
+        }
       }
 
     }

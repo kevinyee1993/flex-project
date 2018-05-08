@@ -24,10 +24,10 @@ class Header extends React.Component {
                       <h5 className="creator-name">Kevin Yee</h5>
                       <ul className="list-unstyled">
                           <li>
-                              <a href="#!"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                              <a target="_blank" href="https://www.linkedin.com/in/kevin-yee-9b7874158/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
                           </li>
                           <li>
-                              <a href="#!"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+                              <a target="_blank" href="https://github.com/kevinyee1993"><i class="fa fa-github-square" aria-hidden="true"></i></a>
                           </li>
                       </ul>
                   </div>
@@ -38,10 +38,10 @@ class Header extends React.Component {
                       <h5 className="creator-name">Winston Chan</h5>
                       <ul className="list-unstyled">
                           <li>
-                              <a href="#!"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                              <a target="_blank" href="https://www.linkedin.com/in/winstonchan94/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
                           </li>
                           <li>
-                              <a href="#!"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+                              <a target="_blank" href="https://github.com/winstonchan94"><i class="fa fa-github-square" aria-hidden="true"></i></a>
                           </li>
                       </ul>
                   </div>
@@ -50,10 +50,10 @@ class Header extends React.Component {
                       <h5 className="creator-name">Yihwan Kim</h5>
                       <ul className="list-unstyled">
                           <li>
-                              <a href="#!"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                              <a target="_blank" href="https://linkedin.com/yihwan"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
                           </li>
                           <li>
-                              <a href="#!"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+                              <a target="_blank" href="https://github.com/yihwan"><i class="fa fa-github-square" aria-hidden="true"></i></a>
                           </li>
                       </ul>
                   </div>

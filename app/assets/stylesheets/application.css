@@ -276,6 +276,10 @@ footer {
     footer .footer-links .creator ul a {
       font-size: 20px;
       padding: 15px 5px 10px 5px; }
+    footer .footer-links .creator ul a:hover {
+      color: white; }
+    footer .footer-links .creator ul .fa:hover {
+      color: #008489; }
 
 .page-footer {
   margin-bottom: -20px; }
