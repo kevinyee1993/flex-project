@@ -1,10 +1,48 @@
+@import './globals.scss';
+
 footer {
-  height: 35px;
+
   width: 100vw;
   position: fixed;
-  text-align: center;
+  border-bottom: 25px solid $grey;
   bottom: 0;
   left: 0;
-  background-color: black;
+  background: $grey;
   color: white;
+
+  .title {
+    color: white;
+    font-weight: 500;
+    font-size: 1.3em;
+    margin-bottom: 5px;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: space-around;
+    .creator {
+
+      .creator-name {
+        font-weight: 400;
+        font-size: 15px;
+        margin-bottom: -10px;
+      }
+
+      ul {
+
+        a {
+          font-size: 20px;
+          padding: 15px 5px 10px 5px;
+        }
+      }
+
+    }
+
+    margin-bottom: -10px;
+  }
+
+}
+
+.page-footer {
+  margin-bottom: -20px;
 }
