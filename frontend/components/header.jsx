@@ -16,13 +16,6 @@ class Header extends React.Component {
           </rb.Navbar.Brand>
           <rb.Navbar.Toggle />
         </rb.Navbar.Header>
-        <rb.Navbar.Collapse>
-          <rb.Nav pullRight>
-            <rb.NavItem eventKey={1} href="#">
-              MY ITINERARY
-            </rb.NavItem>
-          </rb.Nav>
-        </rb.Navbar.Collapse>
       </rb.Navbar>
     );
   }
