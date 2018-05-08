@@ -212,6 +212,8 @@
       border: 1px solid #dbdbdb;
       border-top: 4px solid #008489;
       padding: 10px 25px; }
+      .suggest-detail .action-sidebar .action-sidebar-container .yelp-button {
+        background-color: #CD1F20; }
       .suggest-detail .action-sidebar .action-sidebar-container .social-share {
         text-align: center; }
 
