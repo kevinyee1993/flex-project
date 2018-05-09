@@ -214,6 +214,10 @@
       padding: 10px 25px; }
       .suggest-detail .action-sidebar .action-sidebar-container .yelp-button {
         background-color: #CD1F20; }
+      .suggest-detail .action-sidebar .action-sidebar-container .fb-button {
+        background-color: #3E66B0; }
+      .suggest-detail .action-sidebar .action-sidebar-container .twitter-button {
+        background-color: #00A0EF; }
       .suggest-detail .action-sidebar .action-sidebar-container .social-share {
         text-align: center; }
 
