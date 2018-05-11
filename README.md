@@ -1,3 +1,51 @@
+# WhatDo
+
+[Live Version](http://whatdo-sf.herokuapp.com/#/survey)
+
+
+# Description
+
+**WhatDo is an app that intelligently recommends trip itinerary suggestions based on a user’s background and preferences.** Trip Planner parses through travel activity, restaurant, and lodging data from third-party platforms and influencers to recommend trip itineraries tailored to a user’s interests.
+
+
+
+# Features
+### Real-time Information
+Custom web scrapers were created to obtain data from various sites including Yelp, OpenTable, and EventBrite.  This provides our app with the most up-to-date information about restaurants, lodging, and activities to ensure the user  gets the most relevant information possible.
+
+
+### Machine Learning Generated Recommendations
+
+
+### Google Maps API
+
+
+
+
+# Technologies
+### Javascript
+
+
+### HTML5/CSS3
+
+
+### Piskel
+
+
+### Webpack
+
+
+# Future Direction
+* Allow users to create accounts and save itineraries and preferences across sessions.
+* Continue to refine trip data point recommendations based on a user’s ongoing app activities and favorites.
+* Continue adding new cities to the app
+* Update app to more accurately filter and present restaurants and lodging based on user preferences
+* Add/update questions list in the beginning to be more efficient and accurate
+
+
+
+
+<!--
 {# Trip Planner (think of new name later)
 **Trip Planner is an app that intelligently recommends trip itinerary suggestions based on a user’s background and preferences.**
 
@@ -81,4 +129,4 @@ Kevin Yee, Winston Chan, Yihwan Kim
 ### Day 6
 * Work on bonus features decided upon
 [Data Sources](
-https://docs.google.com/spreadsheets/d/1tbsrEgkJfH-mGZId1uzCcbQmYgWsQ8J1lkDp9jU8qR4/edit#gid=0)
+https://docs.google.com/spreadsheets/d/1tbsrEgkJfH-mGZId1uzCcbQmYgWsQ8J1lkDp9jU8qR4/edit#gid=0) -->
