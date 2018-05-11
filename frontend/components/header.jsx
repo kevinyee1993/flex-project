@@ -12,7 +12,7 @@ class Header extends React.Component {
       <rb.Navbar>
         <rb.Navbar.Header>
           <rb.Navbar.Brand>
-            flex-project
+            WhatDo
           </rb.Navbar.Brand>
           <rb.Navbar.Toggle />
         </rb.Navbar.Header>
