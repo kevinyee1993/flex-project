@@ -2,12 +2,12 @@ import React from 'react';
 import * as rb from 'react-bootstrap';
 import * as utils from '../../../../frontend_utils';
 
+// <div className="nav-header">
+//   <rb.Image src="https://i.imgur.com/iwbypjK.png" responsive/>
+// </div>
 export default ({ data }) => {
   return(
     <div className="nav-container">
-      <div className="nav-header">
-        <rb.Image src="https://i.imgur.com/iwbypjK.png" responsive/>
-      </div>
 
       <div className="nav-item title">
         {data.name}

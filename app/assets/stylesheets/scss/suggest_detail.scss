@@ -206,6 +206,23 @@
     top: 25px;
     .action-sidebar-container {
 
+      .yelp-button {
+        background-color: #CD1F20;
+
+      }
+
+      .fb-button {
+        background-color: #3E66B0;
+      }
+
+      .twitter-button {
+        background-color: #00A0EF;
+      }
+
+      .mail-button {
+
+      }
+
       border: 1px solid $light-grey;
       border-top: 4px solid $blue-ish;
 

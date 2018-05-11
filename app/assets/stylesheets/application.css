@@ -1,5 +1,5 @@
 .main {
-  margin-bottom: 75px; }
+  margin-bottom: 200px; }
 
 .survey-question h3 {
   font-weight: 600;
@@ -37,7 +37,7 @@
   max-width: 100px; }
 
 .main {
-  margin-bottom: 75px; }
+  margin-bottom: 200px; }
 
 .suggest-header h3 {
   color: #484848;
@@ -93,7 +93,7 @@
   border: 0px solid #dbdbdb; }
 
 .main {
-  margin-bottom: 75px; }
+  margin-bottom: 200px; }
 
 .photo-carousel {
   max-height: 325px;
@@ -212,6 +212,12 @@
       border: 1px solid #dbdbdb;
       border-top: 4px solid #008489;
       padding: 10px 25px; }
+      .suggest-detail .action-sidebar .action-sidebar-container .yelp-button {
+        background-color: #CD1F20; }
+      .suggest-detail .action-sidebar .action-sidebar-container .fb-button {
+        background-color: #3E66B0; }
+      .suggest-detail .action-sidebar .action-sidebar-container .twitter-button {
+        background-color: #00A0EF; }
       .suggest-detail .action-sidebar .action-sidebar-container .social-share {
         text-align: center; }
 
@@ -249,12 +255,37 @@
   left: 50%;
   transform: translate(-50%, -50%); }
 
+.main {
+  margin-bottom: 200px; }
+
 footer {
-  height: 35px;
   width: 100vw;
   position: fixed;
-  text-align: center;
+  border-bottom: 25px solid #484848;
   bottom: 0;
   left: 0;
-  background-color: black;
+  background: #484848;
   color: white; }
+  footer .title {
+    color: white;
+    font-weight: 500;
+    font-size: 1.3em;
+    margin-bottom: 5px; }
+  footer .footer-links {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: -10px; }
+    footer .footer-links .creator .creator-name {
+      font-weight: 400;
+      font-size: 15px;
+      margin-bottom: -10px; }
+    footer .footer-links .creator ul a {
+      font-size: 20px;
+      padding: 15px 5px 10px 5px; }
+    footer .footer-links .creator ul a:hover {
+      color: white; }
+    footer .footer-links .creator ul .fa:hover {
+      color: #008489; }
+
+.page-footer {
+  margin-bottom: -20px; }
