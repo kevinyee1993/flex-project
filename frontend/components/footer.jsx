@@ -15,7 +15,7 @@ class Header extends React.Component {
 
           <div className="container text-center ">
             <div className="row title">
-              flex-project created by
+              WhatDo created by
             </div>
               <div className="row footer-links">
 
