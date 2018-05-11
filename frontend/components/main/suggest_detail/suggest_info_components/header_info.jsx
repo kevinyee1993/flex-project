@@ -11,6 +11,9 @@ export default ({ data }) => {
   if (dingLa == "") {
     dingLa = "Free";
   }
+
+  let odds = Math.random();
+
   return(
     <div className="header-info">
       <div className="sd-header">
@@ -23,7 +26,15 @@ export default ({ data }) => {
         </div>
 
         <div className="sd-ratings-reviews">
-          <span className="rating"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></span>
+          { odds > 0.5 ? (
+            <div>
+            <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+            </div>
+          ) : (
+            <div>
+            <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+          </div>
+          )}
           <span className="review"> {utils.addCommas(data.numReviews)} Reviews</span>
         </div>
       </div>
