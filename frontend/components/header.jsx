@@ -1,5 +1,6 @@
 import React from 'react';
 import * as rb from 'react-bootstrap';
+// var BrowserHistory = require('react-router/lib/BrowserHistory').default;
 
 class Header extends React.Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class Header extends React.Component {
       <rb.Navbar>
         <rb.Navbar.Header>
           <rb.Navbar.Brand>
-            WhatDo
+              WhatDo
           </rb.Navbar.Brand>
           <rb.Navbar.Toggle />
         </rb.Navbar.Header>
