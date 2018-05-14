@@ -73,7 +73,7 @@ We imported SciKit-Learn's Gaussian Naive-Bayes machine learning classification 
 We used Python to script fitting of training data to the machine learning model.  We also fed unlabeled new survey data through the model to obtain a list of activity recommendations ranked by probability of classification.
 
 ### Spawn
-We imported Spawn from child-processes to integrate our Python scripts into the Express back end route.  This persisted user survey data from the front end by way of URL params, then we passed it to the Python file as system input.
+We imported Spawn from child-process to integrate our Python scripts into the Express back end route.  This persisted user survey data from the front end by way of URL params, then we passed it to the Python file as system input.
 
 
 
@@ -83,3 +83,4 @@ We imported Spawn from child-processes to integrate our Python scripts into the 
 * Continue adding new cities to the app
 * Update app to more accurately filter and present restaurants and lodging based on user preferences
 * Add/update questions list in the beginning to be more efficient and accurate
+* Use itinerary to add to training data to strengthen model accuracy
