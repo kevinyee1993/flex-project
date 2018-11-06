@@ -1,8 +1,11 @@
 {
-  "name": "whysitcalledthat",
+  "name": "whatdo",
   "version": "1.0.0",
   "description": "# Trip Planner (think of new name later) **Trip Planner is an app that intelligently recommends trip itinerary suggestions based on a user’s background and preferences.**",
   "main": "eventbrite.js",
+  "engines": {
+  "node": "8.9.4"
+  },
   "dependencies": {
     "asyncawait": "^1.0.6",
     "axios": "^0.18.0",
