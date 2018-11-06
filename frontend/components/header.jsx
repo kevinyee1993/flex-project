@@ -13,7 +13,7 @@ class Header extends React.Component {
       <rb.Navbar>
         <rb.Navbar.Header>
           <rb.Navbar.Brand>
-              WhatDo
+              <a href="https://winstonchan94.github.io/whatdo/">WhatDo</a>
           </rb.Navbar.Brand>
           <rb.Navbar.Toggle />
         </rb.Navbar.Header>
