@@ -1,6 +1,6 @@
 # WhatDo
 
-[Live Version](http://whatdo-sf.herokuapp.com/#/survey)
+[Live Version](https://yihwan.github.io/trip-planner-splash/)
 ![splashPage](https://i.imgur.com/pGGPZds.gif)
 
 
