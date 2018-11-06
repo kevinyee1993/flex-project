@@ -48,7 +48,7 @@
 
 .suggest-carousel .carousel-card .tags {
   text-transform: uppercase;
-  color: #008489;
+  color: #2196f3;
   font-weight: 600;
   margin-top: 5px; }
 
@@ -65,7 +65,7 @@
   text-decoration: none; }
 
 .suggest-carousel .carousel-card .ratings-reviews .rating {
-  color: #008489; }
+  color: #2196f3; }
 
 .suggest-carousel .carousel-card .ratings-reviews .review {
   font-size: 12px;
@@ -105,7 +105,7 @@
   .suggest-detail .suggest-info .sd-tags {
     font-weight: 600;
     text-transform: uppercase;
-    color: #008489; }
+    color: #2196f3; }
   .suggest-detail .suggest-info .sd-name h2 {
     font-weight: 600;
     margin-top: 2px;
@@ -142,7 +142,7 @@
         font-weight: 400; }
       .suggest-detail .suggest-info .from-owner .from-owner-header .toggle-btn {
         cursor: pointer;
-        color: #008489; }
+        color: #2196f3; }
   .suggest-detail .suggest-info .review-block {
     margin-top: 35px;
     padding: 10px 0;
@@ -175,7 +175,7 @@
     .suggest-detail .suggest-info .review-block .toggle-btn-reviews {
       cursor: pointer;
       font-size: 18px;
-      color: #008489;
+      color: #2196f3;
       display: flex;
       justify-content: center;
       font-weight: 300; }
@@ -190,7 +190,7 @@
     -moz-box-shadow: 5px 5px 29px 5px #dbdbdb;
     box-shadow: 5px 5px 29px 5px #dbdbdb; }
     .suggest-detail .suggest-info .nav-container a {
-      color: #008489; }
+      color: #2196f3; }
     .suggest-detail .suggest-info .nav-container .nav-header {
       font-weight: 600; }
     .suggest-detail .suggest-info .nav-container .nav-item {
@@ -210,7 +210,7 @@
     top: 25px; }
     .suggest-detail .action-sidebar .action-sidebar-container {
       border: 1px solid #dbdbdb;
-      border-top: 4px solid #008489;
+      border-top: 4px solid #2196f3;
       padding: 10px 25px; }
       .suggest-detail .action-sidebar .action-sidebar-container .yelp-button {
         background-color: #CD1F20; }
@@ -285,7 +285,7 @@ footer {
     footer .footer-links .creator ul a:hover {
       color: white; }
     footer .footer-links .creator ul .fa:hover {
-      color: #008489; }
+      color: #2196f3; }
 
 .page-footer {
   margin-bottom: -20px; }

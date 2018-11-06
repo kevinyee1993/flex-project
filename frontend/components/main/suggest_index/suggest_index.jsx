@@ -133,7 +133,7 @@ class SuggestIndex extends React.Component {
         <div>
           <ScaleLoader
             className="loading-spinner"
-            color="#008489"
+            color="#2196f3"
             size="16px"
             margin="4px"/>
         </div>
@@ -158,6 +158,6 @@ class SuggestIndex extends React.Component {
   }
 }
 
-// 
+//
 // <footer className="suggest-index-footer"> TESTSUGGESTINDEXFOOTER </footer>
 export default SuggestIndex;

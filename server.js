@@ -20,15 +20,6 @@ const port = process.env.PORT || 8000;
 
 // const virtualenv = require('python-virtualenv');
 const { spawn } = require('child_process');
-// virtualenv.installEnv();
-// virtualenv.installPackage('numpy');
-// virtualenv.installPackage('pandas');
-// virtualenv.installPackage('python-dateutil');
-// virtualenv.installPackage('scikit-learn');
-// virtualenv.installPackage('six');
-// virtualenv.installPackage('pytz');
-// virtualenv.installPackage('scipy');
-
 //express can't process url encoded forms on its own
 //bodyParser downloaded helps us out with that
 
