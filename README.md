@@ -94,6 +94,23 @@ print ','.join(final)
 
 ### Spawn
 We imported Spawn from child-process to integrate our Python scripts into the Express back end route.  This persisted user survey data from the front end by way of URL params, then we passed it to the Python file as system input.
+```
+app.get('/recommendations/:data', (req, res) => {
+
+  let dataSplit = req.params.data.split("");
+  let dataInt = [];
+  dataSplit.forEach(char => dataInt.push(parseInt(char)));
+  function sendPrediction(dataInf) {
+    const process = spawn('python', ["./predict.py", dataInt]);
+    process.stdout.on('data', (data) => {
+      let jSonned = JSON.stringify(data.toString('utf-8'));
+      let chopped = jSonned.slice(1, jSonned.length - 3);
+      res.send(chopped.split(','));
+    });
+  }
+  sendPrediction(dataInt);
+});
+```
 
 
 
