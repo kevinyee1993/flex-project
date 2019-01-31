@@ -67,10 +67,30 @@ module.exports = function(routeName, object) {
 We integrated mLab as our database of choice.  MongoDB was used rather than PostgreSQL because of the sheer number of JSON that we had to work with.  MongoDB proved to perform better with the data we had in terms of data retrieval, storage, and modification.  In addition, a cloud MongoDB service like mLab was especially useful because we could simply update the database and connect it to our project, immediately updating our information.  This cuts out the middleman of having to run the scrapers, reseeding the database, and then deploying the website.
 
 ### SciKit Learn
-We imported SciKit-Learn's Gaussian Naive-Bayes machine learning classification model.   This prototyped training data to match features derived from user surveys to labels in the form of recommended activities.
+We imported SciKit-Learn's Gaussian Naive-Bayes machine learning classification model, which uses Bayes Theorem to determine the probabilistic outcome of a set of data based on previously observed outcomes.  This used prototyped training data to match features derived from user surveys to labels in the form of recommended activities.
 
 ### Python
 We used Python to script fitting of training data to the machine learning model.  We also fed unlabeled new survey data through the model to obtain a list of activity recommendations ranked by probability of classification.
+```
+df = pd.read_csv('./training_data.csv', header=0)
+gnb = GaussianNB()
+raw_input = sys.argv[1].split(',')
+int_input = [ int(i) for i in raw_input ]
+x_train = df.loc[:, df.columns != 'activity']
+y_train = df['activity']
+gnb_fit = gnb.fit(x_train, y_train)
+y_pred = gnb_fit.predict_proba(numpy.array(int_input).reshape(1,-1))
+activities = list(set(y_train))
+activities.sort()
+probs = y_pred.tolist()
+zipped = [zip(i, activities) for i in probs]
+realPreds = zipped[0]
+realPreds.sort(reverse=True)
+probs, acts = zip(*realPreds)
+sortPreds = map(list, realPreds)
+final = [indiv[1] for indiv in sortPreds]
+print ','.join(final)
+```
 
 ### Spawn
 We imported Spawn from child-process to integrate our Python scripts into the Express back end route.  This persisted user survey data from the front end by way of URL params, then we passed it to the Python file as system input.
